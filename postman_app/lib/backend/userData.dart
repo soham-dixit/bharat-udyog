@@ -2,7 +2,7 @@ import 'dart:convert';
 import 'package:http/http.dart' as http;
 
 class PostmanDetails {
-  static var serverUrl = 'https://bharatudyog.vercel.app/api/v4';
+  static var serverUrl = 'https://bharat-udyog.vercel.app/api/v4';
 
   static Future<Map<String, dynamic>> getPostmanData(String postmanId) async {
     var headers = {'Content-Type': 'application/json'};

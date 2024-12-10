@@ -36,4 +36,4 @@
 
 ## Server URL:
 
-[https://bharatudyog.vercel.app/](https://bharatudyog.vercel.app/)
+[https://bharat-udyog.vercel.app/](https://bharat-udyog.vercel.app/)

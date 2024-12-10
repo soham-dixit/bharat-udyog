@@ -325,9 +325,9 @@ const Map<String, String> currencySymbolMap = {
   "vatican city (holy see)": "€"
 };
 
-const String regUrl = "https://bharatudyog.vercel.app/api/v4/";
+const String regUrl = "https://bharat-udyog.vercel.app/api/v4/";
 const String dbUrl = "https://dnk-documents-default-rtdb.firebaseio.com/";
-const String imgUrl = "https://bharatudyog.vercel.app/";
+const String imgUrl = "https://bharat-udyog.vercel.app/";
 
 final otpInputDecoration = InputDecoration(
   contentPadding:

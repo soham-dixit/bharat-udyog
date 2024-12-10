@@ -53,4 +53,4 @@ OutlineInputBorder outlineInputBorder() {
   );
 }
 
-const String regUrl = "https://bharatudyog.vercel.app/api/v4/";
+const String regUrl = "https://bharat-udyog.vercel.app/api/v4/";

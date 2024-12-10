@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 
 class PostmanRegistration {
-  static var serverUrl = 'https://bharatudyog.vercel.app/api/v4/';
+  static var serverUrl = 'https://bharat-udyog.vercel.app/api/v4/';
 
   static Future<Map<String, dynamic>> performHttpRequest(
     String apiReq,

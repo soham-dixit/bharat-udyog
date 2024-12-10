@@ -3,7 +3,7 @@ import 'package:get/get.dart';
 import 'package:http/http.dart' as http;
 
 class PostmanLogin {
-  static var ipAdd = 'https://bharatudyog.vercel.app/api/v4/';
+  static var ipAdd = 'https://bharat-udyog.vercel.app/api/v4/';
 
   static Future<Map<String, dynamic>> performHttpRequest(
       String apiReq, String endUrl, Map<String, dynamic> getApiData) async {
