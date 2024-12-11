@@ -170,6 +170,7 @@ const AddProduct = () => {
                 className="mb-4 
                 requiredtext-gray-800 dark:text-gray-300"
                 name="file"
+                accept=".pdf,.jpg,.jpeg,.png"
                 // onChange={(e) => setFiles(e.target.files)}
                 onChange={uploadImage}
                 multiple
