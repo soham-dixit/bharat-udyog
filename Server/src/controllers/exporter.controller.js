@@ -10,7 +10,11 @@ import OrderStatusModel from "../models/orderStatus.model.js";
 import { findIndexById } from "../utils/findIndex.js";
 import { getOrderStatusForOrder } from "../utils/getOrderStatus.js";
 import { OpenAI } from 'openai';
+import { GoogleGenerativeAI } from '@google/generative-ai';
 import dotenv from "dotenv";
+import path from 'path';
+import axios from 'axios';
+
 dotenv.config();
 
 const openai = new OpenAI({
@@ -154,34 +158,6 @@ export const addProduct = async (req, res, next) => {
     return createError(req, res, next, "Failed to save in DB", 400);
   }
 
-  const prompt = `
-    You are an expert in Indian festivals. Based on the following product details, recommend the Indian festivals this product could be used for. 
-    Product Name: ${productName}
-    Description: ${description}
-    Category: ${category}
-    Price: ₹${price}
-    Weight: ${weight} kg
-
-    Here is a list of Indian festivals (only the festival names, no dates or details): 
-
-    New Year, Lohri, Pongal, Uttarayan, Makar Sankranti, Subhas Chandra Bose Jayanti, Republic Day, 
-    Basant Panchmi, Saraswati Puja, Mahashivratri, Holika Dahan, Holi, Bank's Holiday, Chaitra Navratri, 
-    Ugadi, Gudi Padwa, Cheti Chand, Baisakhi, Ambedkar Jayanti, Chaitra Navratri Parana, Ram Navami, 
-    Hanuman Jayanti, Akshaya Tritiya, Jagannath Rath Yatra, Ashadhi Ekadashi, Guru Purnima, Hariyali Teej, 
-    Nag Panchami, Independence Day, Raksha Bandhan, Kajari Teej, Janmashtami, Hartalika Teej, Ganesh Chaturthi, 
-    Onam/Thiruvonam, Anant Chaturdashi, Gandhi Jayanti, Sharad Navratri, Durga Maha Navami Puja, 
-    Durga Puja Ashtami, Dussehra, Karva Chauth, Dhanteras, Narak Chaturdashi, Diwali, Govardhan Puja, 
-    Bhai Dooj, Chhath Puja, Children's Day, Merry Christmas.
-
-    Your task is to select the most relevant festivals from the list above for this product based on themes, traditions, and seasonal relevance.
-
-    Respond with a list of festivals the product could be relevant for in JSON format, using only the festivals from the list provided. Example:
-
-    ["New Year", "Pongal", "Makar Sankranti", "Republic Day"]
-`;
-
-  // console.log("Prompt:", prompt);
-
   try {
     const openaiResponse = await openai.chat.completions.create({
       model: 'gpt-4', // Ensure this is the correct model
@@ -189,32 +165,32 @@ export const addProduct = async (req, res, next) => {
         {
           role: 'system',
           content: `You are an expert cultural product matcher specializing in Indian festivals and traditional products. Your task is to intelligently map products to their most culturally relevant festivals. 
-  
+
         STRICT GUIDELINES:
-  
+
         1. Cultural Specificity Threshold:
            - MUST associate only for traditional/cultural items.
            - MUST NOT associate for generic everyday items.
            - Prioritize deep cultural significance over superficial connections.
-  
+
         2. Festival Association Criteria:
            - Direct ritual/ceremonial use.
            - Traditional attire relevance.
            - Symbolic meaning during specific festivals.
            - Seasonal alignment with festival traditions.
-  
+
         3. Strict Filtering Guidelines:
            - Generic clothing (shirts, pants, generic sweaters): EMPTY LIST [].
            - Cultural clothing (kurtas, sarees, traditional wear): MULTIPLE FESTIVALS.
            - Decorative items (diyas, garlands): SPECIFIC FESTIVAL MATCHES.
            - Seasonal/special occasion items: CONTEXTUAL FESTIVAL ASSOCIATIONS.
-  
+
         4. PRODUCT EVALUATION FRAMEWORK:
            - Analyze product name, description, category.
            - Assess cultural significance.
            - Determine precise festival relevance.
            - Return ONLY festivals from provided list.
-  
+
         5. FESTIVALS LIST: ["New Year", "Lohri", "Pongal", "Uttarayan", "Makar Sankranti", "Subhas Chandra Bose Jayanti", "Republic Day", 
         "Basant Panchmi", "Saraswati Puja", "Mahashivratri", "Holika Dahan", "Holi", "Bank's Holiday", "Chaitra Navratri", 
         "Ugadi", "Gudi Padwa", "Cheti Chand", "Baisakhi", "Ambedkar Jayanti", "Chaitra Navratri Parana", "Ram Navami", 
@@ -223,12 +199,12 @@ export const addProduct = async (req, res, next) => {
         "Onam/Thiruvonam", "Anant Chaturdashi", "Gandhi Jayanti", "Sharad Navratri", "Durga Maha Navami Puja", 
         "Durga Puja Ashtami", "Dussehra", "Karva Chauth", "Dhanteras", "Narak Chaturdashi", "Diwali", "Govardhan Puja", 
         "Bhai Dooj", "Chhath Puja", "Children's Day", "Merry Christmas"]
-  
+
         Your output must be in the following format:
         - A JSON array of festival names.
         - An empty array [] if the product is not culturally significant.
         - A maximum of 3-4 festivals for each culturally significant product.
-  
+
         Only return festivals from the provided list.`
         },
         {
@@ -243,32 +219,33 @@ export const addProduct = async (req, res, next) => {
       ]
     });
 
-    // Handle the response from OpenAI here
-    console.log("OpenAI Response:", openaiResponse);
+    console.log("OpenAI Response:", openaiResponse.choices[0].message.content);
 
-    // Handle the response from OpenAI here
-    console.log(openaiResponse);
-
-    console.log("OpenAI Response Message:", openaiResponse.choices[0].message.content);
-
-
-    // Parse the OpenAI response
     const festivals = JSON.parse(openaiResponse.choices[0].message.content);
 
-    // Update the product with the recommended festivals
     savedProduct.festivals = festivals;
 
-    // Save the product with the festivals field
     await savedProduct.save();
 
-    // Return the success response with the product and its festivals
-    res.status(200).json({
-      success: true,
-      message: "Product saved successfully with festival recommendations.",
-      data: savedProduct,
+    const response = await axios.post('http://localhost:5000/validate-product', {
+      name: productName,
+      category: category,
+      description: description,
     });
+
+    if (response.data["is_exportable"] == true) {
+      res.status(200).json({
+        success: true,
+        message: "Product saved successfully with festival recommendations.",
+        data: savedProduct,
+      });
+    }
+    else{
+      return createError(req, res, next, "Product violates export guidelines.", 400);
+    }
   } catch (error) {
-    return createError(req, res, next, error, 500);
+    console.error('Error processing product:', error);
+    return createError(req, res, next, "Error processing product", 500);
   }
 };
 
