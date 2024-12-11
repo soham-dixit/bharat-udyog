@@ -36,4 +36,5 @@
 
 ## Server URL:
 
-[https://bharat-udyog.vercel.app/](https://bharat-udyog.vercel.app/)
+1) NodeJS Server: [https://bharat-udyog.vercel.app](https://bharat-udyog.vercel.app)
+2) FastAPI Server: [https://bharat-udyog.onrender.com](https://bharat-udyog.onrender.com)
