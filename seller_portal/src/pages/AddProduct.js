@@ -48,9 +48,9 @@ const AddProduct = () => {
   const [details, setDetails] = useState(initialState);
   const [imgUrl, setImgUrl] = useState(null);
   const [progresspercent, setProgresspercent] = useState(0);
-  // const [files, setFiles] = useState([]);
   const [isUploading, setIsUploading] = useState(false);
   const [isUploaded, setIsUploaded] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const onChangeHandler = (e) => {
     setDetails({ ...details, [e.target.name]: e.target.value });
@@ -102,43 +102,45 @@ const AddProduct = () => {
 
   const submitHandler = async (e) => {
     e.preventDefault();
-    await axios
-      .post("/exporter/addProduct", details)
-      .then((res) => {
-        toast.success(res.data.message, "Please wait for approval");
-        setDetails(initialState);
-        // history.push(`/login`);
-      })
-      .catch((error) => {
-        toast.error(error.response.data.message);
+    setIsSubmitting(true);
+
+    // First validation message after 3 seconds
+    setTimeout(() => {
+      toast.loading("Validating export guidelines...", {
+        id: 'validation-toast'
       });
+    }, 3000);
 
-    // setUploading(false);
-    // const formData = new FormData();
-    // for (let i = 0; i < files.length; i++) {
-    //   formData.append("file", files[i]);
-    // }
+    // Second processing message after 6 seconds
+    setTimeout(() => {
+      toast.remove('validation-toast');
+      toast.loading("Processing product details...", {
+        id: 'processing-toast'
+      });
+    }, 6000);
 
-    // for (const key in details) {
-    //   formData.append(key, details[key]);
-    // }
-
-    // fetch("http://localhost:8000/api/v4/exporter/addProduct", {
-    //   method: "POST",
-    //   body: formData,
-    // })
-    //   .then((data) => data.json())
-    //   .then((res) => {
-    //     toast.success(res.message);
-
-    //     setDetails(initialState);
-    //     // history.push(`/login`);
-    //   })
-    //   .catch((error) => {
-    //     toast.error(`${error} Failed!!`);
-
-    //     setDetails(initialState);
-    //   });
+    try {
+      const response = await axios.post("/exporter/addProduct", details);
+      
+      // Remove loading toasts
+      toast.remove('validation-toast');
+      toast.remove('processing-toast');
+      
+      // Success toast
+      toast.success(response.data.message, "Please wait for approval");
+      
+      // Reset form
+      setDetails(initialState);
+    } catch (error) {
+      // Remove loading toasts
+      toast.remove('validation-toast');
+      toast.remove('processing-toast');
+      
+      // Error toast
+      toast.error(error.response?.data?.message || "An error occurred");
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -171,11 +173,9 @@ const AddProduct = () => {
                 requiredtext-gray-800 dark:text-gray-300"
                 name="file"
                 accept=".pdf,.jpg,.jpeg,.png"
-                // onChange={(e) => setFiles(e.target.files)}
                 onChange={uploadImage}
                 multiple
                 disabled={isUploaded}
-              // ref={fileInputRef}
               />
 
               <FormTitle>Product Name</FormTitle>
@@ -232,9 +232,9 @@ const AddProduct = () => {
                   className="bg-color"
                   size="large"
                   iconLeft={AddIcon}
-                // disabled={isUploading}
+                  disabled={isSubmitting}
                 >
-                  Add Product
+                  {isSubmitting ? 'Adding Product...' : 'Add Product'}
                 </Button>
               </div>
             </CardBody>
@@ -246,11 +246,15 @@ const AddProduct = () => {
                   layout="primary"
                   className="mr-3"
                   iconLeft={PublishIcon}
-                // disabled={isUploading}
+                  disabled={isSubmitting}
                 >
                   Add Product
                 </Button>
-                <Button layout="link" iconLeft={StoreIcon}>
+                <Button 
+                  layout="link" 
+                  iconLeft={StoreIcon}
+                  disabled={isSubmitting}
+                >
                   Save as Draft
                 </Button>
               </div>

@@ -8100,7 +8100,7 @@ Total : 457  goods
  
 
         Evaluate this product for export eligibility:
-        {'name': 'Kurtaa', 'category': 'Fashion Accessories', 'description': 'red kurtaaa'}
+        {'name': 'Vodka', 'category': 'Miscellaneous Products', 'description': 'Vodka'}
 
         Provide a clear yes/no response about whether this product can be exported.
         Include specific reasons from the guidelines supporting your decision.
