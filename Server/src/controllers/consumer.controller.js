@@ -219,8 +219,8 @@ export const addRating = async (req, res, next) => {
     // Update the rating fields
     product.totalRatingCount += 1;
     product.ratingAddition += ratingCount;
-    product.rating = product.ratingAddition / product.totalRatingCount;
-
+    product.rating = Math.round((product.ratingAddition / product.totalRatingCount) * 10) / 10;
+    
     await product.save();
 
     res.status(200).json({ 

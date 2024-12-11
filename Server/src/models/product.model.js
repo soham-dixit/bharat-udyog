@@ -38,7 +38,9 @@ const Product = new mongoose.Schema({
   },
   rating: {
     type: Number,
-    default: 0
+    default: 0.0,
+    set: (value) => Math.round(value * 10) / 10,
+    get: (value) => parseFloat(value.toFixed(1))
   },
   totalRatingCount: {
     type: Number,
