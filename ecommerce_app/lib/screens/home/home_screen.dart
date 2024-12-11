@@ -33,36 +33,37 @@ class HomeScreen extends StatelessWidget {
                 SizedBox(height: getProportionateScreenWidth(30)),
                 // PersonalizedRecommend(),
                 // SizedBox(height: getProportionateScreenWidth(30)),
-                // FestiveProducts(),
-                // SizedBox(height: getProportionateScreenWidth(30)),
+                FestiveProducts(),
+                SizedBox(height: getProportionateScreenWidth(30)),
               ],
             ),
           ),
-          GestureDetector(
-            onTap: () {
-              Navigator.pushNamed(context, ChatBot.routeName);
-            },
-            child: Padding(
-              padding: EdgeInsets.only(right: 13, bottom: 23),
-              child: Align(
-                alignment: Alignment.bottomRight,
-                child: Container(
-                    margin: EdgeInsets.all(3),
-                    decoration: BoxDecoration(
-                      color: kPrimaryColor.withOpacity(0.3),
-                      borderRadius: BorderRadius.circular(100),
-                    ),
-                    child: Padding(
-                      padding: const EdgeInsets.all(10.0),
-                      child: SvgPicture.asset(
-                        "assets/icons/chatbot.svg",
-                        width: 40,
-                        height: 40,
-                      ),
-                    )),
-              ),
-            ),
-          ),
+          // temporary hided
+          // GestureDetector(
+          //   onTap: () {
+          //     Navigator.pushNamed(context, ChatBot.routeName);
+          //   },
+          //   child: Padding(
+          //     padding: EdgeInsets.only(right: 13, bottom: 23),
+          //     child: Align(
+          //       alignment: Alignment.bottomRight,
+          //       child: Container(
+          //           margin: EdgeInsets.all(3),
+          //           decoration: BoxDecoration(
+          //             color: kPrimaryColor.withOpacity(0.3),
+          //             borderRadius: BorderRadius.circular(100),
+          //           ),
+          //           child: Padding(
+          //             padding: const EdgeInsets.all(10.0),
+          //             child: SvgPicture.asset(
+          //               "assets/icons/chatbot.svg",
+          //               width: 40,
+          //               height: 40,
+          //             ),
+          //           )),
+          //     ),
+          //   ),
+          // ),
         ]),
       ),
     );
