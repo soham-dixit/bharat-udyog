@@ -151,7 +151,7 @@ export const addProduct = async (req, res, next) => {
   });
 
   try {
-    const response = await axios.post('http://localhost:5000/validate-product', {
+    const response = await axios.post('https://bharat-udyog.onrender.com//validate-product', {
       name: productName,
       category: category,
       description: description,

@@ -40,11 +40,11 @@ const routes = [
   //   icon: "GroupIcon",
   //   name: "Collaboration",
   // },
-  {
-    path: "/app/chats",
-    icon: "ChatIcon",
-    name: "Message",
-  },
+  // {
+  //   path: "/app/chats",
+  //   icon: "ChatIcon",
+  //   name: "Message",
+  // },
 
   // {
   //   path: "/app/manage-profile",

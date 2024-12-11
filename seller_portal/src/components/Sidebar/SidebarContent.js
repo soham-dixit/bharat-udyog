@@ -44,7 +44,7 @@ function SidebarContent() {
       </div>
 
       <ul className="mt-6">
-        {routes.slice(0, -2).map((route) =>
+        {routes.map((route) =>
           route.routes ? (
             <SidebarSubmenu route={route} key={route.name} />
           ) : (
@@ -74,7 +74,7 @@ function SidebarContent() {
 
         <hr className="customeDivider mx-4 my-5" />
 
-        {routes.slice(-2).map((route) => (
+        {/* {routes.slice(-2).map((route) => (
           <li className="relative px-6 py-3" key={route.name}>
             <NavLink
               exact
@@ -92,7 +92,7 @@ function SidebarContent() {
               <span className="ml-4">{route.name}</span>
             </NavLink>
           </li>
-        ))}
+        ))} */}
         <li className="relative px-6 py-3">
           <p
             className="inline-flex items-center w-full text-sm font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200 cursor-pointer"
