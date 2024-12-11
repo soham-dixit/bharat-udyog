@@ -1,3 +1,4 @@
+import axios from "axios";
 import CustomsModel from "../models/customs.model.js";
 import Data from "../models/dataSchema.model.js";
 import DnkCentreModel from "../models/dnkCentre.model.js";
@@ -5,6 +6,7 @@ import PlaceOrderModel from "../models/order.model.js";
 import OrderStatusModel from "../models/orderStatus.model.js";
 import ProductModel from "../models/product.model.js";
 import createError from "../utils/createError.js";
+import mongoose from "mongoose";
 
 export const getDnkCentreDetails = async (req, res, next) => {
   const { pincode } = req.params;
@@ -170,5 +172,80 @@ export const fetchOperationalCountries = async (req, res, next) => {
     return res
       .status(500)
       .json({ success: false, message: "Internal Server Error" });
+  }
+};
+
+export const recommendedProducts = async (req, res, next) => {
+  try {
+    const { email } = req.params;
+
+    // Validate email
+    if (!email) {
+      return res.status(400).json({ 
+        message: "User email is required" 
+      });
+    }
+
+    // Step 1: Get recommended product IDs from FastAPI recommendation service
+    const recommendationResponse = await axios.get(
+      `${process.env.FASTAPI_BASE_URL}/getRecommendation/${encodeURIComponent(email)}`,
+      {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }
+    );
+
+    // Extract product IDs
+    const productIds = recommendationResponse.data;
+
+    // If no recommendations found
+    if (!productIds || productIds.length === 0) {
+      return res.status(404).json({ 
+        message: "No product recommendations found" 
+      });
+    }
+
+    // Step 2: Fetch full product details from MongoDB
+    const products = await ProductModel.find({
+      _id: { $in: productIds.map(id => new mongoose.Types.ObjectId(id)) }
+    }).lean(); // Use .lean() for better performance
+
+    // Optional: Sort products based on the order of recommendation IDs
+    const sortedProducts = productIds.map(id => 
+      products.find(product => product._id.toString() === id)
+    ).filter(product => product); // Remove any undefined products
+
+    // Step 3: Return recommended products
+    res.status(200).json({
+      message: "Recommendations fetched successfully",
+      recommendations: sortedProducts,
+      totalRecommendations: sortedProducts.length
+    });
+
+  } catch (error) {
+    // Comprehensive error handling
+    console.error('Recommendation Fetch Error:', error);
+
+    if (error.response) {
+      // The request was made and the server responded with a status code
+      // that falls out of the range of 2xx
+      return res.status(error.response.status).json({
+        message: "Error fetching recommendations",
+        details: error.response.data
+      });
+    } else if (error.request) {
+      // The request was made but no response was received
+      return res.status(500).json({
+        message: "No response from recommendation service",
+        details: error.message
+      });
+    } else {
+      // Something happened in setting up the request that triggered an Error
+      return res.status(500).json({
+        message: "Internal server error during recommendation fetch",
+        details: error.message
+      });
+    }
   }
 };
