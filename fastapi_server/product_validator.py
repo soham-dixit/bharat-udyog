@@ -45,6 +45,10 @@ class ProductExportValidator:
         Include specific reasons from the guidelines supporting your decision.
         If not exportable, explain exactly which guideline prevents export.
         """
+        
+        # save prompt to a text file
+        with open('prompt.txt', 'w') as file:
+            file.write(prompt)
         try:
             response = self.model.generate_content(prompt)
             validation_text = response.text.lower()
