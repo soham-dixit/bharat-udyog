@@ -28,7 +28,7 @@ const Exporter = new mongoose.Schema({
   },
   isVerified: {
     type: Boolean,
-    default: false,
+    default: true,
   },
   isDenied: {
     type: Boolean,
@@ -36,7 +36,7 @@ const Exporter = new mongoose.Schema({
   },
   isKycSubmitted: {
     type: Boolean,
-    default: false,
+    default: true,
   },
   // latitude: {
   //   type: String,
