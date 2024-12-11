@@ -199,7 +199,7 @@ const ProductsAll = () => {
         </ModalHeader>
         <ModalBody>
           Make sure you want to delete product{" "}
-          {selectedDeleteProduct && `"${selectedDeleteProduct.name}"`}
+          {selectedDeleteProduct && `"${selectedDeleteProduct.productName}"`}
         </ModalBody>
         <ModalFooter>
           {/* I don't like this approach. Consider passing a prop to ModalFooter

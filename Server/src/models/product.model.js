@@ -35,6 +35,18 @@ const Product = new mongoose.Schema({
   },
   festivals: {
     type: Array,
+  },
+  rating: {
+    type: Number,
+    default: 0
+  },
+  totalRatingCount: {
+    type: Number,
+    default: 0
+  },
+  ratingAddition: {
+    type: Number,
+    default: 0
   }
 });
 
