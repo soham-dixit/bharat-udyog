@@ -94,5 +94,9 @@ async def validate_product(product: Product):
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error in product validation: {str(e)}")
 
-# To run the FastAPI app with Uvicorn
-# uvicorn <filename>:app --reload
+@app.get("/")
+async def root():
+    return {"message": "Bharat Udyog FastAPI server"}
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=int(os.getenv("PORT", 7000)))
