@@ -46,7 +46,7 @@ app.use(
       "http://localhost:3000",
       "http://localhost:3001",
       "http://localhost:3002",
-      "https://bharatudyog.vercel.app"
+      "https://bharat-udyog.vercel.app",
     ],
   })
 );

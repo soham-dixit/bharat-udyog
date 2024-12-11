@@ -1,4 +1,5 @@
 import mongoose from "mongoose";
+const { Decimal128 } = mongoose.Schema.Types;
 
 const Product = new mongoose.Schema({
   exporterId: {
@@ -37,19 +38,19 @@ const Product = new mongoose.Schema({
     type: Array,
   },
   rating: {
-    type: Double,
+    type: Decimal128,
     default: 0.0,
     set: (value) => Math.round(value * 10) / 10, // Round to 1 decimal place
-    get: (value) => parseFloat(value.toFixed(1)) // Ensure 1 decimal point is returned
+    get: (value) => parseFloat(value.toFixed(1)), // Ensure 1 decimal point is returned
   },
   totalRatingCount: {
     type: Number,
-    default: 0
+    default: 0,
   },
   ratingAddition: {
     type: Number,
-    default: 0
-  }
+    default: 0,
+  },
 });
 
 const ProductModel = mongoose.model("Product", Product);
