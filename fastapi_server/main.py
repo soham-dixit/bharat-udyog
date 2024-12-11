@@ -76,11 +76,11 @@ class ValidationResponse(BaseModel):
 async def validate_product(product: Product):
     API_KEY = os.getenv("GEMINI_API_KEY")
     PDF_PATHS = [
-        '/home/abhinav/Downloads/General_Information.pdf',
-        '/home/abhinav/Downloads/Definitions_of_9_Classes_of_Dangerous_Goods.pdf',
-        '/home/abhinav/Downloads/List_of_Narcotic_Drugs.pdf',
-        '/home/abhinav/Downloads/List_of_Psychotropic_Substances.pdf',
-        '/home/abhinav/Downloads/List_of_Harmonized_System_Codes.pdf'
+        './PDFs/Definitions_of_9_Classes_of_Dangerous_Goods.pdf',
+        './PDFs/General_Information.pdf',
+        './PDFs/List_of_Harmonized_System_Codes.pdf',
+        './PDFs/List_of_Narcotic_Drugs.pdf',
+        './PDFs/List_of_Psychotropic_Substances.pdf',
     ]
     print("Product: ", product)
     try:
