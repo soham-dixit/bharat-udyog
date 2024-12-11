@@ -52,7 +52,7 @@ class _LoadDataState extends State<LoadData> {
 
       allProducts = [];
       fetchedAllProducts.forEach((element) {
-        print(element['rating']['\$numberDecimal'].runtimeType);
+        print(element['rating'].runtimeType);
 
         Product prod = Product(
             id: element['_id'],
@@ -63,7 +63,7 @@ class _LoadDataState extends State<LoadData> {
             description: element['description'],
             availableQty: element['availableQty'],
             category: element['category'],
-            rating: double.parse(element['rating']['\$numberDecimal']),
+            rating: element['rating'],
             weight: element['weight'].toDouble(),
             isFestival: false,
             isPopular: true);
@@ -103,7 +103,7 @@ class _LoadDataState extends State<LoadData> {
             description: element['description'],
             availableQty: element['availableQty'],
             category: element['category'],
-            rating: double.parse(element['rating']['\$numberDecimal']),
+            rating: element['rating'],
             weight: element['weight'].toDouble(),
             isFestival: true, // Explicitly setting it here
             isPopular: false,
