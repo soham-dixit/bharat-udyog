@@ -38,10 +38,8 @@ const Product = new mongoose.Schema({
     type: Array,
   },
   rating: {
-    type: Decimal128,
-    default: 0.0,
-    set: (value) => Math.round(value * 10) / 10, // Round to 1 decimal place
-    get: (value) => parseFloat(value.toFixed(1)), // Ensure 1 decimal point is returned
+    type: Number,
+    default: 0,
   },
   totalRatingCount: {
     type: Number,
