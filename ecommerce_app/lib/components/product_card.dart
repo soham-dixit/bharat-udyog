@@ -42,9 +42,10 @@ class ProductCard extends StatelessWidget {
                     borderRadius: BorderRadius.circular(15),
                   ),
                   child: Hero(
-                    tag: product.id.toString(),
-                    child: 
-                    Image.network("${product.photoUrl}"),
+                    tag: product.id.toString() +
+                        "-" +
+                        DateTime.now().millisecondsSinceEpoch.toString(), // for unique id for each usage
+                    child: Image.network("${product.photoUrl}"),
                   ),
                 ),
               ),

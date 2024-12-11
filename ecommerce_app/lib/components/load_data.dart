@@ -61,6 +61,7 @@ class _LoadDataState extends State<LoadData> {
             description: element['description'],
             availableQty: element['availableQty'],
             category: element['category'],
+            rating: element['rating'],
             weight: element['weight'].toDouble(),
             isFestival: false,
             isPopular: true);
@@ -100,6 +101,7 @@ class _LoadDataState extends State<LoadData> {
           description: element['description'],
           availableQty: element['availableQty'],
           category: element['category'],
+          rating: element['rating'],
           weight: element['weight'].toDouble(),
           isFestival: true, // Explicitly setting it here
           isPopular: false,
