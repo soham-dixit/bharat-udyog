@@ -245,7 +245,15 @@ const OrderDetails = () => {
 
             <div>
               {status == "Pending" && (
-                <Button onClick={updateStatus}>Mark for Pick Up</Button>
+                <>
+                  <Button
+                    onClick={updateStatus}
+                    style={{ marginRight: "10px" }}
+                  >
+                    Request Pickup
+                  </Button>
+                  <Button onClick={updateStatus}>Drop at Post Office</Button>
+                </>
               )}
               {status == "Ready for Pickup" && (
                 <form className="flex gap-2" onSubmit={verifyPin}>
@@ -269,9 +277,7 @@ const OrderDetails = () => {
             {/* <Button onClick={() => history.push(`/app/invoicegenerate/${order._id}`)}>
               Generate Invoice
             </Button> */}
-            
           </div>
-          
         </CardBody>
       </Card>
     </div>
