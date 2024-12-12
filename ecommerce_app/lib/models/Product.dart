@@ -6,7 +6,8 @@ class Product {
   final int availableQty;
   final String category;
   final double weight;
-  final double rating, price;
+  final int rating;
+  final double  price;
   bool isFavourite, isPopular, isFestival;
 
   Product({
@@ -30,7 +31,7 @@ class Product {
 
 List<Product> allProducts = [];
 List<Product> festiveProducts = [];
-
+List<Product> recommendedProducts = [];
 List<Product> demoProducts = [
   Product(
     id: "657d13cea1bab7076a51139f",
@@ -42,7 +43,7 @@ List<Product> demoProducts = [
     availableQty: 10,
     category: "design",
     weight: 5,
-    rating: 4.4,
+    rating: 4,
   ),
   Product(
     id: "657d54b3b5d070880e854890",
@@ -54,7 +55,7 @@ List<Product> demoProducts = [
     availableQty: 1,
     category: "Edu",
     weight: 5,
-    rating: 4.4,
+    rating: 4,
   ),
 ];
 

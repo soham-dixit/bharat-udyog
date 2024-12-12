@@ -7,7 +7,7 @@ import 'package:rating_dialog/rating_dialog.dart';
 import '../../../size_config.dart';
 
 class CustomAppBar extends StatelessWidget {
-  final double rating;
+  final int rating;
   final String product_id;
 
   CustomAppBar({required this.rating, required this.product_id});

@@ -18,6 +18,7 @@ class _SearchScreenState extends State<SearchScreen> {
   List<Product> products = [...allProducts];
   String searchText = "";
   bool isFestivalScreen = false;
+  bool isRecommendScreen = false;
 
   @override
   void didChangeDependencies() {
@@ -30,12 +31,18 @@ class _SearchScreenState extends State<SearchScreen> {
           .where((product) => product.isFestival == true)
           .toList();
     }
+    if (args is Map<String, dynamic> && args['recommend'] == true) {
+      isRecommendScreen = true;
+      products = recommendedProducts;
+    }
   }
 
   void updateBody(String str) {
     List<Product> newProducts = isFestivalScreen
         ? allProducts.where((product) => product.isFestival == true).toList()
-        : [...allProducts];
+        : isRecommendScreen
+            ? [...recommendedProducts]
+            : [...allProducts];
 
     searchText = str;
 

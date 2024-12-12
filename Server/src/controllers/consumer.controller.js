@@ -203,8 +203,7 @@ export const getOrderStatus = async (req, res, next) => {
 
 export const addRating = async (req, res, next) => {
   try {
-    const { productId } = req.params;
-    const { ratingCount } = req.body; // Get the rating value from the request body
+    const { productId, ratingCount } = req.params; // Get the rating value from the request body
 
     if (!ratingCount || ratingCount < 1 || ratingCount > 5) {
       return res.status(400).json({ error: "Rating must be between 1 and 5." });
@@ -218,20 +217,24 @@ export const addRating = async (req, res, next) => {
 
     // Update the rating fields
     product.totalRatingCount += 1;
-    product.ratingAddition += ratingCount;
-    product.rating = (product.ratingAddition / product.totalRatingCount); 
-    
+    product.ratingAddition += Number(ratingCount);
+    product.rating =
+      Math.round((product.ratingAddition / product.totalRatingCount) * 100) /
+      100;
+
     await product.save();
 
-    res.status(200).json({ 
-      message: "Rating added successfully.", 
+    res.status(200).json({
+      message: "Rating added successfully.",
       product: {
         rating: product.rating,
-        totalRatingCount: product.totalRatingCount
-      } 
+        totalRatingCount: product.totalRatingCount,
+      },
     });
   } catch (error) {
     console.error(error);
-    res.status(500).json({ error: "An error occurred while adding the rating." });
+    res
+      .status(500)
+      .json({ error: "An error occurred while adding the rating." });
   }
 };
