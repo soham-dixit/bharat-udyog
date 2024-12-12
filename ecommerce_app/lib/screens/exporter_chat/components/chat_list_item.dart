@@ -19,9 +19,7 @@ class ChatListItem extends StatelessWidget {
         Navigator.push(
           context,
           MaterialPageRoute(
-            builder: (context) =>
-                ChattingScreen(receiverId: id, receiverName: name),
-          ),
+              builder: (context) => ChattingScreen(receiverId: id)),
         );
       },
       child: Container(
