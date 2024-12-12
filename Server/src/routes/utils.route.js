@@ -30,6 +30,7 @@ router.get("/getUpcomingFestivals", async (req, res) => {
         message: "Upcoming festivals fetched successfully",
         data: upcomingFestivals
     });
+});
 router.post("/docs", async (req, res) => {
     // get the category from query param, find it in the docsModel and return the data
     const category = req.body.category;
