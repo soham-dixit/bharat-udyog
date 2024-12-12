@@ -26,10 +26,18 @@ from typing import Dict, Optional
 from pydantic import BaseModel, Field
 import json
 import textwrap
+from fastapi.middleware.cors import CORSMiddleware
+origins = ["*"]
 
 load_dotenv()
 app = FastAPI()
-
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 class ForecastRequest(BaseModel):
     target_month: int
     seller_id: str
@@ -148,11 +156,45 @@ async def demand_forecast(request: ForecastRequest):
                 
                 # You can modify the recommendations here if needed based on festivals
                 # For example, you might want to add festival information to the response
-                recommendations['upcoming_festivals'] = festivals_data
+                # recommendations['upcoming_festivals'] = festivals_data
 
                 # hit all products api in nodejs
                 products_response = await client.get("http://localhost:8000/api/v4/details/getAllProducts")
+                products_data = products_response.json()
+                
+                upcoming_festivals = festivals_data["data"]
+                all_products = products_data["data"]
+                
+                mapped_products = []
+                upcoming_festivals = festivals_data.get("data", {})
 
+                for product in products_data.get("data", []):
+                    product_festivals = product.get("festivals", [])
+                    mapped_festivals = []
+
+                    for product_festival in product_festivals:
+                        for month, festivals in upcoming_festivals.items():
+                            for festival in festivals:
+                                if product_festival.lower() == festival.get("name", "").lower():
+                                    mapped_festivals.append({
+                                        "festival_name": festival.get("name"),
+                                        "month": month,
+                                        "date": festival.get("date"),
+                                        "day": festival.get("day")
+                                    })
+
+                    mapped_products.append({
+                        "product_name": product.get("productName"),
+                        "available_qty": product.get("availableQty"),
+                        "mapped_festivals": mapped_festivals
+                    })
+                    
+                return {
+                        "success": True,
+                        "message": "Forecast generated successfully",
+                        "recommendations": recommendations,
+                        "mapped_products": mapped_products
+                }
 
                         
             except httpx.RequestError as e:
