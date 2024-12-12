@@ -8100,7 +8100,7 @@ Lebanon  Triazolam
  
 
         Evaluate this product for export eligibility:
-        {'name': 'Christmas Cap', 'category': 'Traditional & Ethnic Clothing', 'description': 'A Christmas cap is a festive headpiece typically worn during the holiday season, often associated with celebrations like Christmas parties, family gatherings, and holiday parades.'}
+        {'name': 'Wooden Chair', 'category': 'Sweets & Snacks', 'description': 'jfjfewj', 'image_url': 'https://firebasestorage.googleapis.com/v0/b/dnk-documents.appspot.com/o/files%2Fdownload.jpeg?alt=media&token=360f71d7-939b-4b28-b33a-63e3cde97b0d'}
 
         Provide a clear yes/no response about whether this product can be exported.
         Include specific reasons from the guidelines supporting your decision.
