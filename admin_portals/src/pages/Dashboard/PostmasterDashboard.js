@@ -15,8 +15,14 @@ import {
   lineLegends,
 } from "../../utils/demo/chartsData";
 import OrdersTable from "../../components/PendingOrdersTable";
+import axios from "axios";
+import { useEffect } from "react";
+import { useContext } from "react";
+import UserContext from "../../context/User/UserContext";
+import OrderAnalyticsCharts from "../../components/Chart/OrderAnalytics";
 
 function Dashboard() {
+  const { state } = useContext(UserContext);
 
   const [resultsPerPage, setResultPerPage] = useState(10);
  
@@ -28,6 +34,23 @@ function Dashboard() {
   const handleMonthChange = (e) => {
     setSelectedMonth(e.target.value);
   };
+
+  const [orders, setOrders] = useState([]);
+
+  useEffect(() => {
+    const fetchOrders = async () => {
+      try {
+        const response = await axios.get(`http://localhost:8000/api/v4/postMaster/getAllOrders/${state.user.email}`);
+        setOrders(response.data.orders);
+      } catch (error) {
+        console.error("Failed to fetch orders", error);
+      }
+    };
+
+    fetchOrders();
+  }, []);
+
+
   return (
     <div>
       <PageTitle>Dashboard
@@ -129,8 +152,9 @@ function Dashboard() {
       {/* Table */}
       <OrdersTable
         resultsPerPage={resultsPerPage}
-        
       />
+      <h2 className="text-2xl font-semibold mb-6">Order Analytics</h2>
+      <OrderAnalyticsCharts orders={orders} />
     </div>
   );
 }
