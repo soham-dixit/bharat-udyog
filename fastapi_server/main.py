@@ -7,6 +7,15 @@ from dotenv import load_dotenv
 import os
 import pandas as pd
 import numpy as np
+from fastapi import FastAPI, HTTPException
+from pydantic import BaseModel
+from sklearn.preprocessing import MinMaxScaler
+from sklearn.model_selection import train_test_split
+from tensorflow.keras.models import Sequential
+from tensorflow.keras.layers import LSTM, Dense, Dropout
+from tensorflow.keras.optimizers import Adam
+import asyncio
+import httpx
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 from motor.motor_asyncio import AsyncIOMotorClient
@@ -19,6 +28,142 @@ import json
 import textwrap
 
 load_dotenv()
+app = FastAPI()
+
+class ForecastRequest(BaseModel):
+    target_month: int
+    seller_id: str
+
+def forecast_inventory(data_path: str, target_month: int, buffer_percentage: float = 0.2) -> Dict[str, int]:
+    """
+    Forecast inventory needs using machine learning
+    """
+    # Load and preprocess data
+    sales_data = pd.read_csv("./675876ada06c3d098e4a4aa0.csv")
+
+    sales_data.rename(
+        {
+            'year': 'Year',
+            'month': 'Month',
+            'productName': 'Product Name',
+            'YEAR': 'Year',
+            'MONTH': 'Month',
+            'ITEM TYPE': 'Product Name'
+        }, inplace=True, axis=1
+    )
+    
+    # Validate input month
+    if target_month < 1 or target_month > 12:
+        raise ValueError("Target month must be between 1 and 12")
+    
+    # Aggregate sales by Year, Month, and Product Name
+    monthly_sales = sales_data.groupby(['Year', 'Month', 'Product Name']).size().reset_index(name='Sales')
+    
+    recommendations = {}
+    
+    # Forecast for each product
+    for product in monthly_sales['Product Name'].unique():
+        # Filter data for the specific product
+        product_data = monthly_sales[monthly_sales['Product Name'] == product].sort_values(['Year', 'Month'])
+        
+        # Create time series of sales
+        sales_series = product_data['Sales'].values
+        
+        # Normalize the data
+        scaler = MinMaxScaler(feature_range=(0, 1))
+        scaled_sales = scaler.fit_transform(sales_series.reshape(-1, 1))
+        
+        # Prepare sequences for LSTM
+        def create_sequences(data, seq_length=3):
+            X, y = [], []
+            for i in range(len(data) - seq_length):
+                X.append(data[i:(i + seq_length)])
+                y.append(data[i + seq_length])
+            return np.array(X), np.array(y)
+        
+        # Create sequences
+        X, y = create_sequences(scaled_sales, seq_length=2)
+        
+        # Split the data
+        X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+        
+        # Build LSTM model
+        model = Sequential([
+            LSTM(50, activation='relu', input_shape=(X_train.shape[1], 1), return_sequences=True),
+            Dropout(0.2),
+            LSTM(50, activation='relu'),
+            Dropout(0.2),
+            Dense(25, activation='relu'),
+            Dense(1)
+        ])
+        
+        # Compile the model
+        model.compile(optimizer=Adam(learning_rate=0.001), loss='mean_squared_error')
+        
+        # Train the model
+        model.fit(X_train, y_train, epochs=50, batch_size=32, validation_split=0.2, verbose=0)
+        
+        # Prepare input sequence for prediction
+        recent_sales = product_data['Sales'].values[-3:]
+        scaled_recent_sales = scaler.transform(recent_sales.reshape(-1, 1))
+        input_seq = scaled_recent_sales.reshape((1, 3, 1))
+        
+        # Predict next month's sales
+        predicted_scaled = model.predict(input_seq)
+        predicted_sales = scaler.inverse_transform(predicted_scaled)[0][0]
+        
+        # Add buffer and round up
+        recommended_stock = max(1, int(np.ceil(predicted_sales * (1 + buffer_percentage))))
+        
+        recommendations[product] = recommended_stock
+    
+    return recommendations
+
+@app.post("/forecast")
+async def demand_forecast(request: ForecastRequest):
+    """
+    Endpoint for demand forecasting based on seller ID and target month
+    """
+    # Validate target month
+    if request.target_month < 1 or request.target_month > 12:
+        raise HTTPException(status_code=400, detail="Target month must be between 1 and 12")
+
+    # Check if CSV exists
+    input_file = f"{request.seller_id}.csv"
+    if not os.path.exists(input_file):
+        raise HTTPException(status_code=404, detail=f"No sales data found for seller {request.seller_id}")
+
+    try:
+        # Forecast inventory
+        recommendations = forecast_inventory(
+            data_path=input_file, 
+            target_month=request.target_month
+        )
+        
+        # Asynchronously fetch upcoming festivals
+        async with httpx.AsyncClient() as client:
+            try:
+                festivals_response = await client.get("http://localhost:8000/api/v4/utils/getUpcomingFestivals")
+                festivals_data = festivals_response.json()
+                
+                # You can modify the recommendations here if needed based on festivals
+                # For example, you might want to add festival information to the response
+                recommendations['upcoming_festivals'] = festivals_data
+
+                # hit all products api in nodejs
+                products_response = await client.get("http://localhost:8000/api/v4/details/getAllProducts")
+
+
+                        
+            except httpx.RequestError as e:
+                # Log the error but don't block the main forecast response
+                print(f"Error fetching festivals: {e}")
+                recommendations['upcoming_festivals'] = []
+        
+        return recommendations
+    
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=str(e))
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
@@ -324,7 +469,7 @@ class MongoRecommendationSystem:
             return pd.DataFrame()
 
 # FastAPI app initialization
-app = FastAPI()
+
 
 class Product(BaseModel):
     name: str

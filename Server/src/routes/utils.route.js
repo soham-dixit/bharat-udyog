@@ -23,6 +23,13 @@ router.get("/festive_products", async (req, res) => {
 
 });
 
+router.get("/getUpcomingFestivals", async (req, res) => {
+    const upcomingFestivals = await getUpcomingFestivals();
+    res.status(200).json({
+        success: true,
+        message: "Upcoming festivals fetched successfully",
+        data: upcomingFestivals
+    });
 router.post("/docs", async (req, res) => {
     // get the category from query param, find it in the docsModel and return the data
     const category = req.body.category;
