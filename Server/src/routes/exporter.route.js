@@ -15,6 +15,7 @@ import {
   updateProductDetails,
   deleteProduct,
 } from "../controllers/exporter.controller.js";
+import { getUpcomingFestivals } from "../controllers/utils.controller.js";
 // import { upload } from "../middlewares/upload.js";
 
 const router = Router();
@@ -47,6 +48,6 @@ router.get("/getProductDetails/:productId", getProductDetails);
 
 router.put("/updateProductDetails/:productId", updateProductDetails);
 
-router.delete("/deleteProduct/:productId", deleteProduct)
+router.delete("/deleteProduct/:productId", deleteProduct);
 
 export default router;

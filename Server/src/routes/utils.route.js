@@ -22,4 +22,13 @@ router.get("/festive_products", async (req, res) => {
 
 });
 
+router.get("/getUpcomingFestivals", async (req, res) => {
+    const upcomingFestivals = await getUpcomingFestivals();
+    res.status(200).json({
+        success: true,
+        message: "Upcoming festivals fetched successfully",
+        data: upcomingFestivals
+    });
+});
+
 export default router;
