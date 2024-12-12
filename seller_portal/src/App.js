@@ -9,7 +9,6 @@ import AccessibleNavigationAnnouncer from "./components/AccessibleNavigationAnno
 import "./assets/css/tailwind.css";
 import { Toaster } from "react-hot-toast";
 import RegisterModal from "./components/Registermodel";
-import axios from "./axios/axios";
 
 const Layout = lazy(() => import("./containers/Layout"));
 const Login = lazy(() => import("./pages/Login"));

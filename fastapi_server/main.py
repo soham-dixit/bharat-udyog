@@ -21,6 +21,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 from motor.motor_asyncio import AsyncIOMotorClient
 import asyncio
 import logging
+import re
 
 from typing import Dict, Optional
 from pydantic import BaseModel, Field
@@ -517,10 +518,206 @@ class Product(BaseModel):
     name: str
     category: str
     description: str
+    image_url: str
+
+import os
+import requests
+from fastapi import HTTPException
+from pydantic import BaseModel
+import base64
+from io import BytesIO
+from PIL import Image
+
+class Product(BaseModel):
+    name: str
+    category: str
+    description: str
+    image_url: str
+
+class ValidationResponse(BaseModel):
+    is_exportable: bool
+    # explanation: str
+    image_verified: bool = False
+    # image_verification_explanation: str = ""
+
+def download_image(image_url: str) -> bytes:
+    """
+    Download image from the given URL and return it as bytes.
+    
+    Args:
+        image_url (str): URL of the image to download
+    
+    Returns:
+        bytes: Image content
+    """
+    try:
+        response = requests.get(image_url)
+        response.raise_for_status()  # Raise an exception for bad status codes
+        return response.content
+    except requests.RequestException as e:
+        raise HTTPException(status_code=400, detail=f"Failed to download image: {str(e)}")
+
+def image_to_base64(image_content: bytes) -> str:
+    """
+    Convert image bytes to base64 encoded string.
+    
+    Args:
+        image_content (bytes): Image content
+    
+    Returns:
+        str: Base64 encoded image
+    """
+    return base64.b64encode(image_content).decode('utf-8')
+
+# @app.post("/validate-product", response_model=ValidationResponse)
+# async def validate_product(product: Product):
+#     API_KEY = os.getenv("GEMINI_API_KEY")
+#     PDF_PATHS = [
+#         './PDFs/Definitions_of_9_Classes_of_Dangerous_Goods.pdf',
+#         './PDFs/General_Information.pdf',
+#         './PDFs/List_of_Harmonized_System_Codes.pdf',
+#         './PDFs/List_of_Narcotic_Drugs.pdf',
+#         './PDFs/List_of_Psychotropic_Substances.pdf',
+#     ]
+#     print("Product: ", product)
+    
+#     try:
+#         # Download the image
+#         image_content = download_image(product.image_url)
+        
+#         # Validate export
+#         validator = ProductExportValidator(API_KEY, PDF_PATHS)
+#         product_details = product.dict()  # Convert Product object to dictionary
+        
+#         is_exportable, explanation = validator.validate_product(product_details)
+        
+#         # Image verification using Gemini
+#         image_verified = False
+#         image_verification_explanation = ""
+        
+#         try:
+#             # Prepare Gemini request for image verification
+#             genai.configure(api_key=API_KEY)
+#             model = genai.GenerativeModel('gemini-1.5-flash')
+            
+#             # Prepare the prompt for verification
+#             verification_prompt = f'''
+#                 "You are a smart assistant tasked with verifying the match between a product image and its description. Given the product description and product image determine whether the description aligns with what is depicted in the image.
+#         Task:
+#         Analyze the product description provided.
+#         Review the image content summary (a text description of the image's visible features or characteristics).
+#         Based on these, return "True" if the image and description match, and "False" if they do not."
+#         "Strictly return the string "True" or "False" only without any explaination."
+#         "Product Name: {product.name}\n"
+#         "Product Description: {product.description}"
+#             '''
+#             print("Verification Prompt: ", verification_prompt)
+#             base64_image = image_to_base64(image_content)
+            
+#             # Send request to Gemini
+#             response = model.generate_content([verification_prompt, {
+#                 'mime_type': 'image/jpeg',
+#                 'data': base64_image
+#             }])
+            
+#             print("Verification Response: ", response.text)
+            
+#             # Check the verification response
+#             verification_text = response.text.lower()
+#             if "matches" in verification_text or "consistent" in verification_text or "yes" in verification_text:
+#                 image_verified = True
+#                 image_verification_explanation = "Image successfully verified to match product details."
+#             else:
+#                 image_verified = False
+#                 image_verification_explanation = "Potential discrepancy found between image and product details."
+        
+#         except Exception as image_verify_error:
+#             image_verified = False
+#             image_verification_explanation = f"Image verification failed: {str(image_verify_error)}"
+        
+#         return ValidationResponse(
+#             is_exportable=is_exportable, 
+#             explanation=explanation,
+#             image_verified=image_verified,
+#             image_verification_explanation=image_verification_explanation
+#         )
+    
+#     except Exception as e:
+#         raise HTTPException(status_code=500, detail=f"Error in product validation: {str(e)}")
+
+import os
+import requests
+import base64
+import json
+from fastapi import HTTPException
+from pydantic import BaseModel
+import google.generativeai as genai
+
+class Product(BaseModel):
+    name: str
+    category: str
+    description: str
+    image_url: str
 
 class ValidationResponse(BaseModel):
     is_exportable: bool
     explanation: str
+    image_verified: bool
+    verification_details: str
+
+def download_pdf_contents(pdf_paths: list) -> str:
+    """
+    Read contents of PDF files and convert to a concatenated string.
+    
+    Args:
+        pdf_paths (list): List of paths to PDF files
+    
+    Returns:
+        str: Concatenated text content of PDFs
+    """
+    pdf_contents = []
+    for path in pdf_paths:
+        try:
+            # Use PyPDF2 or another PDF text extraction library
+            with open(path, 'rb') as file:
+                reader = PyPDF2.PdfReader(file)
+                pdf_text = ""
+                for page in reader.pages:
+                    pdf_text += page.extract_text() + "\n"
+                pdf_contents.append(pdf_text)
+        except Exception as e:
+            print(f"Error reading PDF {path}: {str(e)}")
+    
+    return "\n\n".join(pdf_contents)
+
+def download_image(image_url: str) -> bytes:
+    """
+    Download image from the given URL and return it as bytes.
+    
+    Args:
+        image_url (str): URL of the image to download
+    
+    Returns:
+        bytes: Image content
+    """
+    try:
+        response = requests.get(image_url)
+        response.raise_for_status()
+        return response.content
+    except requests.RequestException as e:
+        raise HTTPException(status_code=400, detail=f"Failed to download image: {str(e)}")
+
+def image_to_base64(image_content: bytes) -> str:
+    """
+    Convert image bytes to base64 encoded string.
+    
+    Args:
+        image_content (bytes): Image content
+    
+    Returns:
+        str: Base64 encoded image
+    """
+    return base64.b64encode(image_content).decode('utf-8')
 
 @app.post("/validate-product", response_model=ValidationResponse)
 async def validate_product(product: Product):
@@ -532,14 +729,90 @@ async def validate_product(product: Product):
         './PDFs/List_of_Narcotic_Drugs.pdf',
         './PDFs/List_of_Psychotropic_Substances.pdf',
     ]
-    print("Product: ", product)
+    
     try:
-        validator = ProductExportValidator(API_KEY, PDF_PATHS)
-        product_details = product.dict()  # Convert Product object to dictionary
+        # Download image
+        image_content = download_image(product.image_url)
+        base64_image = image_to_base64(image_content)
         
-        is_exportable, explanation = validator.validate_product(product_details)
+        # Extract PDF contents
+        pdf_guidelines = download_pdf_contents(PDF_PATHS)
         
-        return ValidationResponse(is_exportable=is_exportable, explanation=explanation)
+        # Prepare Gemini request
+        genai.configure(api_key=API_KEY)
+        model = genai.GenerativeModel('gemini-1.5-pro')
+        
+        # Comprehensive validation prompt
+        validation_prompt = f'''
+        You are an expert product verification assistant with the following critical tasks:
+
+        1. Export Compliance Verification:
+        - Carefully review the provided PDF guidelines containing export regulations and dangerous goods classifications.
+        - Analyze the product details against these guidelines.
+        - Determine if the product can be legally exported.
+
+        2. Product Image Verification:
+        - Examine the provided product image
+        - Compare the image with the product description
+        - Verify if the image accurately represents the described product
+
+        Product Details:
+        - Name: {product.name}
+        - Category: {product.category}
+        - Description: {product.description}
+
+        Export Guidelines (Extracted from PDFs):
+        {pdf_guidelines[:5000]}  # Limit to first 5000 characters to avoid token limits
+
+        Response Format (JSON) without any escape characters or backslashes or backticks:
+        {{
+            "is_exportable": true/false,
+            "export_explanation": "Detailed reason for export status",
+            "image_verified": true/false,
+            "image_verification_details": "Explanation of image match"
+        }}
+
+        Critically analyze BOTH export compliance and image verification. Return a comprehensive JSON response.
+        '''
+        
+        # Send request to Gemini
+        response = model.generate_content([validation_prompt, {
+            'mime_type': 'image/jpeg',
+            'data': base64_image
+        }])
+        print("Response: ", response.text)
+        
+        # Parse the response
+        try:
+            # Extract values using string parsing
+            is_exportable = '"is_exportable": true' in response.text
+            is_exportable_false = '"is_exportable": false' in response.text
+            
+            image_verified = '"image_verified": true' in response.text
+            image_verified_false = '"image_verified": false' in response.text
+            
+            # Extract explanations
+            export_explanation_match = re.search(r'"export_explanation": *"([^"]*)"', response.text)
+            image_verification_details_match = re.search(r'"image_verification_details": *"([^"]*)"', response.text)
+            
+            export_explanation = export_explanation_match.group(1) if export_explanation_match else "No export explanation provided"
+            verification_details = image_verification_details_match.group(1) if image_verification_details_match else "No image verification details provided"
+            
+            return ValidationResponse(
+                is_exportable=is_exportable,
+                explanation=export_explanation,
+                image_verified=image_verified,
+                verification_details=verification_details
+            )
+        
+        except Exception as parsing_error:
+            print(f"Parsing error: {parsing_error}")
+            return ValidationResponse(
+                is_exportable=False,
+                explanation="Failed to parse verification results",
+                image_verified=False,
+                verification_details="Parsing error occurred"
+            )
     
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Error in product validation: {str(e)}")

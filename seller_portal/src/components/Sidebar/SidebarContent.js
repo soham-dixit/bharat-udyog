@@ -32,6 +32,7 @@ function SidebarContent() {
     });
     history.push("/app/InvoiceGenerate");
   };
+  
   return (
     <div className="py-4 text-gray-500 dark:text-gray-400">
       <div className="flex items-center">
