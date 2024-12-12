@@ -164,7 +164,7 @@ class _OrderDetailsState extends State<OrderDetails> {
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceBetween,
                                       children: [
-                                        Text(
+                                        const Text(
                                           'Name',
                                           style: TextStyle(
                                               fontSize: 12,
@@ -173,7 +173,7 @@ class _OrderDetailsState extends State<OrderDetails> {
                                         ),
                                         Text(
                                           snapshot.data?['orderedBy'],
-                                          style: TextStyle(
+                                          style: const TextStyle(
                                               fontSize: 12,
                                               fontWeight: FontWeight.w500),
                                         )
@@ -183,7 +183,7 @@ class _OrderDetailsState extends State<OrderDetails> {
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceBetween,
                                       children: [
-                                        Text(
+                                        const Text(
                                           'Mobile No.',
                                           style: TextStyle(
                                               fontSize: 12,
@@ -192,7 +192,7 @@ class _OrderDetailsState extends State<OrderDetails> {
                                         ),
                                         Text(
                                           snapshot.data?['phoneNumber'],
-                                          style: TextStyle(
+                                          style: const TextStyle(
                                               fontSize: 12,
                                               fontWeight: FontWeight.w500),
                                         )
@@ -202,7 +202,7 @@ class _OrderDetailsState extends State<OrderDetails> {
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceBetween,
                                       children: [
-                                        Text(
+                                        const Text(
                                           'Email',
                                           style: TextStyle(
                                               fontSize: 12,
@@ -211,7 +211,7 @@ class _OrderDetailsState extends State<OrderDetails> {
                                         ),
                                         Text(
                                           snapshot.data?['email'],
-                                          style: TextStyle(
+                                          style: const TextStyle(
                                               fontSize: 12,
                                               fontWeight: FontWeight.w500),
                                         )
@@ -222,16 +222,16 @@ class _OrderDetailsState extends State<OrderDetails> {
                                       mainAxisAlignment:
                                           MainAxisAlignment.spaceBetween,
                                       children: [
-                                        Text(
-                                          snapshot.data?['city'],
-                                          style: TextStyle(
+                                        const Text(
+                                          "City",
+                                          style: const TextStyle(
                                               fontSize: 12,
                                               color: Colors.black,
                                               fontWeight: FontWeight.w500),
                                         ),
                                         Text(
-                                          'Pune',
-                                          style: TextStyle(
+                                          snapshot.data?['city'],
+                                          style: const TextStyle(
                                               fontSize: 12,
                                               fontWeight: FontWeight.w500),
                                         )
@@ -398,13 +398,28 @@ class _OrderDetailsState extends State<OrderDetails> {
                                                   fontSize: 13),
                                             ),
                                             onPressed: () {
+                                              print("location");
+                                              print(snapshot
+                                                      .data?['exporterLocation']
+                                                  ['latitude']);
+                                              print(snapshot
+                                                      .data?['exporterLocation']
+                                                  ['longitude']);
                                               getUserCurrentLocation()
                                                   .then((value) {
                                                 Get.toNamed(
                                                     Routesclass.navigationPage,
                                                     arguments: NavigationPage(
-                                                        lat: 18.501864,
-                                                        long: 73.863613,
+                                                        lat: double.parse(snapshot
+                                                                    .data?[
+                                                                'exporterLocation']
+                                                            ['latitude']),
+                                                        long: double.parse(snapshot
+                                                                    .data?[
+                                                                'exporterLocation']
+                                                            ['longitude']),
+                                                        // lat: 18.50186,
+                                                        // long: 73.863613,
                                                         pos: value));
                                               });
                                             },
@@ -436,8 +451,8 @@ class _OrderDetailsState extends State<OrderDetails> {
                                                 Get.toNamed(
                                                     Routesclass.navigationPage,
                                                     arguments: NavigationPage(
-                                                        lat: 18.478198,
-                                                        long: 73.861578,
+                                                        lat: 13.003162112819226,
+                                                        long: 80.09884398437424,
                                                         pos: value));
                                               });
                                             },
