@@ -15,6 +15,7 @@ import {
   updateProductDetails,
   deleteProduct,
   addDetails,
+  getExporterInfo,
 } from "../controllers/exporter.controller.js";
 import { getUpcomingFestivals } from "../controllers/utils.controller.js";
 // import { upload } from "../middlewares/upload.js";
@@ -52,5 +53,7 @@ router.put("/updateProductDetails/:productId", updateProductDetails);
 router.delete("/deleteProduct/:productId", deleteProduct);
 
 router.post("/addDetails/:exporterId", addDetails);
+
+router.get("/getExporterInfo/:exporterId", getExporterInfo);
 
 export default router;

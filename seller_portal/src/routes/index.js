@@ -16,6 +16,7 @@ const AllOrders = lazy(() => import("../pages/AllOrders"));
 const OrderDetails = lazy(() => import("../pages/OrderDetail"));
 const EditProduct = lazy(() => import("../pages/EditProduct"));
 const InvoiceGenerate = lazy(() => import("../pages/InvoiceGenerate"));
+const ExporterInfo = lazy(() => import("../pages/ExporterInfo"));
 
 /**
  * ⚠ These are internal routes!
@@ -87,6 +88,10 @@ const routes = [
   {
     path: "/blank",
     component: Blank,
+  },
+  {
+    path: "/exporterInfo",
+    component: ExporterInfo,
   },
 ];
 

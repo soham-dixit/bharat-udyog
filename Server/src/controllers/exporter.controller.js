@@ -13,6 +13,7 @@ import { getOrderStatusForOrder } from "../utils/getOrderStatus.js";
 import { OpenAI } from "openai";
 import dotenv from "dotenv";
 import axios from "axios";
+import ExporterInfoModel from "../models/exporterinfo.model.js";
 
 dotenv.config();
 
@@ -553,25 +554,65 @@ export const addDetails = async (req, res, next) => {
     }
 
     // Check if the exporter already exists
-    const existingExporter = await ExporterModel.findOne({ exporterId });
-    if (!existingExporter) {
-      return res.status(404).json({ message: "Exporter not found." });
+    const existingExporter = await ExporterInfoModel.findOne({ exporterId });
+    if (existingExporter) {
+      // Update existing exporter details
+      existingExporter.aboutBusiness = aboutBusiness;
+      existingExporter.aboutProducts = aboutProducts;
+      existingExporter.rangeSpecs = rangeSpecs;
+
+      // Save updated exporter details
+      const updatedExporter = await existingExporter.save();
+
+      return res.status(200).json({
+        message: "Exporter details updated successfully.",
+        data: updatedExporter,
+      });
     }
 
-    // Update exporter details
-    existingExporter.aboutBusiness = aboutBusiness;
-    existingExporter.aboutProducts = aboutProducts;
-    existingExporter.rangeSpecs = rangeSpecs;
+    // Create a new exporter record
+    const newExporter = new ExporterInfoModel({
+      exporterId,
+      aboutBusiness,
+      aboutProducts,
+      rangeSpecs,
+    });
 
-    // Save updated exporter details
-    const updatedExporter = await existingExporter.save();
+    // Save the new exporter details
+    const savedExporter = await newExporter.save();
 
-    res.status(200).json({
-      message: "Exporter details updated successfully.",
-      data: updatedExporter,
+    res.status(201).json({
+      message: "Exporter details added successfully.",
+      data: savedExporter,
     });
   } catch (error) {
-    console.error("Error updating exporter details:", error);
+    console.error("Error adding or updating exporter details:", error);
+    res.status(500).json({ message: "Internal server error." });
+  }
+};
+
+export const getExporterInfo = async (req, res, next) => {
+  try {
+    const { exporterId } = req.params;
+
+    // Validate exporterId
+    if (!exporterId) {
+      return res.status(400).json({ message: "Exporter ID is required." });
+    }
+
+    // Fetch exporter details
+    const exporterDetails = await ExporterInfoModel.findOne({ exporterId });
+
+    if (!exporterDetails) {
+      return res.status(404).json({ message: "Exporter details not found." });
+    }
+
+    res.status(200).json({
+      message: "Exporter details fetched successfully.",
+      data: exporterDetails,
+    });
+  } catch (error) {
+    console.error("Error fetching exporter details:", error);
     res.status(500).json({ message: "Internal server error." });
   }
 };

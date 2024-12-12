@@ -35,6 +35,11 @@ const routes = [
     icon: "GroupIcon",
     name: "Customers",
   },
+  {
+    path: "/app/exporterInfo",
+    icon: "GroupIcon",
+    name: "Exporter Details",
+  },
   // {
   //   path: "/app/blank",
   //   icon: "GroupIcon",
