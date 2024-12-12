@@ -10,8 +10,17 @@ import toast from "react-hot-toast";
 const EditProduct = () => {
   const history = useHistory();
   const { id } = useParams();
-  const [editedProduct, setEditedProduct] = useState({});
+  const [editedProduct, setEditedProduct] = useState({
+    productName: '',
+    category: '',
+    description: '',
+    price: '',
+    availableQty: '',
+    photoUrl: ''
+  });
   const [isEditing, setIsEditing] = useState(false);
+  const [requiredDocuments, setRequiredDocuments] = useState([]);
+  const [isDocumentsLoading, setIsDocumentsLoading] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
@@ -19,14 +28,39 @@ const EditProduct = () => {
         const response = await axios.get(`/exporter/getProductDetails/${id}`);
         toast.success(response.data.message);
         setEditedProduct(response.data.product);
+        
+        // Fetch required documents based on product category
+        if (response.data.product.category) {
+          fetchRequiredDocuments(response.data.product.category);
+        }
       } catch (error) {
         console.error(error);
-        toast.error(error.response.data.message);
+        toast.error(error.response?.data?.message || "Failed to fetch product details");
       }
     };
 
     fetchData();
   }, [id]);
+
+  const fetchRequiredDocuments = async (category) => {
+    try {
+      setIsDocumentsLoading(true);
+      const response = await axios.post(
+        "http://localhost:8000/api/v4/utils/docs", 
+        { category }
+      );
+      
+      if (response.data.success && response.data.data) {
+        // Updated to match the new payload structure
+        setRequiredDocuments(response.data.data.documents);
+      }
+    } catch (error) {
+      console.error("Error fetching required documents:", error);
+      toast.error("Could not fetch required export documents");
+    } finally {
+      setIsDocumentsLoading(false);
+    }
+  };
 
   const updateDetails = async () => {
     try {
@@ -36,11 +70,11 @@ const EditProduct = () => {
       );
       toast.success(response.data.message);
       setEditedProduct(response.data.product);
-      setIsEditing(false); // Exit edit mode after a successful update
+      setIsEditing(false);
       history.push("/app/all-products");
     } catch (error) {
       console.error(error);
-      toast.error(error.response.data.message);
+      toast.error(error.response?.data?.message || "Failed to update product");
     }
   };
 
@@ -84,9 +118,9 @@ const EditProduct = () => {
             <div>
               <div className="relative">
                 <img
-                  alt=""
+                  alt="Product"
                   className="w-full rounded-lg border border-gray-300"
-                  src={editedProduct?.photoUrl}
+                  src={editedProduct?.photoUrl || '/default-product-image.png'}
                 />
               </div>
             </div>
@@ -101,7 +135,7 @@ const EditProduct = () => {
                     className="mt-2 p-2 border rounded-md focus:outline-none focus:ring focus:border-purple-500 text-gray-700"
                     name="productName"
                     placeholder="Product Name"
-                    value={editedProduct?.productName}
+                    value={editedProduct?.productName || ''}
                     onChange={handleInputChange}
                   />
                 ) : (
@@ -117,7 +151,7 @@ const EditProduct = () => {
                     className="mt-2 p-2 border rounded-md focus:outline-none focus:ring focus:border-purple-500 text-gray-700"
                     name="category"
                     placeholder="Product Category"
-                    value={editedProduct?.category}
+                    value={editedProduct?.category || ''}
                     onChange={handleInputChange}
                   />
                 ) : (
@@ -134,7 +168,7 @@ const EditProduct = () => {
                     rows="2"
                     name="description"
                     placeholder="Short Description"
-                    value={editedProduct?.description}
+                    value={editedProduct?.description || ''}
                     onChange={handleInputChange}
                   />
                 ) : (
@@ -151,7 +185,7 @@ const EditProduct = () => {
                     className="mt-2 p-2 border rounded-md focus:outline-none focus:ring focus:border-purple-500 text-gray-700"
                     name="price"
                     placeholder="Product Price"
-                    value={editedProduct?.price}
+                    value={editedProduct?.price || ''}
                     onChange={handleInputChange}
                   />
                 ) : (
@@ -172,7 +206,7 @@ const EditProduct = () => {
                     min="1"
                     max="100"
                     placeholder="Quantity"
-                    value={editedProduct?.availableQty}
+                    value={editedProduct?.availableQty || ''}
                     onChange={handleInputChange}
                   />
                 ) : (
@@ -184,17 +218,57 @@ const EditProduct = () => {
             </div>
           </div>
 
-          <div>
+          {/* Required Export Documents Section */}
+          <div className="mt-8">
+            <h2 className="text-xl font-bold mb-4 text-gray-800 dark:text-gray-200">
+              Required Export Documents
+            </h2>
+            {isDocumentsLoading ? (
+              <p className="text-gray-600">Loading required documents...</p>
+            ) : requiredDocuments && requiredDocuments.length > 0 ? (
+              <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
+                {requiredDocuments.map((doc, index) => (
+                  <Card 
+                    key={index} 
+                    className="border border-gray-200 dark:border-gray-700 shadow-sm"
+                  >
+                    <CardBody>
+                      <h3 className="font-semibold text-gray-600 mb-2 text-lg">
+                        {doc.documentName}
+                      </h3>
+                      <p className="text-sm text-gray-600 mb-2">
+                        {doc.description}
+                      </p>
+                      <div className="mt-2">
+                        <p className="text-xs text-gray-500 mb-1">
+                          <strong>Procurement:</strong> {doc.procurement}
+                        </p>
+                        <p className="text-xs text-gray-500">
+                          <strong>Regulatory Body:</strong> {doc.regulatoryBody}
+                        </p>
+                      </div>
+                    </CardBody>
+                  </Card>
+                ))}
+              </div>
+            ) : (
+              <p className="text-gray-600">
+                No specific export documents found for this product category.
+              </p>
+            )}
+          </div>
+
+          <div className="mt-6">
             {isEditing ? (
               <Button
-                className="bg-red-700 text-white hover:bg-red-500 mt-4 border "
+                className="bg-red-700 text-white hover:bg-red-500 mt-4 border"
                 onClick={handleSaveChanges}
               >
                 Save Changes
               </Button>
             ) : (
               <Button
-                className="bg-red-700 text-white hover:bg-red-500 mt-4 border "
+                className="bg-red-700 text-white hover:bg-red-500 mt-4 border"
                 onClick={toggleEditMode}
               >
                 Edit Product

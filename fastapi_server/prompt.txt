@@ -1,6 +1,151 @@
 
         Carefully analyze these export/import guidelines:
-        UNIVERSAL POSTAL UNION
+        Update6/2002 1List ofprohibited articles–Part IV
+IATA– Dangerous Goods Regulations
+Definitionsofnine classes ofdangerous goods
+Class 1:Explosives
+Class1comprises:
+(a) explosive substances (a substance which is not itself an explosive but which can form an explosive atmosphere of
+gas, vapour or dust is not included in Class 1), except those that are too dangerous to transport or those where the
+predominant hazard is appropriate toanotherclass;
+(b) explosive articles, except devices containing explosive substances in such quantity or of such a character that their
+inadvertent or accidental ignition or initiation, during transport, will not cause any effect external to the device eitherbyprojection, fire,smoke,heat orloudnoise;and
+(c)articles and substances not mentioned under (a) and (b) above which are manufactured with a view to producing a
+practical,explosive orpyrotechniceffect.
+Division1.1
+Articles and substances having a mass explosion hazard (a mass explosion is one which affects almost the entire load
+virtuallyinstantaneously.
+Division1.2
+Articlesandsubstances having aprojectionhazardbutnot amassexplosion hazard.
+Division1.3
+Articlesandsubstances having afirehazardandeitheraminorblast hazardora minor projection hazard orboth, but nota massexplosionhazard.This divisioncomprisesarticles andsubstances that:
+(a) give rise toconsiderable radiant heat;or
+(b) burn one afteranother, producing minorblast and/orprojectioneffects.
+Division1.4
+Articles and substances that present no significant hazard. This division comprises articles and substances which
+present only a small hazard in the event of ignition or initiation during transport. The effects are largely confined to the
+package and no projection of fragments of appreciable size or range is to be expected. An external fire must not cause
+virtuallyinstantaneous explosionofalmostthe entirecontents ofthe package.
+Division1.5
+Very insensitive substances, having a mass explosion hazard, which are so insensitive that there is very little probabilityof initiationoroftransitionfromburningto detonation undernormalconditionsof transport.
+Division1.6
+Extremely insensitive articles which do nothave a mass explosion hazard. This division comprises articles which contain
+onlyextremelyinsensitive detonatingsubstances and whichdemonstrate anegligibleprobabilityofaccidental initiation or
+propagation.
+Note: The risk fromarticles ofDivision1.6 is limitedto the explosionof asinglearticle.
+Class 2:Gases
+Agasisa substance which:
+(a) at 50°C(122°F)hasa vapourpressuregreaterthan 300 kPa (3.0 bar, 43.5 lb/in2);or
+(b) is completelygaseousat 20°C(68°F)at astandard pressure of101.3 kPa (1.01bar, 14.7lb/in2). 2Division2.1 Flammable gas
+Gases which at20°C(68°F)and astandardpressure of101.3 kPa (1.01 bar, 14.7lb/in2):
+(a) are ignitablewhen in amixture of13%orless byvolume with air; or
+(b) have a flammable range withairofatleast 12 percentagepointsregardlessof the lower flammable limit. Flammability
+must be determined by tests or by calculation in accordance with methods adopted by ISO (see ISO Standard
+10156:1990). Where insufficient data are available to use these methods, tests by a comparable method recognizedbythe appropriatenational authoritymust be used.
+Division2.2 Non-flammable,non-toxic gas
+Gases which aretransportedat apressure notless than280kPa at 20°C, oras refrigerated liquids,and which:
+(a) are asphyxiant – gases which dilute orreplace theoxygen normallyintheatmosphere;or(b) are oxidizing – gases which may, generally by providing oxygen, cause or contribute to the combustion of other
+materialmore than airdoes;or
+(c) do notcomeundertheotherdivisions.
+Division2.3 Toxicgas
+Gases which:
+(a) are known to besotoxic orcorrosive tohumansasto pose a hazard tohealth;or(b) are presumed to be toxic or corrosive to humans because they have an LC
+50value equal to or less than 5000 mL/m3
+(ppm)when tested in accordance with the criteria forInhalation Toxicity.
+Class 3:Flammable liquids
+This class has no subdivisions. It comprises liquids or mixtures of liquids or liquids containing solids in solution or in
+suspension (for example paints, varnishes, lacquers, etc., but not including substances otherwise classified on accountof their dangerous characteristics) which give off a flammable vapour at temperatures of not more than 60.5°C (141°F)closed-cuptest ornotmore than65.6°C(150°F)open-cup testnormallyreferred toas the flash point.
+Liquids described above with a flash point exceeding 35°C (95°F) need not be considered as flammable liquids for the
+purposesof these Regulations, if:
+(a) theydo notsustaincombustion when subjected tothemethodoftesting forcombustibilityofClass 3substances;or(b) theirfirepoint according to ISO2592isgreaterthan 100°C(212°F);or
+(c) theyaremisciblesolutionswith a watercontentofmorethan 90% byweight.
+Liquidsoffered fortransport attemperatures atorabove theirflashpoint are considered as flammableliquids.Substances that are transported or offered for transport at elevated temperatures in a liquid state and which give off a
+flammable vapour at a temperature at or belowthe maximum transport temperature (i.e. the maximum temperature likelyto beencounteredbythesubstancein transport)arealso considered tobeflammableliquids.
+Class 4: Flammable solids; substances liable to spontaneous combustion; substances which, in contact with
+water,emitflammablegases
+Division4.1 Flammable solids;self-reactive and relatedsubstances;desensitized explosives
+Solids which, under conditions encountered in transport, are readily combustible or may cause or contribute to firethrough friction; self-reactive and related substances which are liable to undergo a strongly exothermic reaction;desensitized explosives whichmayexplodeifnotdilutedsufficiently.Division 4.1 contains:
+– flammablesolids;
+– self-reactive and related substances;
+– desensitized explosives.Flammable solids are readily combustible solids and solids which may cause fire through friction. Readily combustible
+solidsare powdered, granular orpasty substances which are dangerous if they can be easily ignited by brief contact withan ignition source, such as a burning match, and if the flame spreads rapidly. The danger may not only come from the
+fire but also from toxic combustion products. Metal powders are especially dangerous because of the difficulty of
+extinguishinga fire since normal extinguishing agents such ascarbondioxide orwatercanincrease the hazard. Update6/2002 3Self-reactive substances: Thermally unstable substances liable to undergo a strongly exothermic decomposition even
+without the participation of oxygen (air). The following substances must not be considered to be self-reactive substances
+ofDivision 4.1:
+– explosives according tothecriteriaof Class 1;
+– oxidizing substances according totheassignmentprocedure forOxidizing Solids;
+– organic peroxides according tothecriteriaof Division 5.2;
+– substances where theirheatofdecomposition is less than 300J/g;or
+– substances where theirself-accelerating decompositiontemperature is greaterthan 75°Cfor50 kg package.
+Related substances are distinguished from self-reactive substances by having a self-accelerating decomposition
+temperature greater than 75°C. They are liable to undergo, as are self-reactive substances, a strongly exothermicdecomposition.Theyare alsoliable,incertain packagings,to meetthecriteria forsubstancesofClass 1.
+Desensitized explosives: Substances which are wetted with water or alcohols or diluted with other substances to
+suppress theirexplosive properties.
+Division4.2 Substances liable tospontaneouscombustion
+Substances which are liable to spontaneous heating under normal conditions encountered in transport, or to heating up
+in contact with air, and beingthen liable tocatch fire.
+The following types ofsubstancesareclassified in Division4.2:
+– pyrophoric substances;
+– self-heatingsubstances.
+Division4.3 Substances which,incontactwith water,emitflammable gases
+Substances which, incontact with water, emit flammable gases (Dangerous when wet). Substances which, by interaction
+with water, are liableto becomespontaneouslyflammable orto give offflammablegasesin dangerous quantities.
+These aredescribedin the Listof Dangerous Goodsas ''Water-reactive''substances.
+Class 5:Oxidizing substancesandorganicperoxides
+Division5.1 Oxidizing substances
+Substances which, in themselves are not necessarily combustible, but may generally cause or contribute to the
+combustionofothermaterial byyieldingoxygen.
+Division5.2 Organic peroxides
+Organic substances which contain the bivalent structure -O-O- and may be considered derivatives of hydrogen peroxidein which one orboth ofthehydrogen atomshave been replaced byorganic radicals.
+Organic peroxides are thermally unstable substances which may undergo exothermic, self-accelerating decomposition.
+In addition, theymayhave oneormoreof the following properties:
+– be liable toexplosive decomposition;
+– burn rapidly;
+– b es e n s i t i v et oi mp a cto rf r i c t i o n ;
+– reactdangerouslywith othersubstances;
+– cause damage to theeyes. 4Class 6:Toxic andinfectioussubstances
+Division6.1 Toxicsubstances
+Substances which are liable to cause death or injury or to harm human health if swallowed, inhaled or contacted by the
+skin.
+Division6.2 Infectious substances
+Division 6.2 includes substances which are infectious to humans and/or animals, genetically modified micro-organismsand organisms,biological products,diagnostic specimensandclinicalandmedical waste.
+Substances known to contain, or reasonably expected to contain, pathogens. Pathogens are micro-organisms (including
+bacteria, viruses, rickettsia, parasites, fungi) or recombinant micro-organisms (hybrid or mutant) that are known orreasonably expected to cause infectious disease in humans or animals. Infectious substances are not subject to theprovisions of these Regulations for Division 6.2 if they are unlikely to cause human or animal disease. Infectioussubstances are, however, subject to the provisions of these Regulations for Division 6.2 if they are capable of spreadingdiseasewhen exposure to themoccurs.
+Class 7:Radioactive material
+Aradioactive material is anyarticleorsubstance having aspecificactivitygreaterthan70 kBq/kg(0.002 mCi/g).
+Radioactive materials are articles or substances which spontaneously and continuously emit ionizing radiation which can
+be harmful to the health of humans and animals and can affect photographic or X-Ray film. This radiation cannot bedetected by any of the human senses (sight, smell, hearing, touch or taste), but it can be detected and measured withsuitableinstruments.
+Class 8:Corrosives
+Substances which, in the event of leakage, can cause severe damage by chemical action when in contact with living
+tissueorcan materiallydamageotherfreight orthemeansof transport.
+Class 9:Miscellaneous dangerousgoods
+Articles and substances which during air transport present a danger not covered by other classes. Included in this class
+are: Aviation regulatedsolids orliquids, magnetizedmaterial and miscellaneous articlesand substances.
+Any material which has narcotic, noxious, irritating orotherproperties such that, in the event of spillage or leakage on an
+aircraft, could cause extreme annoyance or discomfort to crew members so as to prevent the correct performance of
+assigned duties.Thematerials includedunderthispropershippingnamemustnotmeetanyofthe definitions forClasses
+1 through8.
+Magnetized material: Any material which, when packed for air transport, has a magnetic field strength of 0.159 A/m
+(0.002 gauss) or more at a distance of 2.1 m (7 ft) from any point on the surface of the assembled package (see also
+Packing Instruction902,which includesmethodsof determiningmagnetic field strength).
+Elevated temperatures substances: Substances that are transported or offered for transport in a liquid state at
+temperatures equal to or exceeding 100°C (212°F) and below their flash point, or in a solid state at temperatures equal
+to orexceeding240°C(464°F).Thesesubstances mayonlybe carriedunderspecialgovernment exemption.
+Miscellaneous articlesandsubstances:Examplesincluded in thisclass:
+– asbestos;– carbon dioxide, solid (dryice);
+– consumercommodity;
+– chemical and firstaidkits;
+– environmentallyhazardous substances;– life-savingappliances;
+– engines,internal combustion;
+– vehicles (flammablegaspowered), vehicles (flammableliquidpowered);
+– polymericbeads; Update6/2002 5– battery-powered equipment orvehicles;
+– zinc dithionite;– genetically modified organisms or micro-organisms which are not infectious substances but which are capable of
+altering animals, plants or microbiological substances in a way which is not normally the result of naturalreproduction.
+Forfurtherinformation,pleaseconsult theIATA– Dangerous Goods Regulations
+Montreal– Geneva
+www.iataonline.com
+www.iata.org UNIVERSAL POSTAL UNION
 BERNE
 INTERNATIONAL BUREAU OF THE UNIVERSAL POSTAL UNION
 2007 EditionList of prohibited articles
@@ -151,152 +296,939 @@ considered as “securities payable to bearer”. Papers “representing a monet
 vouchers, may be enclosed in unregistered priority items and in unregistered sealed letters, while still prohibited in reduced- rate items.
 Information about the admission in registered items under sealed cover are given in the Letter Post Compendium. Part II
 List of articles prohibited as imports 
-or admitted conditionally by post in the countries concerned Update6/2002 1List ofprohibited articles–Part IV
-IATA– Dangerous Goods Regulations
-Definitionsofnine classes ofdangerous goods
-Class 1:Explosives
-Class1comprises:
-(a) explosive substances (a substance which is not itself an explosive but which can form an explosive atmosphere of
-gas, vapour or dust is not included in Class 1), except those that are too dangerous to transport or those where the
-predominant hazard is appropriate toanotherclass;
-(b) explosive articles, except devices containing explosive substances in such quantity or of such a character that their
-inadvertent or accidental ignition or initiation, during transport, will not cause any effect external to the device eitherbyprojection, fire,smoke,heat orloudnoise;and
-(c)articles and substances not mentioned under (a) and (b) above which are manufactured with a view to producing a
-practical,explosive orpyrotechniceffect.
-Division1.1
-Articles and substances having a mass explosion hazard (a mass explosion is one which affects almost the entire load
-virtuallyinstantaneously.
-Division1.2
-Articlesandsubstances having aprojectionhazardbutnot amassexplosion hazard.
-Division1.3
-Articlesandsubstances having afirehazardandeitheraminorblast hazardora minor projection hazard orboth, but nota massexplosionhazard.This divisioncomprisesarticles andsubstances that:
-(a) give rise toconsiderable radiant heat;or
-(b) burn one afteranother, producing minorblast and/orprojectioneffects.
-Division1.4
-Articles and substances that present no significant hazard. This division comprises articles and substances which
-present only a small hazard in the event of ignition or initiation during transport. The effects are largely confined to the
-package and no projection of fragments of appreciable size or range is to be expected. An external fire must not cause
-virtuallyinstantaneous explosionofalmostthe entirecontents ofthe package.
-Division1.5
-Very insensitive substances, having a mass explosion hazard, which are so insensitive that there is very little probabilityof initiationoroftransitionfromburningto detonation undernormalconditionsof transport.
-Division1.6
-Extremely insensitive articles which do nothave a mass explosion hazard. This division comprises articles which contain
-onlyextremelyinsensitive detonatingsubstances and whichdemonstrate anegligibleprobabilityofaccidental initiation or
-propagation.
-Note: The risk fromarticles ofDivision1.6 is limitedto the explosionof asinglearticle.
-Class 2:Gases
-Agasisa substance which:
-(a) at 50°C(122°F)hasa vapourpressuregreaterthan 300 kPa (3.0 bar, 43.5 lb/in2);or
-(b) is completelygaseousat 20°C(68°F)at astandard pressure of101.3 kPa (1.01bar, 14.7lb/in2). 2Division2.1 Flammable gas
-Gases which at20°C(68°F)and astandardpressure of101.3 kPa (1.01 bar, 14.7lb/in2):
-(a) are ignitablewhen in amixture of13%orless byvolume with air; or
-(b) have a flammable range withairofatleast 12 percentagepointsregardlessof the lower flammable limit. Flammability
-must be determined by tests or by calculation in accordance with methods adopted by ISO (see ISO Standard
-10156:1990). Where insufficient data are available to use these methods, tests by a comparable method recognizedbythe appropriatenational authoritymust be used.
-Division2.2 Non-flammable,non-toxic gas
-Gases which aretransportedat apressure notless than280kPa at 20°C, oras refrigerated liquids,and which:
-(a) are asphyxiant – gases which dilute orreplace theoxygen normallyintheatmosphere;or(b) are oxidizing – gases which may, generally by providing oxygen, cause or contribute to the combustion of other
-materialmore than airdoes;or
-(c) do notcomeundertheotherdivisions.
-Division2.3 Toxicgas
-Gases which:
-(a) are known to besotoxic orcorrosive tohumansasto pose a hazard tohealth;or(b) are presumed to be toxic or corrosive to humans because they have an LC
-50value equal to or less than 5000 mL/m3
-(ppm)when tested in accordance with the criteria forInhalation Toxicity.
-Class 3:Flammable liquids
-This class has no subdivisions. It comprises liquids or mixtures of liquids or liquids containing solids in solution or in
-suspension (for example paints, varnishes, lacquers, etc., but not including substances otherwise classified on accountof their dangerous characteristics) which give off a flammable vapour at temperatures of not more than 60.5°C (141°F)closed-cuptest ornotmore than65.6°C(150°F)open-cup testnormallyreferred toas the flash point.
-Liquids described above with a flash point exceeding 35°C (95°F) need not be considered as flammable liquids for the
-purposesof these Regulations, if:
-(a) theydo notsustaincombustion when subjected tothemethodoftesting forcombustibilityofClass 3substances;or(b) theirfirepoint according to ISO2592isgreaterthan 100°C(212°F);or
-(c) theyaremisciblesolutionswith a watercontentofmorethan 90% byweight.
-Liquidsoffered fortransport attemperatures atorabove theirflashpoint are considered as flammableliquids.Substances that are transported or offered for transport at elevated temperatures in a liquid state and which give off a
-flammable vapour at a temperature at or belowthe maximum transport temperature (i.e. the maximum temperature likelyto beencounteredbythesubstancein transport)arealso considered tobeflammableliquids.
-Class 4: Flammable solids; substances liable to spontaneous combustion; substances which, in contact with
-water,emitflammablegases
-Division4.1 Flammable solids;self-reactive and relatedsubstances;desensitized explosives
-Solids which, under conditions encountered in transport, are readily combustible or may cause or contribute to firethrough friction; self-reactive and related substances which are liable to undergo a strongly exothermic reaction;desensitized explosives whichmayexplodeifnotdilutedsufficiently.Division 4.1 contains:
-– flammablesolids;
-– self-reactive and related substances;
-– desensitized explosives.Flammable solids are readily combustible solids and solids which may cause fire through friction. Readily combustible
-solidsare powdered, granular orpasty substances which are dangerous if they can be easily ignited by brief contact withan ignition source, such as a burning match, and if the flame spreads rapidly. The danger may not only come from the
-fire but also from toxic combustion products. Metal powders are especially dangerous because of the difficulty of
-extinguishinga fire since normal extinguishing agents such ascarbondioxide orwatercanincrease the hazard. Update6/2002 3Self-reactive substances: Thermally unstable substances liable to undergo a strongly exothermic decomposition even
-without the participation of oxygen (air). The following substances must not be considered to be self-reactive substances
-ofDivision 4.1:
-– explosives according tothecriteriaof Class 1;
-– oxidizing substances according totheassignmentprocedure forOxidizing Solids;
-– organic peroxides according tothecriteriaof Division 5.2;
-– substances where theirheatofdecomposition is less than 300J/g;or
-– substances where theirself-accelerating decompositiontemperature is greaterthan 75°Cfor50 kg package.
-Related substances are distinguished from self-reactive substances by having a self-accelerating decomposition
-temperature greater than 75°C. They are liable to undergo, as are self-reactive substances, a strongly exothermicdecomposition.Theyare alsoliable,incertain packagings,to meetthecriteria forsubstancesofClass 1.
-Desensitized explosives: Substances which are wetted with water or alcohols or diluted with other substances to
-suppress theirexplosive properties.
-Division4.2 Substances liable tospontaneouscombustion
-Substances which are liable to spontaneous heating under normal conditions encountered in transport, or to heating up
-in contact with air, and beingthen liable tocatch fire.
-The following types ofsubstancesareclassified in Division4.2:
-– pyrophoric substances;
-– self-heatingsubstances.
-Division4.3 Substances which,incontactwith water,emitflammable gases
-Substances which, incontact with water, emit flammable gases (Dangerous when wet). Substances which, by interaction
-with water, are liableto becomespontaneouslyflammable orto give offflammablegasesin dangerous quantities.
-These aredescribedin the Listof Dangerous Goodsas ''Water-reactive''substances.
-Class 5:Oxidizing substancesandorganicperoxides
-Division5.1 Oxidizing substances
-Substances which, in themselves are not necessarily combustible, but may generally cause or contribute to the
-combustionofothermaterial byyieldingoxygen.
-Division5.2 Organic peroxides
-Organic substances which contain the bivalent structure -O-O- and may be considered derivatives of hydrogen peroxidein which one orboth ofthehydrogen atomshave been replaced byorganic radicals.
-Organic peroxides are thermally unstable substances which may undergo exothermic, self-accelerating decomposition.
-In addition, theymayhave oneormoreof the following properties:
-– be liable toexplosive decomposition;
-– burn rapidly;
-– b es e n s i t i v et oi mp a cto rf r i c t i o n ;
-– reactdangerouslywith othersubstances;
-– cause damage to theeyes. 4Class 6:Toxic andinfectioussubstances
-Division6.1 Toxicsubstances
-Substances which are liable to cause death or injury or to harm human health if swallowed, inhaled or contacted by the
-skin.
-Division6.2 Infectious substances
-Division 6.2 includes substances which are infectious to humans and/or animals, genetically modified micro-organismsand organisms,biological products,diagnostic specimensandclinicalandmedical waste.
-Substances known to contain, or reasonably expected to contain, pathogens. Pathogens are micro-organisms (including
-bacteria, viruses, rickettsia, parasites, fungi) or recombinant micro-organisms (hybrid or mutant) that are known orreasonably expected to cause infectious disease in humans or animals. Infectious substances are not subject to theprovisions of these Regulations for Division 6.2 if they are unlikely to cause human or animal disease. Infectioussubstances are, however, subject to the provisions of these Regulations for Division 6.2 if they are capable of spreadingdiseasewhen exposure to themoccurs.
-Class 7:Radioactive material
-Aradioactive material is anyarticleorsubstance having aspecificactivitygreaterthan70 kBq/kg(0.002 mCi/g).
-Radioactive materials are articles or substances which spontaneously and continuously emit ionizing radiation which can
-be harmful to the health of humans and animals and can affect photographic or X-Ray film. This radiation cannot bedetected by any of the human senses (sight, smell, hearing, touch or taste), but it can be detected and measured withsuitableinstruments.
-Class 8:Corrosives
-Substances which, in the event of leakage, can cause severe damage by chemical action when in contact with living
-tissueorcan materiallydamageotherfreight orthemeansof transport.
-Class 9:Miscellaneous dangerousgoods
-Articles and substances which during air transport present a danger not covered by other classes. Included in this class
-are: Aviation regulatedsolids orliquids, magnetizedmaterial and miscellaneous articlesand substances.
-Any material which has narcotic, noxious, irritating orotherproperties such that, in the event of spillage or leakage on an
-aircraft, could cause extreme annoyance or discomfort to crew members so as to prevent the correct performance of
-assigned duties.Thematerials includedunderthispropershippingnamemustnotmeetanyofthe definitions forClasses
-1 through8.
-Magnetized material: Any material which, when packed for air transport, has a magnetic field strength of 0.159 A/m
-(0.002 gauss) or more at a distance of 2.1 m (7 ft) from any point on the surface of the assembled package (see also
-Packing Instruction902,which includesmethodsof determiningmagnetic field strength).
-Elevated temperatures substances: Substances that are transported or offered for transport in a liquid state at
-temperatures equal to or exceeding 100°C (212°F) and below their flash point, or in a solid state at temperatures equal
-to orexceeding240°C(464°F).Thesesubstances mayonlybe carriedunderspecialgovernment exemption.
-Miscellaneous articlesandsubstances:Examplesincluded in thisclass:
-– asbestos;– carbon dioxide, solid (dryice);
-– consumercommodity;
-– chemical and firstaidkits;
-– environmentallyhazardous substances;– life-savingappliances;
-– engines,internal combustion;
-– vehicles (flammablegaspowered), vehicles (flammableliquidpowered);
-– polymericbeads; Update6/2002 5– battery-powered equipment orvehicles;
-– zinc dithionite;– genetically modified organisms or micro-organisms which are not infectious substances but which are capable of
-altering animals, plants or microbiological substances in a way which is not normally the result of naturalreproduction.
-Forfurtherinformation,pleaseconsult theIATA– Dangerous Goods Regulations
-Montreal– Geneva
-www.iataonline.com
-www.iata.org 1          YELLOW LIST  
+or admitted conditionally by post in the countries concerned   
+ 
+ 
+ 
+ 
+ 
+UNIVERSAL POSTAL UNION   
+International Bureau  
+ 
+ 
+ 
+ 
+List  
+of Harmonized System codes  
+of items  sent frequently  
+by post  
+  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+BERNE 2005  
+ 
+  List of H.S. codes of items sent frequently by post  
+ 
+1  
+Fish (chapter  3) 
+  
+0305.41  Smoked salmon   
+  
+  
+Dairy produce ; natural honey  (chapter  4) 
+  
+0402.10  Milk in powder , fat content not exceeding 1%  
+0402.2 9 Concentrated milk containing added sugar , fat content exceeding 1.5%  
+0402.99  Concentrated milk containing added sugar , fat content not exceeding 1.5%  
+0406.10  Fresh cheese  
+0406.30  Processed cheese , not grated or powdered  
+0409.00  Natural honey  
+  
+  
+Live trees and other plants; bulbs, roots and the like; cut flowers and ornamental foliage  (chapter  6) 
+  
+0601.10  Bulbs, tubers, tuberous roots, corms, crowns and rhizomes, dormant  
+0602.1 0 Unrooted cuttings and slips  
+0603.10  Cut flowers and flower buds of a kind suitable for bouquets or for ornamental purposes, fresh  
+0603.9 0 Cut flowers and flower buds of a kind suitable for bouqu ets or for ornamental purposes , dried, dyed, bleached, 
+impregnated or otherwise prepared  
+  
+  
+Roots and tubers  (chapter  7) 
+  
+0709.52  Truffles, fresh or chilled  
+0709.60  Fruits of the genus Capsicum  or of the genus Pimenta , fresh or chilled  
+  
+  
+Edible fruit and nuts (chapter  8) 
+  
+0801.22  Shelled Brazil nu ts 
+0801.32  Shelled cashew nuts  
+0802.12  Shelled almonds  
+0802.22  Shelled hazelnuts  
+0802.50  Pistachio s 
+0804.10  Dates , fresh or dried  
+0804.20  Figs, fresh or dried  
+0806.20  Dried grapes  
+0813.50  Mixtures of nuts or dried fruits  
+  
+  
+Coffee, tea, maté an d spices (chapter  9) 
+  
+ Coffee roasted:  
+0901.21  – not decaffeinated  
+0901.22  – decaffeinated  
+0902.10  Green tea (not fermented) in immediate packings of a content not exceeding 3 kg  
+0902.30  Black tea (fermented) and partly fermented tea, in immediate p ackings of a content not exceeding 3 kg  
+0905.00  Vanill a 
+0910.10  Ginge r 
+0910.20  Saffro n 
+0910.30  Turmeric (c urcuma ) 
+0910.50  Curry  
+  
+  
+Cereal s (chapter  10) 
+  
+1006.30  Semi -milled or wholly milled rice, whether or not polished or glazed  
+  
+   List of H.S. codes of items sent frequently by post  
+ 
+2  
+Oil seeds and oleaginous fruits; miscellaneous grains, seeds and fruit; industrial or medicinal plants;  
+straw and fodder  (chapter  12) 
+  
+1209.30  Seeds of herbaceous plants cultivated principally for their flowers  
+1209.91  Vegetable seeds  
+  
+  
+Preparations o f meat, of fish or of crustaceans, molluscs or other aquatic invertebrates  (chapter  16) 
+  
+1601.00  Sausages and similar products, of meat, meat offal or blood; food preparations based on these products  
+1602. 20 Goose and duck liver  
+1604.30  Caviar , and ca viar substitutes  
+ Crustaceans, molluscs and other aquatic invertebrates, prepared or preserved  
+1605.10  Crab  
+1605.20  Shrimps and prawns  
+1605.30  Lobster  
+  
+  
+Sugars and sugar confectionery (chapter  17) 
+  
+ Raw sugar not containing added flavouring or colouring matter:  
+1701.11  – cane sugar  
+1701.12  – beet sugar  
+1704.10  Chewing gum, whether or not sugar -coated  
+  
+  
+Cocoa and cocoa preparations (chapter  18) 
+  
+1806.10  Cocoa powder, containing added sugar or other sweetening matter  
+ Chocolate and oth er food preparations containing cocoa in blocks, slabs or bars : 
+1806.31  – filled 
+1806.32  – not filled  
+1806.90  Pralines  
+  
+  
+Preparations of cereals, flour, starch or milk; pastrycooks' products (chapter  19) 
+  
+1901.10  Preparations for infant use, pu t up for retail sale  
+1902.11  Uncooked pasta, not stuffed or otherwise prepared , containing eggs  
+1902.20  Stuffed pasta  (including lasagna) , whether or not cooked or otherwise prepared  
+1904.10  Prepared foods obtained by the swelling or roasting of cereals  or cereal products  (e.g. cornflakes)  
+1904.20  Prepared foods obtained from unroasted cereal flakes or from mixtures of unroasted cereal flakes and roasted 
+cereal flakes or swelled cereals  (e.g. muesli)  
+1905.20  Gingerbread and the like  
+1905.31  Sweet bisc uits 
+1905.32  Waffles and wafers  
+  
+  
+Preparations of vegetables, fruit, nuts or other parts of plants (chapter  20) 
+  
+ Jams, fruit jellies, marmalades, fruit or nut purée and fruit or nut pastes, obtained by cooking, whether  
+or not containing added su gar or other sweetening matter:  
+2007.10  – homogenised preparations  of fruit, put up as enfant food in containers of a net weight content  
+not exceeding 250 g.  
+2007.91  – citrus fruit  
+2009.12  Orange juice not frozen  
+2009.21  Grapefruit juice  
+2009.41  Pineapple juice  
+2009.50  Tomato jui ce 
+2009.61  Grape juice (including grape must)  
+2009.71  Apple juice  
+2009.90  Mixtures of juices  
+  
+   List of H.S. codes of items sent frequently by post  
+ 
+3  
+Miscellaneous edible preparations  (chapter  21) 
+  
+2101.11  Extracts, essences and concentrates of coffee  
+2101.20  Extracts, essences and concentrates  of tea  
+2102.30  Prepared baking powders  
+2104.10  Soups and broths and preparations therefor  
+2106.90  Food supplement (multivitamins/minerals, 1 per day tablets)  
+ 
+ 
+Beverages, spirits and vinegar (chapter  22) 
+  
+2203.00  Beer  made from malt  
+2204.10  Sparkling wine , including Champagne  
+2204.21  Other wine; grape must with fermentation prevented or arrested by the addition of alcohol in containers 
+holding 2 l or less  (red wine, white wine, rosé wine, etc.)  
+2205.10  Vermouth and other wine of fresh grapes flavoured with plants or aromatic substances in containers  
+holding 2 l or less  
+2208.20  Spirits obtained by distilling grape wine or grape marc  (e.g. Cognac, Armagnac, brandy and grappa)  
+2208.30  Whiskies  
+2208.40  Rum and tafia 
+2208.50  Gin and Geneva  
+2208.60  Vodka  
+2208.70  Liqueurs and cordials  
+  
+  
+Prepared animal fodder  (chapter  23) 
+  
+2309.10  Dog or cat food, put up for retail sale  
+  
+  
+Tobacco and manufactured tobacco substitutes (chapter  24) 
+  
+2402.10  Cigars, cheroo ts and cigarillos, containing tobacco  
+2402.20  Cigarettes containing tobacco  
+  
+  
+Organic chemicals  (chapter  29) 
+  
+ Vitamins and their derivatives, unmixed  
+2936.21  Vitamins A and their derivatives  
+2936.22  Vitamin B 1 and its derivatives  
+2936.23  Vitam in B2 and its derivatives  
+2936.24  D- or DL -Pantothenic acid (Vitamin B 3 or Vitamin B 5) and its derivatives  
+2936.25  Vitamin B 6 and its derivatives  
+2936.26  Vitamin B 12 and its derivatives  
+2936.27  Vitamin C and its derivatives  
+2936.28  Vitamin E and its d erivatives  
+ Polypeptide hormones, protein hormones and glycoprotein hormones, their derivatives and structural 
+analogues  
+2937.11  Somatotropin, its derivatives and structural analogues  
+2937.12  Insulin and its salts  
+ Steroidal hormones, their derivatives  and structural analogues  
+2937.21  Cortisone, hydrocortisone, prednisone (dehydrocortisone) and prednisolone (dehydrohydrocortisone)  
+2937.22  Halogenated derivatives of corticosteroidal hormones  
+2937.23  Oestrogens and progestogens  
+ Antibiotics  
+2941.10  Penicillins and their derivatives with a penicillanic acid structure; salts thereof  
+2941.20  Streptomycins and their derivatives; salts thereof  
+2941.30  Tetracyclines and their derivatives; salts thereof  
+2941.40  Chloramphenicol and its derivatives; salts t hereof  
+2941.50  Erythromycin and its derivatives; salts thereof  
+  
+   List of H.S. codes of items sent frequently by post  
+ 
+4  
+Pharmaceutical products  (chapter  30) 
+  
+3002.10  Antisera and other blood fractions and modified immunological products, whether or not obtained by means  
+of biotechnological processe s 
+3002.20  Vaccines for human medicine  
+3002.30  Vaccines for veterinary medicine  
+ Medicaments consisting of mixed or unmixed products for therapeutic or prophylactic uses, put up in 
+measured doses (including those in the form of transdermal administration  systems) or in forms or packings 
+for retail sale:  
+3004.10  – containing penicillins or derivatives thereof, with a penicillanic acid structure, or streptomycins or their 
+derivatives  
+3004.20  – containing other antibiotics  
+3004.31  – containing insulin  
+3004.32  – containing corticosteroid hormones, their derivates and structural analogues  
+3004.40  – containing alkaloids or derivatives thereof but not containing hormones  or antibiotics  
+ Wadding, gauze, bandages and similar articles (for example, dressings, adhesive plasters, poultices), 
+impregnated or coated with pharmaceutical substances or put up in forms or packings for retail sale  
+for medical, surgical, dental or veterinary purposes  
+3005.10  Adhesive dressings and other articles having an adhesive layer  
+3006.10  Sterile surgical catgut, similar sterile suture materials and sterile tissue adhesives for surgical wound closure; 
+sterile laminaria and sterile laminaria tents; sterile absorbable surgical or dental haemostatics  
+3006.20  Blood -grouping reagents  
+3006.40  Dental cements and other dental fillings; bone reconstruction cements  
+3006.50  First-aid boxes and kits  
+3006.60  Chemical contraceptive preparations based on hormones  
+3006.70  Gel preparations designed to be used in human or veterinary medicine as  a lubricant for parts of the body  
+for surgical operations or physical examinations or as a coupling agent between the body and medical 
+instruments  
+  
+  
+Tanning or dyeing extracts; tannins and their derivatives; dyes, pigments and other colouring matter ;  
+paints and varnishes; putty and other mastics; inks  (chapter  32) 
+  
+3213.10  Artists', students' or signboard painters' colours, modifying tints, amusement colours and the like, in tablets, 
+tubes, jars, bottles, pans or in similar forms or packings , in sets 
+  
+  
+Essential oils and resinoids; perfumery, cosmetic or toilet preparations  (chapter  33) 
+  
+3303.00  Perfumes and toilet waters  
+3304.10  Lip make -up preparations  
+3304.20  Eye make -up preparations  
+3304.30  Manicure or pedicure preparations  
+3305.1 0 Shampoo s 
+3305.30  Hair lacquers  
+3306.10  Dentifrices  
+3307.10  Pre-shave, shaving or after -shave preparations  
+3307.20  Personal deodorants and antiperspirants  
+3307.30  Perfumed bath salts and other bath preparations  
+  
+  
+Soap, organic surface -active age nts, washing preparations, lubricating preparations, artificial waxes,  
+prepared waxes, polishing or scouring preparations, candles (chapter  34) 
+  
+3401.1 1 Soap f or toilet use  
+3401.30  Organic surface -active products and preparations for washing the skin,  in the form of liquid  or cream  
+and put up for retail sale, whether or not containing soap  
+3405.10  Polishes, creams and similar preparations for footwear or leather  
+3406.00  Candles, tapers and the like  
+  
+  
+Albumin oidal substances; modified starches; glues; enzymes (chapter  35) 
+  
+3506. 10 
+ Products suitable for use as glues or adhesives, put up for retail sale as glues or adhesives, not exceeding  
+a net weight of 1 kg  
+   
+   List of H.S. codes of items sent frequently by post  
+ 
+5  
+Photographic or cinematographic goods (chapter  37) 
+  
+3702.31  Photographi c films for colour photography (polychrome ), without perforation  
+3702.54  Photographic films for colour photography (polychrome ), with  perforation  
+  
+ 
+Plastics and articles thereof  (chapter  39) 
+  
+3924.10  Tableware and kitchenware  
+3926.10  Office or sch ool supplies  
+3926.40  Statuettes and other ornamental articles  
+  
+  
+Rubber and articles thereof  (chapter  40) 
+  
+4014.10  Sheath contraceptives  
+4016.92  Erasers  
+  
+  
+Articles of leather; saddlery and harness; travel goods, handbags and similar container s;  
+articles of animal gut (chapter  42) 
+  
+4201.00  Saddlery and harness for any animal (including traces, leads, knee pads, muzzles, saddle cloths,  
+saddle bags, dog coats and the like), of any material  
+ Handbags, whether or not with shoulder strap, incl uding those without handle : 
+4202.21  – with outer surface of leather, of composition leather or of patent leather  
+4202.22  – with outer surface of plastic sheeting or of textile materials  
+ Articles of a kind normally carried in the pocket or in the handba g (e.g. wallets, purses, cigarette cases  
+and tobacco pouches) : 
+4202.31  – with outer surface of leather, of composition leather or of patent leather  
+4202.32  – with outer surface of plastic sheeting or of textile materials  
+ Articles of apparel and clothi ng accessories, of leather or of composition leather  
+4203.2 1 Gloves, mittens and mitts, specially designed for use in sports  
+4203.29  Gloves, mittens and mitts,  other than for use in sports  
+4203.30  Belts and bandoliers  
+  
+  
+Wood and articles of wood; w ood charcoal (chapter  44) 
+  
+4414.00  Wooden frames for paintings, photographs, mirrors or similar objects  
+4420.10  Statuettes and other ornaments, of wood  
+4421.10  Clothes hangers  
+  
+  
+Cork and articles of cork (chapter  45) 
+  
+4503.10  Corks and stopper s 
+  
+  
+Paper and paperboard; articles of paper pulp, of paper or of paperboard (chapter  48) 
+  
+4817.10  Envelop es 
+4817.20  Letter cards, plain postcards and correspondence cards  
+4817.30  Boxes, pouches, wallets and writing compendiums, of paper or paperb oard, containing an assortment  
+of paper stationery  
+4818.10  Toilet paper  
+4818.20  Handkerchiefs, cleansing or facial tissues and towels  
+4818.30  Tablecloths and serviettes  
+4818.40  Sanitary towels and tampons, napkins and napkin liners for babies and simi lar sanitary articles  
+4820.10  Registers, account books, note books, order books, receipt books, letter pads, memorandum pads,  
+diaries and similar articles  
+4820.20  Exercise books  
+  
+   List of H.S. codes of items sent frequently by post  
+ 
+6  
+Printed books, newspapers, pictures and other products of the prin ting industry; manuscripts, typescripts  
+and plans (chapter  49) 
+  
+4901.91  Dictionaries and encyclopaedias, and serial instalments thereof  
+4901.99  Printed books, brochures, leaflets and similar printed matter  
+4903.00  Children's picture, drawing or colou ring books  
+4910.00  Calendars of any kind, printed, including calendar blocks  
+4911.10  Trade advertising material and commercial catalogues  
+4911.91  Pictures, designs and photographs  
+  
+  
+Silk (chapter  50) 
+  
+5006.00  Silk yarn and yarn spun from silk wa ste, put up for retail sale  
+  
+  
+Wool  (chapter  51) 
+  
+5109.10  Yarn of wool or of fine animal hair, put up for retail sale  containing 85% or more by weight of wool  
+or of fine animal hair  
+  
+  
+Cotton (chapter  52) 
+  
+5204.20  Cotton sewing thread, wheth er or not put up for retail sale  
+  
+  
+Man-made filaments (chapter  54) 
+  
+ Sewing thread of man -made filaments, whether or not put up for retail sale : 
+5401.10  – of synthetic filaments  (e.g. polyamides, polyesters, polyurethanes)  
+5401.20  – of artificial  filaments  (e.g. viscose rayon and cellulose acetate)  
+  
+  
+Man-made staple fibres (chapter  55) 
+  
+ Synthetic filament tow:  
+5501.10  – of nylon or other polyamides  
+5501.20  – of polyesters  
+5501.30  – acrylic or modacrylic  
+ Sewing thread of man -made stap le fibres, whether or not put up for retail sale : 
+5508.10  – of synthetic staple fibres  
+5508.20  – of artificial staple fibres  
+  
+  
+Carpets (chapter  57) 
+  
+5701.10  Carpets and other textile floor coverings, knotted, whether or not made up , of wool or fi ne animal hair  
+  
+  
+Special woven fabrics; tufted textile fabrics; lace; tapestries; trimmings; embroidery (chapter  58) 
+  
+5805.00  Hand -woven tapestries of the type Gobelins, Flanders, Aubusson, Beauvais and the like, and needle -worked 
+tapestries (for e xample, petit point, cross stitch), whether or not made up  
+  
+  
+Articles of apparel and clothing accessories, knitted or crocheted  (chapter  61) 
+  
+ Men's or boys' shirts, knitted or crocheted : 
+6105.10  – of cotton  (min. 50%)  
+6105.20  – of man -made fibre s (min. 50%)  
+ Women's or girls' blouses, shirts and shirt -blouses, knitted or crocheted : 
+6106.10  – of cotton  (min. 50%)  
+6106.20  – of man -made fibres  (min. 50%)   List of H.S. codes of items sent frequently by post  
+ 
+7  
+ Men's or boys' underpants, briefs, nightshirts, pyjamas, bathrobes, dressing gowns and si milar articles,  
+knitted or crocheted  
+ Underpants and briefs : 
+6107.11  – of cotton  (min. 50%)  
+6107.12  – of man -made fibres  (min. 50%)  
+ Nightshirts and pyjamas : 
+6107.21  – of cotton  (min. 50%)  
+6107.22  – of man -made fibres  (min. 50%)  
+ Women's or girls' slips, petticoats, briefs, panties, nightdresses, pyjamas, négligés, bathrobes,  
+dressing gowns and similar articles, knitted or crocheted  
+ Slips and petticoats : 
+6108.11  – of man -made fibres  (min. 50%)  
+6108.19  – of other textile materials  
+ Briefs and p anties:  
+6108.21  – of cotton  (min. 50%)  
+6108.22  – of man -made fibres  (min. 50%)  
+ Nightdresses and pyjamas:  
+6108.31  – of cotton  (min. 50%)  
+6108 .32 – of man -made fibres  (min. 50%)  
+ T-shirts, singlets and other vests, knitted or crocheted : 
+6109.10  – of cotton  (min. 50%)  
+6109. 90 – of other textile materials  
+ Jerseys, pullovers, cardigans, waist -coats and similar articles, knitted or crocheted:  
+6110.11  – of wool  (min. 50%)  
+6110.12  – of Kashmir (cashmere) goats  (min. 50%)  
+6110.20  – of cotton  (min. 50%)  
+6110.30  – of man -made fibres  (min. 50%)  
+ Babies' garments and clothing accessories, knitted or crocheted:  
+6111.1 0 – of wool or fine animal hair  (min. 50%)  
+6111.20  – of cotton  (min. 50%)  
+6111.3 0 – of synthetic fibres  (min. 50%)  
+ Track suits:  
+6112.11  – of cotton  (min. 50%)  
+6112.1 2 – of synthetic fibres  (min. 50%)  
+ Men's or boys' swimwear : 
+6112.31  – of synthetic fibres  
+ Women's or girls' swimwear : 
+6112.41  – of synthetic fibres  
+ Panty hose and tights : 
+6115.1 1 – of synthetic fibres , less than 67 d ecitex  
+6115.12  – of synthetic fibres, 67 decitex or more  
+6115. 20 Women's full -length or knee -length hosiery  
+ Socks : 
+6115.91  – of wool or fine animal hair  (min. 50%)  
+6115.9 2 – of cotton  (min. 50%)  
+6115. 93 – of synthetic fibres  (min. 50%)  
+ Gloves, mit tens and mitts, knitted or crocheted : 
+6116.10  – Impregnated, coated or covered with plastics or rubber  
+6116. 91 – of wool or fine animal hair  (min. 50%)  
+6116. 92 – of cotton  (min. 50%)  
+6116.93  – of synthetic fibres  (min. 50%)  
+  
+  
+Articles of apparel a nd clothing accessories, not knitted or crocheted  (chapter 62)  
+  
+ Men's or boys' overcoats, car -coats, capes, cloaks, anoraks (including ski -jackets), wind -cheaters,  
+wind-jackets and similar articles  
+ Overcoats, raincoats, car -coats, capes, cloaks and similar articles:  
+6201.11  – of wool or fine animal hair  (min. 50%)  
+6201.12  – of cotton  (min. 50%)  
+6201.13  – of man -made fibres  (min. 50%)  
+6201.19  – of other textile materials  
+ Anoraks (including ski -jackets), wind -cheaters, wind -jackets and similar ar ticles : 
+6201.91  – of wool or fine animal hair  (min. 50%)  
+6201.92  – of cotton  (min. 50%)  
+6201.93  – of man -made fibres (min. 50%)  
+6201.99  – of other textile materials   List of H.S. codes of items sent frequently by post  
+ 
+8  
+ Women's or girls' overcoats, car -coats, capes, cloaks, anoraks (including ski -jacke ts), wind -cheaters,  
+wind-jackets and similar articles  
+ Overcoats, raincoats, car -coats, capes, cloaks and similar articles:  
+6202.11  – of wool or fine animal hair  (min. 50%)  
+6202.12  – of cotton  (min. 50%)  
+6202.13  – of man -made fibres  (min. 50%)  
+6202.1 9 – of other textile materials  
+ Anoraks (including ski -jackets), wind -cheaters, wind -jackets and similar articles : 
+6202.91  – of wool or fine animal hair  (min. 50%)  
+6202.92  – of cotton  (min. 50%)  
+6202.93  – of man -made fibres  (min. 50%)  
+6202.99  – of other textile materials  
+ Men's or boys' suits, ensembles, jackets, blazers, trousers, bib and brace overalls, breeches and shorts  
+(other than swimwear)  
+ Suits:  
+6203.11  – of wool or fine animal hair  (min. 50%)  
+6203.12  – of synthetic fibres  (min. 50%)  
+6203.19 – of cotton  (min. 50%)  
+ Jackets and blazers : 
+6203.31  – of wool or fine animal hair  (min. 50%)  
+6203.32  – of cotton  (min. 50%)  
+6203.33  – of synthetic fibres  (min. 50%)  
+ Trousers, bib and brace overalls, breeches and shorts:  
+6203.41  – of wool or fi ne animal hair  (min. 50%)  
+6203.42  – of cotton  (min. 50%)  
+6203.43  – of synthetic fibres  (min. 50%)  
+6203.49  – of other textile materials  
+ Women's or girls' suits, ensembles, jackets, blazers, dresses, skirts, divided skirts, trousers,  
+bib and brace over alls, breeches and shorts (other than swimwear)  
+ Suits:  
+6204.11  – of wool or fine animal hair  (min. 50%)  
+6204.12  – of cotton  (min. 50%)  
+6204.13  – of synthetic fibres  (min. 50%)  
+ Jackets and blazers : 
+6204.31  – of wool or fine animal hair  (min. 50%)  
+6204.32  – of cotton  (min. 50%)  
+6204.33  – of synthetic fibres  (min. 50%)  
+ Dresses : 
+6204.41  – of wool or fine animal hair  (min. 50%)  
+6204.42  – of cotton  (min. 50%)  
+6204.43  – of synthetic fibres  (min. 50%)  
+6204.44  – of artificial fibres  (min. 50%)  
+ Skirts and divided skirts : 
+6204.51  – of wool or fine animal hair  (min. 50%)  
+6204.52  – of cotton  (min. 50%)  
+6204.53  – of synthetic fibres  (min. 50%)  
+ Trousers, bib and brace overalls, breeches and shorts:  
+6204.61  – of wool or fine animal hair  (min. 50%)  
+6204.62  – of cotton  (min. 50%)  
+6204.63  – of synthetic fibres  (min. 50%)  
+ Brassières, girdles, corsets, braces, suspenders, garters and similar articles and parts thereof,  
+whether or not knitted or crocheted  
+6212.10  Brassières  
+6212.20  Girdles and panty -girdles  
+6212.30  Corselettes  
+ Shawls, scarves, mufflers, mantillas, veils and the like : 
+6214.10  – of silk or silk waste  
+6214.20  – of wool or fine animal hair  (min. 50%)  
+6214.30  – of synthetic fibres  (min. 50%)  
+6214.40  – of artificial fibres  (min. 50%)  
+ Ties, bow ties and cravats:  
+6215.10  – of silk or silk waste  
+6215.20  – of man -made fibres  
+  
+   List of H.S. codes of items sent frequently by post  
+ 
+9  
+Other made up textile articles; sets; worn clothing and worn textile articles; rags (chapter  63) 
+  
+6302.10  Bed linen, knitted or crocheted  
+6302.40  Table linen, knitted or crocheted  
+6302.6 0 Toilet linen and kitchen linen, of terry towelling or similar terry fabrics, of cotton  
+  
+  
+Footwear, gaiters and the like; parts of such articles (chapter  64) 
+  
+ Footwear : 
+6403.59  – with outer soles and upper p arts of leather  
+6403.99  – with outer soles of rubber or plastics and upper parts of leather  
+6404.11  Sports footwear; tennis shoes, basketball shoes, gym shoes, training shoes and the like  
+ Footwear : 
+6404 .19 – with outer soles of rubber or plastics and upper parts of textiles  
+6404 .20 – with outer soles of leather and upper parts of textiles  
+  
+  
+Ceramic products (chapter  69) 
+  
+6911.10  Tableware and kitchenware  
+6913.10  Statuettes and other ornamental ceramic articles  of porcelain or china  
+  
+  
+Glass and glassware (chapter  70) 
+  
+7013.21  Drinking glasses of lead crystal  
+  
+  
+Natural or cultured pearls, precious or semi -precious stones, precious metals, metals clad with precious metal, 
+and articles thereof; imitation jewellery (chapter  71) 
+  
+7101.10 Natural pearls  
+ Cultured pearls : 
+7101.21  – unworked  
+7101.22  – worked  
+ Diamonds, whether or not worked, but not mounted or set  
+ Industrial : 
+7102.21  – unworked or simply sawn, cleaved or bruted  
+ Non-industrial : 
+7102.31  – unworked or simply sawn,  cleaved or bruted  
+ Precious stones (other than diamonds) and semi -precious stones, whether or not worked or graded  
+but not strung, mounted or set; ungraded precious stones (other than diamonds) and semi -precious stones, 
+temporarily strung for convenienc e of transport : 
+7103.10  – unworked or simply sawn or roughly shaped  
+ Otherwise worked : 
+7103.91  – rubies, sapphires and emeralds  
+ Synthetic or reconstructed precious or semi -precious stones, whether or not worked or graded but not strung, 
+mounted or set ; ungraded synthetic or reconstructed precious or semi -precious stones, temporarily strung  
+for convenience of transport:  
+7104.10  – piezo-electric quartz  
+7117. 19 Imitation jewellery  of base metal, whether or not plated with precious metal  
+  
+  
+Articles  of iron or steel (chapter  73) 
+  
+7319.10  Sewing, darning or embroidery needles  
+7319.20  Safety pins  
+  
+  
+Tools, implements, cutlery, spoons and forks, of base metal; parts thereof of base metal (chapter  82) 
+  
+ Files, rasps, pliers (including cutting pliers), pincers, tweezers, metal cutting shears, pipe -cutters,  
+bolt croppers, perforating punches and similar hand tools  
+8203.10  Files, rasps and similar tools  
+8203.20  Pliers (including cutting pliers), pincers, tweezers and similar tools   List of H.S. codes of items sent frequently by post  
+ 
+10  
+ Hand -operated spanners and wrenches (including torque meter wrenches but not including tap wrenches); 
+interchangeable spanner sockets, with or without handles  
+ Hand -operated spanners and wrenches:  
+8204.11  – non-adjustable  
+8204.12  – adjustable  
+ Hand tools (inclu ding glaziers' diamonds), not elsewhere specified or included  
+8205.10  Drilling, threading or tapping tools  
+8205.20  Hammers  
+8205.30  Planes, chisels, gouges and similar cutting tools for working wood  
+8205.40  Screwdrivers  
+ Other hand tools (including gla ziers' diamonds):  
+8205.51  – household tools  
+ Interchangeable tools for hand tools, whether or not power -operated, or for machine -tools (for example, for 
+pressing, stamping, punching, tapping, threading, drilling, boring, broaching, milling, turning or sc rew driving), 
+including dies for drawing or extruding metal  
+8207.20  Dies for drawing or extruding metal  
+8207.30  Tools for pressing, stamping or punching  
+8207.40  Tools for tapping or threading  
+8207.50  Tools for drilling, other than for rock drilling  
+8207.60  Tools for boring or broaching  
+8207.70  Tools for milling  
+ Knives and cutting blades, for machines or for mechanical appliances : 
+8208.10  – for metal working  
+8208.20  – for wood working  
+8208.30  – for kitchen appliances or for machines used by the fo od industry  
+ Knives with cutting blades, serrated or not (including pruning knives), other than knives of heading 82.08,  
+and blades therefor  
+8211.91  Table knives having fixed blades  
+8211.93  Knives having other than fixed blades  
+8212.20  Safety razor bl ades  
+8214.10  Paper knives, letter openers, erasing knives, pencil sharpeners and blades therefor  
+8214.20  Manicure or pedicure sets and instruments (including nail files)  
+ Spoons, forks, ladles, skimmers, cake -servers, fish -knives, butter -knives, sugar t ongs and similar kitchen  
+or tableware : 
+8215.10  – sets of assorted articles containing at least one article plated with precious metal  
+8215.2 0 – other sets of assorted articles (e.g. of stainless steel)  
+8215.91  – other sets of assorted articles plated w ith precious metal  
+  
+  
+Miscellaneous articles of base metal (chapter  83) 
+  
+8301.10  Padlocks  
+8301.30  Locks of a kind used for furniture  
+8301.50  Clasps and frames with clasps, incorporating locks  
+8301.70  Keys presented separately  
+8302.10  Hinges  
+8302.20 Castors  
+ Fittings for loose -leaf binders or files, letter clips, letter corners, paper clips, indexing tags and similar office 
+articles, of base metal; staples in strips (for example, for offices, upholstery, packaging), of base metal  
+8305.10  Fittin gs for loose -leaf binders or files  
+8305.20  Staples in strips  
+8306.21  Statuettes and other ornaments plated with precious metal  
+8306.2 9 Statuettes and other ornaments of base  metal  
+8306.30  Photograph, picture or similar frames; mirrors  
+ Clasps, frames with clasps, buckles, buckle -clasps, hooks, eyes, eyelets and the like, of base metal, of a kind 
+used for clothing, footwear, awnings, handbags, travel goods or other made up articles; tubular or bifurcated 
+rivets, of base metal; beads and spangles, of bas e metal  
+8308.10  Hooks, eyes and eyelets  
+8308.20  Tubular or bifurcated rivets  
+  
+  List of H.S. codes of items sent frequently by post  
+ 
+11  
+Electronic appliances (chapter  84) 
+  
+8470.10  Electronic calculators capable of operation without an  external source of electric power and pocket -size data 
+recording, r eproducing and displaying machines with calculating functions  
+8471.30  Portable digital automatic data processing machines, weighing not more than 10 kg, consisting of a least  
+a central processing unit, a keyboard and a display  
+8473.30  Parts and accessor ies of the machin es of code  8471.30 
+  
+  
+Electrical machinery and equipment and parts thereof; sound recorders and reproducers, television image  
+and sound recorders and reproducers, and parts and accessories of such articles (chapter  85) 
+  
+ Primary c ells and primary batteries : 
+8506.10  – manganese dioxide  
+8506.30  – mercuric oxide  
+8506.40  – silver oxide  
+8506.50  – lithium  
+8506.60  – air-zinc 
+8510.10  Shavers  
+8510.20  Hair clippers  
+8510.30  Hair-removing appliances  
+8513.10  Portable electric lamps des igned to function by their own source of energy  
+8516.31  Hair dryers  
+8518.30  Headphones and earphones, whether or not combined with a microphone  
+8519.92  Pocket -size cassette -players  
+8519.99  CD-players  
+8520.90  MP3 players  
+ Discs for laser reading syste ms: 
+8524.32  – for reproducing sound only  (CD's)  
+8524.39  – for reproducing sound and image (DVD's)  
+8525.2 0 Mobile phones  
+8525.40  Still image video cameras and other video camera recorders; digital cameras  
+8527.12  Pocket -size radio cassette -players  
+8534.00 Printed circuits  
+ Electric filament or discharge lamps:  
+8539.21  – tungsten halogen  
+8539.22  – other, of a power not exceeding 200 W and for a voltage exceeding 100 V  
+ Electronic integrated circuits and microassemblies  
+8542.10  Cards incorporating a n electronic integrated circuit ("smart" cards)  
+8542.70  Electronic microassemblies  
+  
+  
+Vehicles other than railway or tramway rolling -stock, and parts and accessories thereof  (chapter 87)  
+  
+ Parts and accessories of the motor vehicles  
+8708.21  Safety  seat belts  
+8708.31  Mounted brake linings  
+8708.80  Suspension shock -absorbers  
+8708.94  Steering wheels  
+8708.99  Other parts and accessories of motor vehicles  
+8714.99  Parts and accessories  of cycles, motorcycles  and carriages for disabled persons  
+  
+  
+Optical, photographic, cinematographic, measuring, checking, precision, medical or surgical instruments  
+and apparatus; parts and accessories thereof (chapter  90) 
+  
+9001.10  Optical fibres, optical fibre bundles and cables  
+9001.30  Contact lenses  
+9001.40  Spectacle lenses of glass  
+9001.50  Spectacle lenses of other materials  
+9002.11  Objective lenses for cameras, projectors or photographic enlargers or reducers  
+9002.20  Filters  
+ Frames and mountings : 
+9003.11  – of plastics  
+9003.19  – of other materials   List of H.S. codes of items sent frequently by post  
+ 
+12  
+9004.10  Sunglasses  
+9004.90  Glasses (spectacles), other than sunglasses  
+9005.10  Binoculars  
+9006.51  Cameras with a through -the-lens viewfinder (single lens reflex (SLR)), for roll film of a width  
+not exceeding 35 mm  
+9006.61  Discharge lamp ("electronic")  flashlight apparatus  
+9007.11  Came ras for film of less than 16 mm width or for double -8 mm film  
+ Artificial teeth and dental fittings  
+9021.21  Artificial teeth  
+9021.40  Hearing aids, excluding parts and accessories  
+9021.50  Pacemakers for stimulating hea rt muscles, excluding parts and accessories  
+  
+ 
+Clocks and watches and parts thereof  (chapter  91) 
+  
+ Wrist -watches, pocket -watches and other watches, including stop -watches, with case of precious metal  
+or of metal clad with precious metal  
+ Wrist -watches, electrically operated, whether or not incorporating a stop -watch facility : 
+9101.11  – with mechanical display only  
+9101.12  – with opto -electronic display only  
+ Other wrist -watches, whether or not incorporating a stop -watch facility : 
+9101.21  – with automatic winding  
+ Wrist -watches, pocket -watches and other watches, including stop -watches, other than those with case  
+of precious metal  or of metal clad with precious metal  
+ Wrist -watches, electrically operated, whether or not incorporating a stop -watch facility : 
+9102.11  – with mechanical display only 
+9102.12  – with opto -electronic display only  
+ Other wrist -watches, whether or not incorporating a stop -watch facility : 
+9102.21  – with automatic winding  
+9103.10  Clocks with watch movements,  electrically  operated  
+9105.11  Alarm clocks, electrically operated  
+ Watch movements, complete and assembled , electrically operated : 
+9108.11  – with mechanical display only or with a device to which a mechanical display can be incorporated  
+9108.12  – with opto -electro nic display only  
+9108.20  Watch movements, complete and assembled , not electrically operated , with automatic winding  
+ Watch cases and parts thereof : 
+9111.10  – cases of precious metal or of metal clad with precious metal  
+9111.20  – cases of base metal, wh ether or not gold - or silver -plated  
+ Watch straps, watch bands and watch bracelets, and parts thereof : 
+9113.10  – of precious metal or of metal clad with precious metal  
+9113.20  – of base metal, whether or not gold - or silver -plated  
+9113.90  – of other ma terials (e.g. leather, plastics and textiles)  
+ Other clock or watch parts  
+9114.10  Springs, including hair -springs  
+9114.20  Jewels  
+9114.30  Dials  
+9114.40  Plates and bridge s 
+  
+  
+Musical instruments; parts and accessories of such articles (chapter  92) 
+  
+9202.10  Violins  
+9202.90  Guitars  
+9204.20  Mouth organs  
+9205.10  Brass -wind instruments  
+9205.90  Clarinets  
+9208.10  Musical boxes  
+9209.10  Metronomes, tuning forks and pitch pipes  
+9209.20  Mechanisms for musical boxes  
+9209.30  Musical instrument strings  
+  
+  
+Arms and ammunition; parts and accessories thereof  (chapter 93)  
+  
+9307.00  Swords, cutlasses, bayonets, lances and similar arms and parts thereof and scabbards and sheaths therefor  
+  
+   List of H.S. codes of items sent frequently by post  
+ 
+13  
+Lamps and lighting fittings (chapter  94) 
+  
+9405.20  Elect ric table, desk, bedside or floor -standing lamps  
+9405.30  Lighting sets of a kind used for Christmas trees  
+9405.50  Non-electrical lamps and lighting fittings  (candlesticks, candelabras)  
+  
+  
+Toys, games and sports requisites; parts and accessories there of (chapter  95) 
+  
+9502.10  Dolls, whether or not dressed  
+9502.91  Garments and accessories therefor, footwear and headgear  for dolls  
+9503.10  Electric trains, including tracks, signals and other accessories therefor  
+9503.20  Reduced -size ("scale") model a ssembly kits, whether or not working models, excluding those  
+of subheading 9503.10  
+9503.41  Toys representing animals or non -human creatures , stuffed  
+9503.50  Toy musical instruments and apparatus  
+9503.60  Puzzles  
+9503.80  Other toys and models, incorpora ting a motor  
+9504.10  Video games of a kind used with a television receiver  
+9504.40  Playing cards  
+9505.10  Articles for Christmas festivities  
+9506.12  Ski-fastenings (ski -bindings)  
+9506.32  Golf balls  
+9506.40  Articles and equipment for table -tennis  
+9506.61 Lawn -tennis balls  
+9506.62  Inflatable balls (e.g. footballs, handballs, basketballs)  
+9506.70  Ice skates and roller skates, including skating boots with skates attached  
+ Fishing rods, fish -hooks and other line fishing tackle  
+9507.1 0 Fishing rods  
+9507.20 Fish-hooks, whether or not snelled  
+9507.30  Fishing reels  
+  
+  
+Miscellaneous manufactured articles (chapter  96) 
+  
+ Tooth brushes, shaving brushes, hair brushes, nail brushes, eyelash brushes and other toilet brushes for use 
+on the person, includin g such brushes constituting parts of appliances  
+9603.21  Tooth brushes, including dental -plate brushes  
+9603.30  Artists' brushes, writing brushes and similar brushes for the application of cosmetics  
+9605.00  Travel sets for personal toilet, sewing or shoe or clothes cleaning  
+9606.10  Press -fasteners, snap -fasteners and press -studs and parts therefor  
+ Buttons : 
+9606.21  – of plastics, not covered with textile material  
+9606.22  – of base metal, not covered with textile material  
+9606.29  – covered with textile  materials  
+ Slide fasteners : 
+9607.11  – fitted with chain scoops of base metal  
+9607.1 9 – fitted with chain scoops of other materials (e.g. plastics)  
+9608.10  Ball point pens  
+9608.20  Felt tipped and other porous -tipped pens and markers  
+9608.40  Propellin g or sliding pencils  
+9608.60  Refills for ball point pens, comprising the ball point and ink -reservoir  
+9609.20  Pencil leads, black or coloured  
+9610.00  Slates and boards, with writing or drawing surfaces, whether or not framed  
+9611.00  Date, sealing or nu mbering stamps, and the like (including devices for printing or embossing labels),  
+designed for operating in the hand; hand -operated composing sticks and hand printing sets incorporating  
+such composing sticks  
+9612.10  Ribbons  for typewriters, etc.  
+9612.20 Ink-pads  
+9613.10  Pocket lighters, gas fuelled, non -refillable  
+9613.20  Pocket lighters, gas fuelled, refillable  
+9614.20  Pipes and pipe bowls  
+ Combs, hair -slides and the like : 
+9615.11  – of hard rubber or plastics  
+9616.10  Scent sprays and similar toi let sprays, and mounts and heads therefor  
+  
+   List of H.S. codes of items sent frequently by post  
+ 
+14  
+Works of art, collectors' pieces and antiques (chapter  97) 
+  
+9701.10  Paintings, drawings and pastels  
+9702.00  Original engravings, prints and lithographs  
+9703.00  Original sculptures and statuary, in any  material  
+9704.00  Postage stamps  (for collection)  
+9705.00  Collections and collectors' pieces of zoological, botanical, mineralogical, anatomical, historical, archaeological, 
+palaeontological, ethnographic or numismatic interest  
+  
+  
+Total : 457  goods  
+  
+  
+  1          YELLOW LIST  
 Annex to Forms A, B and C  
 46th edition, December 2004  
  
@@ -7165,942 +8097,10 @@ Lebanon  Triazolam
  
  
 32 
-    
- 
- 
- 
- 
- 
-UNIVERSAL POSTAL UNION   
-International Bureau  
- 
- 
- 
- 
-List  
-of Harmonized System codes  
-of items  sent frequently  
-by post  
-  
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
- 
-BERNE 2005  
- 
-  List of H.S. codes of items sent frequently by post  
- 
-1  
-Fish (chapter  3) 
-  
-0305.41  Smoked salmon   
-  
-  
-Dairy produce ; natural honey  (chapter  4) 
-  
-0402.10  Milk in powder , fat content not exceeding 1%  
-0402.2 9 Concentrated milk containing added sugar , fat content exceeding 1.5%  
-0402.99  Concentrated milk containing added sugar , fat content not exceeding 1.5%  
-0406.10  Fresh cheese  
-0406.30  Processed cheese , not grated or powdered  
-0409.00  Natural honey  
-  
-  
-Live trees and other plants; bulbs, roots and the like; cut flowers and ornamental foliage  (chapter  6) 
-  
-0601.10  Bulbs, tubers, tuberous roots, corms, crowns and rhizomes, dormant  
-0602.1 0 Unrooted cuttings and slips  
-0603.10  Cut flowers and flower buds of a kind suitable for bouquets or for ornamental purposes, fresh  
-0603.9 0 Cut flowers and flower buds of a kind suitable for bouqu ets or for ornamental purposes , dried, dyed, bleached, 
-impregnated or otherwise prepared  
-  
-  
-Roots and tubers  (chapter  7) 
-  
-0709.52  Truffles, fresh or chilled  
-0709.60  Fruits of the genus Capsicum  or of the genus Pimenta , fresh or chilled  
-  
-  
-Edible fruit and nuts (chapter  8) 
-  
-0801.22  Shelled Brazil nu ts 
-0801.32  Shelled cashew nuts  
-0802.12  Shelled almonds  
-0802.22  Shelled hazelnuts  
-0802.50  Pistachio s 
-0804.10  Dates , fresh or dried  
-0804.20  Figs, fresh or dried  
-0806.20  Dried grapes  
-0813.50  Mixtures of nuts or dried fruits  
-  
-  
-Coffee, tea, maté an d spices (chapter  9) 
-  
- Coffee roasted:  
-0901.21  – not decaffeinated  
-0901.22  – decaffeinated  
-0902.10  Green tea (not fermented) in immediate packings of a content not exceeding 3 kg  
-0902.30  Black tea (fermented) and partly fermented tea, in immediate p ackings of a content not exceeding 3 kg  
-0905.00  Vanill a 
-0910.10  Ginge r 
-0910.20  Saffro n 
-0910.30  Turmeric (c urcuma ) 
-0910.50  Curry  
-  
-  
-Cereal s (chapter  10) 
-  
-1006.30  Semi -milled or wholly milled rice, whether or not polished or glazed  
-  
-   List of H.S. codes of items sent frequently by post  
- 
-2  
-Oil seeds and oleaginous fruits; miscellaneous grains, seeds and fruit; industrial or medicinal plants;  
-straw and fodder  (chapter  12) 
-  
-1209.30  Seeds of herbaceous plants cultivated principally for their flowers  
-1209.91  Vegetable seeds  
-  
-  
-Preparations o f meat, of fish or of crustaceans, molluscs or other aquatic invertebrates  (chapter  16) 
-  
-1601.00  Sausages and similar products, of meat, meat offal or blood; food preparations based on these products  
-1602. 20 Goose and duck liver  
-1604.30  Caviar , and ca viar substitutes  
- Crustaceans, molluscs and other aquatic invertebrates, prepared or preserved  
-1605.10  Crab  
-1605.20  Shrimps and prawns  
-1605.30  Lobster  
-  
-  
-Sugars and sugar confectionery (chapter  17) 
-  
- Raw sugar not containing added flavouring or colouring matter:  
-1701.11  – cane sugar  
-1701.12  – beet sugar  
-1704.10  Chewing gum, whether or not sugar -coated  
-  
-  
-Cocoa and cocoa preparations (chapter  18) 
-  
-1806.10  Cocoa powder, containing added sugar or other sweetening matter  
- Chocolate and oth er food preparations containing cocoa in blocks, slabs or bars : 
-1806.31  – filled 
-1806.32  – not filled  
-1806.90  Pralines  
-  
-  
-Preparations of cereals, flour, starch or milk; pastrycooks' products (chapter  19) 
-  
-1901.10  Preparations for infant use, pu t up for retail sale  
-1902.11  Uncooked pasta, not stuffed or otherwise prepared , containing eggs  
-1902.20  Stuffed pasta  (including lasagna) , whether or not cooked or otherwise prepared  
-1904.10  Prepared foods obtained by the swelling or roasting of cereals  or cereal products  (e.g. cornflakes)  
-1904.20  Prepared foods obtained from unroasted cereal flakes or from mixtures of unroasted cereal flakes and roasted 
-cereal flakes or swelled cereals  (e.g. muesli)  
-1905.20  Gingerbread and the like  
-1905.31  Sweet bisc uits 
-1905.32  Waffles and wafers  
-  
-  
-Preparations of vegetables, fruit, nuts or other parts of plants (chapter  20) 
-  
- Jams, fruit jellies, marmalades, fruit or nut purée and fruit or nut pastes, obtained by cooking, whether  
-or not containing added su gar or other sweetening matter:  
-2007.10  – homogenised preparations  of fruit, put up as enfant food in containers of a net weight content  
-not exceeding 250 g.  
-2007.91  – citrus fruit  
-2009.12  Orange juice not frozen  
-2009.21  Grapefruit juice  
-2009.41  Pineapple juice  
-2009.50  Tomato jui ce 
-2009.61  Grape juice (including grape must)  
-2009.71  Apple juice  
-2009.90  Mixtures of juices  
-  
-   List of H.S. codes of items sent frequently by post  
- 
-3  
-Miscellaneous edible preparations  (chapter  21) 
-  
-2101.11  Extracts, essences and concentrates of coffee  
-2101.20  Extracts, essences and concentrates  of tea  
-2102.30  Prepared baking powders  
-2104.10  Soups and broths and preparations therefor  
-2106.90  Food supplement (multivitamins/minerals, 1 per day tablets)  
- 
- 
-Beverages, spirits and vinegar (chapter  22) 
-  
-2203.00  Beer  made from malt  
-2204.10  Sparkling wine , including Champagne  
-2204.21  Other wine; grape must with fermentation prevented or arrested by the addition of alcohol in containers 
-holding 2 l or less  (red wine, white wine, rosé wine, etc.)  
-2205.10  Vermouth and other wine of fresh grapes flavoured with plants or aromatic substances in containers  
-holding 2 l or less  
-2208.20  Spirits obtained by distilling grape wine or grape marc  (e.g. Cognac, Armagnac, brandy and grappa)  
-2208.30  Whiskies  
-2208.40  Rum and tafia 
-2208.50  Gin and Geneva  
-2208.60  Vodka  
-2208.70  Liqueurs and cordials  
-  
-  
-Prepared animal fodder  (chapter  23) 
-  
-2309.10  Dog or cat food, put up for retail sale  
-  
-  
-Tobacco and manufactured tobacco substitutes (chapter  24) 
-  
-2402.10  Cigars, cheroo ts and cigarillos, containing tobacco  
-2402.20  Cigarettes containing tobacco  
-  
-  
-Organic chemicals  (chapter  29) 
-  
- Vitamins and their derivatives, unmixed  
-2936.21  Vitamins A and their derivatives  
-2936.22  Vitamin B 1 and its derivatives  
-2936.23  Vitam in B2 and its derivatives  
-2936.24  D- or DL -Pantothenic acid (Vitamin B 3 or Vitamin B 5) and its derivatives  
-2936.25  Vitamin B 6 and its derivatives  
-2936.26  Vitamin B 12 and its derivatives  
-2936.27  Vitamin C and its derivatives  
-2936.28  Vitamin E and its d erivatives  
- Polypeptide hormones, protein hormones and glycoprotein hormones, their derivatives and structural 
-analogues  
-2937.11  Somatotropin, its derivatives and structural analogues  
-2937.12  Insulin and its salts  
- Steroidal hormones, their derivatives  and structural analogues  
-2937.21  Cortisone, hydrocortisone, prednisone (dehydrocortisone) and prednisolone (dehydrohydrocortisone)  
-2937.22  Halogenated derivatives of corticosteroidal hormones  
-2937.23  Oestrogens and progestogens  
- Antibiotics  
-2941.10  Penicillins and their derivatives with a penicillanic acid structure; salts thereof  
-2941.20  Streptomycins and their derivatives; salts thereof  
-2941.30  Tetracyclines and their derivatives; salts thereof  
-2941.40  Chloramphenicol and its derivatives; salts t hereof  
-2941.50  Erythromycin and its derivatives; salts thereof  
-  
-   List of H.S. codes of items sent frequently by post  
- 
-4  
-Pharmaceutical products  (chapter  30) 
-  
-3002.10  Antisera and other blood fractions and modified immunological products, whether or not obtained by means  
-of biotechnological processe s 
-3002.20  Vaccines for human medicine  
-3002.30  Vaccines for veterinary medicine  
- Medicaments consisting of mixed or unmixed products for therapeutic or prophylactic uses, put up in 
-measured doses (including those in the form of transdermal administration  systems) or in forms or packings 
-for retail sale:  
-3004.10  – containing penicillins or derivatives thereof, with a penicillanic acid structure, or streptomycins or their 
-derivatives  
-3004.20  – containing other antibiotics  
-3004.31  – containing insulin  
-3004.32  – containing corticosteroid hormones, their derivates and structural analogues  
-3004.40  – containing alkaloids or derivatives thereof but not containing hormones  or antibiotics  
- Wadding, gauze, bandages and similar articles (for example, dressings, adhesive plasters, poultices), 
-impregnated or coated with pharmaceutical substances or put up in forms or packings for retail sale  
-for medical, surgical, dental or veterinary purposes  
-3005.10  Adhesive dressings and other articles having an adhesive layer  
-3006.10  Sterile surgical catgut, similar sterile suture materials and sterile tissue adhesives for surgical wound closure; 
-sterile laminaria and sterile laminaria tents; sterile absorbable surgical or dental haemostatics  
-3006.20  Blood -grouping reagents  
-3006.40  Dental cements and other dental fillings; bone reconstruction cements  
-3006.50  First-aid boxes and kits  
-3006.60  Chemical contraceptive preparations based on hormones  
-3006.70  Gel preparations designed to be used in human or veterinary medicine as  a lubricant for parts of the body  
-for surgical operations or physical examinations or as a coupling agent between the body and medical 
-instruments  
-  
-  
-Tanning or dyeing extracts; tannins and their derivatives; dyes, pigments and other colouring matter ;  
-paints and varnishes; putty and other mastics; inks  (chapter  32) 
-  
-3213.10  Artists', students' or signboard painters' colours, modifying tints, amusement colours and the like, in tablets, 
-tubes, jars, bottles, pans or in similar forms or packings , in sets 
-  
-  
-Essential oils and resinoids; perfumery, cosmetic or toilet preparations  (chapter  33) 
-  
-3303.00  Perfumes and toilet waters  
-3304.10  Lip make -up preparations  
-3304.20  Eye make -up preparations  
-3304.30  Manicure or pedicure preparations  
-3305.1 0 Shampoo s 
-3305.30  Hair lacquers  
-3306.10  Dentifrices  
-3307.10  Pre-shave, shaving or after -shave preparations  
-3307.20  Personal deodorants and antiperspirants  
-3307.30  Perfumed bath salts and other bath preparations  
-  
-  
-Soap, organic surface -active age nts, washing preparations, lubricating preparations, artificial waxes,  
-prepared waxes, polishing or scouring preparations, candles (chapter  34) 
-  
-3401.1 1 Soap f or toilet use  
-3401.30  Organic surface -active products and preparations for washing the skin,  in the form of liquid  or cream  
-and put up for retail sale, whether or not containing soap  
-3405.10  Polishes, creams and similar preparations for footwear or leather  
-3406.00  Candles, tapers and the like  
-  
-  
-Albumin oidal substances; modified starches; glues; enzymes (chapter  35) 
-  
-3506. 10 
- Products suitable for use as glues or adhesives, put up for retail sale as glues or adhesives, not exceeding  
-a net weight of 1 kg  
-   
-   List of H.S. codes of items sent frequently by post  
- 
-5  
-Photographic or cinematographic goods (chapter  37) 
-  
-3702.31  Photographi c films for colour photography (polychrome ), without perforation  
-3702.54  Photographic films for colour photography (polychrome ), with  perforation  
-  
- 
-Plastics and articles thereof  (chapter  39) 
-  
-3924.10  Tableware and kitchenware  
-3926.10  Office or sch ool supplies  
-3926.40  Statuettes and other ornamental articles  
-  
-  
-Rubber and articles thereof  (chapter  40) 
-  
-4014.10  Sheath contraceptives  
-4016.92  Erasers  
-  
-  
-Articles of leather; saddlery and harness; travel goods, handbags and similar container s;  
-articles of animal gut (chapter  42) 
-  
-4201.00  Saddlery and harness for any animal (including traces, leads, knee pads, muzzles, saddle cloths,  
-saddle bags, dog coats and the like), of any material  
- Handbags, whether or not with shoulder strap, incl uding those without handle : 
-4202.21  – with outer surface of leather, of composition leather or of patent leather  
-4202.22  – with outer surface of plastic sheeting or of textile materials  
- Articles of a kind normally carried in the pocket or in the handba g (e.g. wallets, purses, cigarette cases  
-and tobacco pouches) : 
-4202.31  – with outer surface of leather, of composition leather or of patent leather  
-4202.32  – with outer surface of plastic sheeting or of textile materials  
- Articles of apparel and clothi ng accessories, of leather or of composition leather  
-4203.2 1 Gloves, mittens and mitts, specially designed for use in sports  
-4203.29  Gloves, mittens and mitts,  other than for use in sports  
-4203.30  Belts and bandoliers  
-  
-  
-Wood and articles of wood; w ood charcoal (chapter  44) 
-  
-4414.00  Wooden frames for paintings, photographs, mirrors or similar objects  
-4420.10  Statuettes and other ornaments, of wood  
-4421.10  Clothes hangers  
-  
-  
-Cork and articles of cork (chapter  45) 
-  
-4503.10  Corks and stopper s 
-  
-  
-Paper and paperboard; articles of paper pulp, of paper or of paperboard (chapter  48) 
-  
-4817.10  Envelop es 
-4817.20  Letter cards, plain postcards and correspondence cards  
-4817.30  Boxes, pouches, wallets and writing compendiums, of paper or paperb oard, containing an assortment  
-of paper stationery  
-4818.10  Toilet paper  
-4818.20  Handkerchiefs, cleansing or facial tissues and towels  
-4818.30  Tablecloths and serviettes  
-4818.40  Sanitary towels and tampons, napkins and napkin liners for babies and simi lar sanitary articles  
-4820.10  Registers, account books, note books, order books, receipt books, letter pads, memorandum pads,  
-diaries and similar articles  
-4820.20  Exercise books  
-  
-   List of H.S. codes of items sent frequently by post  
- 
-6  
-Printed books, newspapers, pictures and other products of the prin ting industry; manuscripts, typescripts  
-and plans (chapter  49) 
-  
-4901.91  Dictionaries and encyclopaedias, and serial instalments thereof  
-4901.99  Printed books, brochures, leaflets and similar printed matter  
-4903.00  Children's picture, drawing or colou ring books  
-4910.00  Calendars of any kind, printed, including calendar blocks  
-4911.10  Trade advertising material and commercial catalogues  
-4911.91  Pictures, designs and photographs  
-  
-  
-Silk (chapter  50) 
-  
-5006.00  Silk yarn and yarn spun from silk wa ste, put up for retail sale  
-  
-  
-Wool  (chapter  51) 
-  
-5109.10  Yarn of wool or of fine animal hair, put up for retail sale  containing 85% or more by weight of wool  
-or of fine animal hair  
-  
-  
-Cotton (chapter  52) 
-  
-5204.20  Cotton sewing thread, wheth er or not put up for retail sale  
-  
-  
-Man-made filaments (chapter  54) 
-  
- Sewing thread of man -made filaments, whether or not put up for retail sale : 
-5401.10  – of synthetic filaments  (e.g. polyamides, polyesters, polyurethanes)  
-5401.20  – of artificial  filaments  (e.g. viscose rayon and cellulose acetate)  
-  
-  
-Man-made staple fibres (chapter  55) 
-  
- Synthetic filament tow:  
-5501.10  – of nylon or other polyamides  
-5501.20  – of polyesters  
-5501.30  – acrylic or modacrylic  
- Sewing thread of man -made stap le fibres, whether or not put up for retail sale : 
-5508.10  – of synthetic staple fibres  
-5508.20  – of artificial staple fibres  
-  
-  
-Carpets (chapter  57) 
-  
-5701.10  Carpets and other textile floor coverings, knotted, whether or not made up , of wool or fi ne animal hair  
-  
-  
-Special woven fabrics; tufted textile fabrics; lace; tapestries; trimmings; embroidery (chapter  58) 
-  
-5805.00  Hand -woven tapestries of the type Gobelins, Flanders, Aubusson, Beauvais and the like, and needle -worked 
-tapestries (for e xample, petit point, cross stitch), whether or not made up  
-  
-  
-Articles of apparel and clothing accessories, knitted or crocheted  (chapter  61) 
-  
- Men's or boys' shirts, knitted or crocheted : 
-6105.10  – of cotton  (min. 50%)  
-6105.20  – of man -made fibre s (min. 50%)  
- Women's or girls' blouses, shirts and shirt -blouses, knitted or crocheted : 
-6106.10  – of cotton  (min. 50%)  
-6106.20  – of man -made fibres  (min. 50%)   List of H.S. codes of items sent frequently by post  
- 
-7  
- Men's or boys' underpants, briefs, nightshirts, pyjamas, bathrobes, dressing gowns and si milar articles,  
-knitted or crocheted  
- Underpants and briefs : 
-6107.11  – of cotton  (min. 50%)  
-6107.12  – of man -made fibres  (min. 50%)  
- Nightshirts and pyjamas : 
-6107.21  – of cotton  (min. 50%)  
-6107.22  – of man -made fibres  (min. 50%)  
- Women's or girls' slips, petticoats, briefs, panties, nightdresses, pyjamas, négligés, bathrobes,  
-dressing gowns and similar articles, knitted or crocheted  
- Slips and petticoats : 
-6108.11  – of man -made fibres  (min. 50%)  
-6108.19  – of other textile materials  
- Briefs and p anties:  
-6108.21  – of cotton  (min. 50%)  
-6108.22  – of man -made fibres  (min. 50%)  
- Nightdresses and pyjamas:  
-6108.31  – of cotton  (min. 50%)  
-6108 .32 – of man -made fibres  (min. 50%)  
- T-shirts, singlets and other vests, knitted or crocheted : 
-6109.10  – of cotton  (min. 50%)  
-6109. 90 – of other textile materials  
- Jerseys, pullovers, cardigans, waist -coats and similar articles, knitted or crocheted:  
-6110.11  – of wool  (min. 50%)  
-6110.12  – of Kashmir (cashmere) goats  (min. 50%)  
-6110.20  – of cotton  (min. 50%)  
-6110.30  – of man -made fibres  (min. 50%)  
- Babies' garments and clothing accessories, knitted or crocheted:  
-6111.1 0 – of wool or fine animal hair  (min. 50%)  
-6111.20  – of cotton  (min. 50%)  
-6111.3 0 – of synthetic fibres  (min. 50%)  
- Track suits:  
-6112.11  – of cotton  (min. 50%)  
-6112.1 2 – of synthetic fibres  (min. 50%)  
- Men's or boys' swimwear : 
-6112.31  – of synthetic fibres  
- Women's or girls' swimwear : 
-6112.41  – of synthetic fibres  
- Panty hose and tights : 
-6115.1 1 – of synthetic fibres , less than 67 d ecitex  
-6115.12  – of synthetic fibres, 67 decitex or more  
-6115. 20 Women's full -length or knee -length hosiery  
- Socks : 
-6115.91  – of wool or fine animal hair  (min. 50%)  
-6115.9 2 – of cotton  (min. 50%)  
-6115. 93 – of synthetic fibres  (min. 50%)  
- Gloves, mit tens and mitts, knitted or crocheted : 
-6116.10  – Impregnated, coated or covered with plastics or rubber  
-6116. 91 – of wool or fine animal hair  (min. 50%)  
-6116. 92 – of cotton  (min. 50%)  
-6116.93  – of synthetic fibres  (min. 50%)  
-  
-  
-Articles of apparel a nd clothing accessories, not knitted or crocheted  (chapter 62)  
-  
- Men's or boys' overcoats, car -coats, capes, cloaks, anoraks (including ski -jackets), wind -cheaters,  
-wind-jackets and similar articles  
- Overcoats, raincoats, car -coats, capes, cloaks and similar articles:  
-6201.11  – of wool or fine animal hair  (min. 50%)  
-6201.12  – of cotton  (min. 50%)  
-6201.13  – of man -made fibres  (min. 50%)  
-6201.19  – of other textile materials  
- Anoraks (including ski -jackets), wind -cheaters, wind -jackets and similar ar ticles : 
-6201.91  – of wool or fine animal hair  (min. 50%)  
-6201.92  – of cotton  (min. 50%)  
-6201.93  – of man -made fibres (min. 50%)  
-6201.99  – of other textile materials   List of H.S. codes of items sent frequently by post  
- 
-8  
- Women's or girls' overcoats, car -coats, capes, cloaks, anoraks (including ski -jacke ts), wind -cheaters,  
-wind-jackets and similar articles  
- Overcoats, raincoats, car -coats, capes, cloaks and similar articles:  
-6202.11  – of wool or fine animal hair  (min. 50%)  
-6202.12  – of cotton  (min. 50%)  
-6202.13  – of man -made fibres  (min. 50%)  
-6202.1 9 – of other textile materials  
- Anoraks (including ski -jackets), wind -cheaters, wind -jackets and similar articles : 
-6202.91  – of wool or fine animal hair  (min. 50%)  
-6202.92  – of cotton  (min. 50%)  
-6202.93  – of man -made fibres  (min. 50%)  
-6202.99  – of other textile materials  
- Men's or boys' suits, ensembles, jackets, blazers, trousers, bib and brace overalls, breeches and shorts  
-(other than swimwear)  
- Suits:  
-6203.11  – of wool or fine animal hair  (min. 50%)  
-6203.12  – of synthetic fibres  (min. 50%)  
-6203.19 – of cotton  (min. 50%)  
- Jackets and blazers : 
-6203.31  – of wool or fine animal hair  (min. 50%)  
-6203.32  – of cotton  (min. 50%)  
-6203.33  – of synthetic fibres  (min. 50%)  
- Trousers, bib and brace overalls, breeches and shorts:  
-6203.41  – of wool or fi ne animal hair  (min. 50%)  
-6203.42  – of cotton  (min. 50%)  
-6203.43  – of synthetic fibres  (min. 50%)  
-6203.49  – of other textile materials  
- Women's or girls' suits, ensembles, jackets, blazers, dresses, skirts, divided skirts, trousers,  
-bib and brace over alls, breeches and shorts (other than swimwear)  
- Suits:  
-6204.11  – of wool or fine animal hair  (min. 50%)  
-6204.12  – of cotton  (min. 50%)  
-6204.13  – of synthetic fibres  (min. 50%)  
- Jackets and blazers : 
-6204.31  – of wool or fine animal hair  (min. 50%)  
-6204.32  – of cotton  (min. 50%)  
-6204.33  – of synthetic fibres  (min. 50%)  
- Dresses : 
-6204.41  – of wool or fine animal hair  (min. 50%)  
-6204.42  – of cotton  (min. 50%)  
-6204.43  – of synthetic fibres  (min. 50%)  
-6204.44  – of artificial fibres  (min. 50%)  
- Skirts and divided skirts : 
-6204.51  – of wool or fine animal hair  (min. 50%)  
-6204.52  – of cotton  (min. 50%)  
-6204.53  – of synthetic fibres  (min. 50%)  
- Trousers, bib and brace overalls, breeches and shorts:  
-6204.61  – of wool or fine animal hair  (min. 50%)  
-6204.62  – of cotton  (min. 50%)  
-6204.63  – of synthetic fibres  (min. 50%)  
- Brassières, girdles, corsets, braces, suspenders, garters and similar articles and parts thereof,  
-whether or not knitted or crocheted  
-6212.10  Brassières  
-6212.20  Girdles and panty -girdles  
-6212.30  Corselettes  
- Shawls, scarves, mufflers, mantillas, veils and the like : 
-6214.10  – of silk or silk waste  
-6214.20  – of wool or fine animal hair  (min. 50%)  
-6214.30  – of synthetic fibres  (min. 50%)  
-6214.40  – of artificial fibres  (min. 50%)  
- Ties, bow ties and cravats:  
-6215.10  – of silk or silk waste  
-6215.20  – of man -made fibres  
-  
-   List of H.S. codes of items sent frequently by post  
- 
-9  
-Other made up textile articles; sets; worn clothing and worn textile articles; rags (chapter  63) 
-  
-6302.10  Bed linen, knitted or crocheted  
-6302.40  Table linen, knitted or crocheted  
-6302.6 0 Toilet linen and kitchen linen, of terry towelling or similar terry fabrics, of cotton  
-  
-  
-Footwear, gaiters and the like; parts of such articles (chapter  64) 
-  
- Footwear : 
-6403.59  – with outer soles and upper p arts of leather  
-6403.99  – with outer soles of rubber or plastics and upper parts of leather  
-6404.11  Sports footwear; tennis shoes, basketball shoes, gym shoes, training shoes and the like  
- Footwear : 
-6404 .19 – with outer soles of rubber or plastics and upper parts of textiles  
-6404 .20 – with outer soles of leather and upper parts of textiles  
-  
-  
-Ceramic products (chapter  69) 
-  
-6911.10  Tableware and kitchenware  
-6913.10  Statuettes and other ornamental ceramic articles  of porcelain or china  
-  
-  
-Glass and glassware (chapter  70) 
-  
-7013.21  Drinking glasses of lead crystal  
-  
-  
-Natural or cultured pearls, precious or semi -precious stones, precious metals, metals clad with precious metal, 
-and articles thereof; imitation jewellery (chapter  71) 
-  
-7101.10 Natural pearls  
- Cultured pearls : 
-7101.21  – unworked  
-7101.22  – worked  
- Diamonds, whether or not worked, but not mounted or set  
- Industrial : 
-7102.21  – unworked or simply sawn, cleaved or bruted  
- Non-industrial : 
-7102.31  – unworked or simply sawn,  cleaved or bruted  
- Precious stones (other than diamonds) and semi -precious stones, whether or not worked or graded  
-but not strung, mounted or set; ungraded precious stones (other than diamonds) and semi -precious stones, 
-temporarily strung for convenienc e of transport : 
-7103.10  – unworked or simply sawn or roughly shaped  
- Otherwise worked : 
-7103.91  – rubies, sapphires and emeralds  
- Synthetic or reconstructed precious or semi -precious stones, whether or not worked or graded but not strung, 
-mounted or set ; ungraded synthetic or reconstructed precious or semi -precious stones, temporarily strung  
-for convenience of transport:  
-7104.10  – piezo-electric quartz  
-7117. 19 Imitation jewellery  of base metal, whether or not plated with precious metal  
-  
-  
-Articles  of iron or steel (chapter  73) 
-  
-7319.10  Sewing, darning or embroidery needles  
-7319.20  Safety pins  
-  
-  
-Tools, implements, cutlery, spoons and forks, of base metal; parts thereof of base metal (chapter  82) 
-  
- Files, rasps, pliers (including cutting pliers), pincers, tweezers, metal cutting shears, pipe -cutters,  
-bolt croppers, perforating punches and similar hand tools  
-8203.10  Files, rasps and similar tools  
-8203.20  Pliers (including cutting pliers), pincers, tweezers and similar tools   List of H.S. codes of items sent frequently by post  
- 
-10  
- Hand -operated spanners and wrenches (including torque meter wrenches but not including tap wrenches); 
-interchangeable spanner sockets, with or without handles  
- Hand -operated spanners and wrenches:  
-8204.11  – non-adjustable  
-8204.12  – adjustable  
- Hand tools (inclu ding glaziers' diamonds), not elsewhere specified or included  
-8205.10  Drilling, threading or tapping tools  
-8205.20  Hammers  
-8205.30  Planes, chisels, gouges and similar cutting tools for working wood  
-8205.40  Screwdrivers  
- Other hand tools (including gla ziers' diamonds):  
-8205.51  – household tools  
- Interchangeable tools for hand tools, whether or not power -operated, or for machine -tools (for example, for 
-pressing, stamping, punching, tapping, threading, drilling, boring, broaching, milling, turning or sc rew driving), 
-including dies for drawing or extruding metal  
-8207.20  Dies for drawing or extruding metal  
-8207.30  Tools for pressing, stamping or punching  
-8207.40  Tools for tapping or threading  
-8207.50  Tools for drilling, other than for rock drilling  
-8207.60  Tools for boring or broaching  
-8207.70  Tools for milling  
- Knives and cutting blades, for machines or for mechanical appliances : 
-8208.10  – for metal working  
-8208.20  – for wood working  
-8208.30  – for kitchen appliances or for machines used by the fo od industry  
- Knives with cutting blades, serrated or not (including pruning knives), other than knives of heading 82.08,  
-and blades therefor  
-8211.91  Table knives having fixed blades  
-8211.93  Knives having other than fixed blades  
-8212.20  Safety razor bl ades  
-8214.10  Paper knives, letter openers, erasing knives, pencil sharpeners and blades therefor  
-8214.20  Manicure or pedicure sets and instruments (including nail files)  
- Spoons, forks, ladles, skimmers, cake -servers, fish -knives, butter -knives, sugar t ongs and similar kitchen  
-or tableware : 
-8215.10  – sets of assorted articles containing at least one article plated with precious metal  
-8215.2 0 – other sets of assorted articles (e.g. of stainless steel)  
-8215.91  – other sets of assorted articles plated w ith precious metal  
-  
-  
-Miscellaneous articles of base metal (chapter  83) 
-  
-8301.10  Padlocks  
-8301.30  Locks of a kind used for furniture  
-8301.50  Clasps and frames with clasps, incorporating locks  
-8301.70  Keys presented separately  
-8302.10  Hinges  
-8302.20 Castors  
- Fittings for loose -leaf binders or files, letter clips, letter corners, paper clips, indexing tags and similar office 
-articles, of base metal; staples in strips (for example, for offices, upholstery, packaging), of base metal  
-8305.10  Fittin gs for loose -leaf binders or files  
-8305.20  Staples in strips  
-8306.21  Statuettes and other ornaments plated with precious metal  
-8306.2 9 Statuettes and other ornaments of base  metal  
-8306.30  Photograph, picture or similar frames; mirrors  
- Clasps, frames with clasps, buckles, buckle -clasps, hooks, eyes, eyelets and the like, of base metal, of a kind 
-used for clothing, footwear, awnings, handbags, travel goods or other made up articles; tubular or bifurcated 
-rivets, of base metal; beads and spangles, of bas e metal  
-8308.10  Hooks, eyes and eyelets  
-8308.20  Tubular or bifurcated rivets  
-  
-  List of H.S. codes of items sent frequently by post  
- 
-11  
-Electronic appliances (chapter  84) 
-  
-8470.10  Electronic calculators capable of operation without an  external source of electric power and pocket -size data 
-recording, r eproducing and displaying machines with calculating functions  
-8471.30  Portable digital automatic data processing machines, weighing not more than 10 kg, consisting of a least  
-a central processing unit, a keyboard and a display  
-8473.30  Parts and accessor ies of the machin es of code  8471.30 
-  
-  
-Electrical machinery and equipment and parts thereof; sound recorders and reproducers, television image  
-and sound recorders and reproducers, and parts and accessories of such articles (chapter  85) 
-  
- Primary c ells and primary batteries : 
-8506.10  – manganese dioxide  
-8506.30  – mercuric oxide  
-8506.40  – silver oxide  
-8506.50  – lithium  
-8506.60  – air-zinc 
-8510.10  Shavers  
-8510.20  Hair clippers  
-8510.30  Hair-removing appliances  
-8513.10  Portable electric lamps des igned to function by their own source of energy  
-8516.31  Hair dryers  
-8518.30  Headphones and earphones, whether or not combined with a microphone  
-8519.92  Pocket -size cassette -players  
-8519.99  CD-players  
-8520.90  MP3 players  
- Discs for laser reading syste ms: 
-8524.32  – for reproducing sound only  (CD's)  
-8524.39  – for reproducing sound and image (DVD's)  
-8525.2 0 Mobile phones  
-8525.40  Still image video cameras and other video camera recorders; digital cameras  
-8527.12  Pocket -size radio cassette -players  
-8534.00 Printed circuits  
- Electric filament or discharge lamps:  
-8539.21  – tungsten halogen  
-8539.22  – other, of a power not exceeding 200 W and for a voltage exceeding 100 V  
- Electronic integrated circuits and microassemblies  
-8542.10  Cards incorporating a n electronic integrated circuit ("smart" cards)  
-8542.70  Electronic microassemblies  
-  
-  
-Vehicles other than railway or tramway rolling -stock, and parts and accessories thereof  (chapter 87)  
-  
- Parts and accessories of the motor vehicles  
-8708.21  Safety  seat belts  
-8708.31  Mounted brake linings  
-8708.80  Suspension shock -absorbers  
-8708.94  Steering wheels  
-8708.99  Other parts and accessories of motor vehicles  
-8714.99  Parts and accessories  of cycles, motorcycles  and carriages for disabled persons  
-  
-  
-Optical, photographic, cinematographic, measuring, checking, precision, medical or surgical instruments  
-and apparatus; parts and accessories thereof (chapter  90) 
-  
-9001.10  Optical fibres, optical fibre bundles and cables  
-9001.30  Contact lenses  
-9001.40  Spectacle lenses of glass  
-9001.50  Spectacle lenses of other materials  
-9002.11  Objective lenses for cameras, projectors or photographic enlargers or reducers  
-9002.20  Filters  
- Frames and mountings : 
-9003.11  – of plastics  
-9003.19  – of other materials   List of H.S. codes of items sent frequently by post  
- 
-12  
-9004.10  Sunglasses  
-9004.90  Glasses (spectacles), other than sunglasses  
-9005.10  Binoculars  
-9006.51  Cameras with a through -the-lens viewfinder (single lens reflex (SLR)), for roll film of a width  
-not exceeding 35 mm  
-9006.61  Discharge lamp ("electronic")  flashlight apparatus  
-9007.11  Came ras for film of less than 16 mm width or for double -8 mm film  
- Artificial teeth and dental fittings  
-9021.21  Artificial teeth  
-9021.40  Hearing aids, excluding parts and accessories  
-9021.50  Pacemakers for stimulating hea rt muscles, excluding parts and accessories  
-  
- 
-Clocks and watches and parts thereof  (chapter  91) 
-  
- Wrist -watches, pocket -watches and other watches, including stop -watches, with case of precious metal  
-or of metal clad with precious metal  
- Wrist -watches, electrically operated, whether or not incorporating a stop -watch facility : 
-9101.11  – with mechanical display only  
-9101.12  – with opto -electronic display only  
- Other wrist -watches, whether or not incorporating a stop -watch facility : 
-9101.21  – with automatic winding  
- Wrist -watches, pocket -watches and other watches, including stop -watches, other than those with case  
-of precious metal  or of metal clad with precious metal  
- Wrist -watches, electrically operated, whether or not incorporating a stop -watch facility : 
-9102.11  – with mechanical display only 
-9102.12  – with opto -electronic display only  
- Other wrist -watches, whether or not incorporating a stop -watch facility : 
-9102.21  – with automatic winding  
-9103.10  Clocks with watch movements,  electrically  operated  
-9105.11  Alarm clocks, electrically operated  
- Watch movements, complete and assembled , electrically operated : 
-9108.11  – with mechanical display only or with a device to which a mechanical display can be incorporated  
-9108.12  – with opto -electro nic display only  
-9108.20  Watch movements, complete and assembled , not electrically operated , with automatic winding  
- Watch cases and parts thereof : 
-9111.10  – cases of precious metal or of metal clad with precious metal  
-9111.20  – cases of base metal, wh ether or not gold - or silver -plated  
- Watch straps, watch bands and watch bracelets, and parts thereof : 
-9113.10  – of precious metal or of metal clad with precious metal  
-9113.20  – of base metal, whether or not gold - or silver -plated  
-9113.90  – of other ma terials (e.g. leather, plastics and textiles)  
- Other clock or watch parts  
-9114.10  Springs, including hair -springs  
-9114.20  Jewels  
-9114.30  Dials  
-9114.40  Plates and bridge s 
-  
-  
-Musical instruments; parts and accessories of such articles (chapter  92) 
-  
-9202.10  Violins  
-9202.90  Guitars  
-9204.20  Mouth organs  
-9205.10  Brass -wind instruments  
-9205.90  Clarinets  
-9208.10  Musical boxes  
-9209.10  Metronomes, tuning forks and pitch pipes  
-9209.20  Mechanisms for musical boxes  
-9209.30  Musical instrument strings  
-  
-  
-Arms and ammunition; parts and accessories thereof  (chapter 93)  
-  
-9307.00  Swords, cutlasses, bayonets, lances and similar arms and parts thereof and scabbards and sheaths therefor  
-  
-   List of H.S. codes of items sent frequently by post  
- 
-13  
-Lamps and lighting fittings (chapter  94) 
-  
-9405.20  Elect ric table, desk, bedside or floor -standing lamps  
-9405.30  Lighting sets of a kind used for Christmas trees  
-9405.50  Non-electrical lamps and lighting fittings  (candlesticks, candelabras)  
-  
-  
-Toys, games and sports requisites; parts and accessories there of (chapter  95) 
-  
-9502.10  Dolls, whether or not dressed  
-9502.91  Garments and accessories therefor, footwear and headgear  for dolls  
-9503.10  Electric trains, including tracks, signals and other accessories therefor  
-9503.20  Reduced -size ("scale") model a ssembly kits, whether or not working models, excluding those  
-of subheading 9503.10  
-9503.41  Toys representing animals or non -human creatures , stuffed  
-9503.50  Toy musical instruments and apparatus  
-9503.60  Puzzles  
-9503.80  Other toys and models, incorpora ting a motor  
-9504.10  Video games of a kind used with a television receiver  
-9504.40  Playing cards  
-9505.10  Articles for Christmas festivities  
-9506.12  Ski-fastenings (ski -bindings)  
-9506.32  Golf balls  
-9506.40  Articles and equipment for table -tennis  
-9506.61 Lawn -tennis balls  
-9506.62  Inflatable balls (e.g. footballs, handballs, basketballs)  
-9506.70  Ice skates and roller skates, including skating boots with skates attached  
- Fishing rods, fish -hooks and other line fishing tackle  
-9507.1 0 Fishing rods  
-9507.20 Fish-hooks, whether or not snelled  
-9507.30  Fishing reels  
-  
-  
-Miscellaneous manufactured articles (chapter  96) 
-  
- Tooth brushes, shaving brushes, hair brushes, nail brushes, eyelash brushes and other toilet brushes for use 
-on the person, includin g such brushes constituting parts of appliances  
-9603.21  Tooth brushes, including dental -plate brushes  
-9603.30  Artists' brushes, writing brushes and similar brushes for the application of cosmetics  
-9605.00  Travel sets for personal toilet, sewing or shoe or clothes cleaning  
-9606.10  Press -fasteners, snap -fasteners and press -studs and parts therefor  
- Buttons : 
-9606.21  – of plastics, not covered with textile material  
-9606.22  – of base metal, not covered with textile material  
-9606.29  – covered with textile  materials  
- Slide fasteners : 
-9607.11  – fitted with chain scoops of base metal  
-9607.1 9 – fitted with chain scoops of other materials (e.g. plastics)  
-9608.10  Ball point pens  
-9608.20  Felt tipped and other porous -tipped pens and markers  
-9608.40  Propellin g or sliding pencils  
-9608.60  Refills for ball point pens, comprising the ball point and ink -reservoir  
-9609.20  Pencil leads, black or coloured  
-9610.00  Slates and boards, with writing or drawing surfaces, whether or not framed  
-9611.00  Date, sealing or nu mbering stamps, and the like (including devices for printing or embossing labels),  
-designed for operating in the hand; hand -operated composing sticks and hand printing sets incorporating  
-such composing sticks  
-9612.10  Ribbons  for typewriters, etc.  
-9612.20 Ink-pads  
-9613.10  Pocket lighters, gas fuelled, non -refillable  
-9613.20  Pocket lighters, gas fuelled, refillable  
-9614.20  Pipes and pipe bowls  
- Combs, hair -slides and the like : 
-9615.11  – of hard rubber or plastics  
-9616.10  Scent sprays and similar toi let sprays, and mounts and heads therefor  
-  
-   List of H.S. codes of items sent frequently by post  
- 
-14  
-Works of art, collectors' pieces and antiques (chapter  97) 
-  
-9701.10  Paintings, drawings and pastels  
-9702.00  Original engravings, prints and lithographs  
-9703.00  Original sculptures and statuary, in any  material  
-9704.00  Postage stamps  (for collection)  
-9705.00  Collections and collectors' pieces of zoological, botanical, mineralogical, anatomical, historical, archaeological, 
-palaeontological, ethnographic or numismatic interest  
-  
-  
-Total : 457  goods  
-  
-  
  
 
         Evaluate this product for export eligibility:
-        {'name': 'Vodka', 'category': 'Miscellaneous Products', 'description': 'Vodka'}
+        {'name': 'Christmas Cap', 'category': 'Traditional & Ethnic Clothing', 'description': 'A Christmas cap is a festive headpiece typically worn during the holiday season, often associated with celebrations like Christmas parties, family gatherings, and holiday parades.'}
 
         Provide a clear yes/no response about whether this product can be exported.
         Include specific reasons from the guidelines supporting your decision.

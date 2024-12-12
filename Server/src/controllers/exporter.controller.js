@@ -7,6 +7,7 @@ import ProductModel from "../models/product.model.js";
 import createError from "../utils/createError.js";
 import PlaceOrderModel from "../models/order.model.js";
 import OrderStatusModel from "../models/orderStatus.model.js";
+import Docs from "../models/docs.model.js";
 import { findIndexById } from "../utils/findIndex.js";
 import { getOrderStatusForOrder } from "../utils/getOrderStatus.js";
 import { OpenAI } from 'openai';
@@ -151,7 +152,7 @@ export const addProduct = async (req, res, next) => {
   });
 
   try {
-    const response = await axios.post('https://bharat-udyog.onrender.com//validate-product', {
+    const response = await axios.post('http://localhost:7000/validate-product', {
       name: productName,
       category: category,
       description: description,
@@ -219,13 +220,13 @@ export const addProduct = async (req, res, next) => {
           }
         ]
       });
-  
+
       console.log("OpenAI Response:", openaiResponse.choices[0].message.content);
-  
+
       const festivals = JSON.parse(openaiResponse.choices[0].message.content);
-  
+
       saveProduct.festivals = festivals;
-  
+
       await saveProduct.save();
 
       if (!savedProduct) {
@@ -236,6 +237,29 @@ export const addProduct = async (req, res, next) => {
         message: "Product saved successfully with festival recommendations.",
         data: savedProduct,
       });
+
+      // Example usage in your async function
+      (async () => {
+        try {
+          const response = await axios.post('http://localhost:7000/generate', {
+            product_category: category
+          });
+
+          const exportDocuments = response.data["export_documents"]?.documents || [];
+
+          if (exportDocuments) {
+            const exportDocumentsModel = new Docs({
+              category,
+              documents: exportDocuments,
+            });
+
+            // await exportDocumentsModel.save();
+            console.log('Document saved successfully');
+          }
+        } catch (error) {
+          console.error('Error:', error);
+        }
+      })();
     }
     else {
       return createError(req, res, next, "Product violates export guidelines.", 400);
