@@ -10,17 +10,16 @@ import storage from "../firebase";
 import axios from "../axios/axios";
 
 function KYC() {
-
   const [isReloaded, setIsReloaded] = useState(false);
 
   useEffect(() => {
-    const reloadFlag = sessionStorage.getItem('reloaded');
+    const reloadFlag = sessionStorage.getItem("reloaded");
 
     if (!reloadFlag) {
-      sessionStorage.setItem('reloaded', 'true');
+      sessionStorage.setItem("reloaded", "true");
       window.location.reload();
     }
-  }, []); 
+  }, []);
 
   // State variables
   const history = useHistory();
@@ -84,9 +83,9 @@ function KYC() {
     }
   }, [imgUrl]);
 
-  useEffect(() => {
-    console.log(imgUrl);
-  }, [imgUrl]);
+  // useEffect(() => {
+  //   console.log(imgUrl);
+  // }, [imgUrl]);
 
   const handleSubmit = async (e) => {
     e.preventDefault();

@@ -38,14 +38,14 @@ const Exporter = new mongoose.Schema({
     type: Boolean,
     default: false,
   },
-  // latitude: {
-  //   type: String,
-  //   required: true,
-  // },
-  // longitude: {
-  //   type: String,
-  //   required: true,
-  // },
+  latitude: {
+    type: String,
+    required: true,
+  },
+  longitude: {
+    type: String,
+    required: true,
+  },
 });
 
 const ExporterModel = mongoose.model("Exporter", Exporter);

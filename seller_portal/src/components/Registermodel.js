@@ -59,7 +59,7 @@ const RegisterModal = () => {
   //         // Success callback
   //         (position) => {
   //           const { latitude, longitude } = position.coords;
-            
+
   //           // Call the callback with location data
   //           onLocationReceived({
   //             latitude,
@@ -82,7 +82,7 @@ const RegisterModal = () => {
   //             default:
   //               errorMessage = "An unknown error occurred.";
   //           }
-            
+
   //           // Call the error callback
   //           onLocationError(errorMessage);
   //         },
@@ -98,7 +98,7 @@ const RegisterModal = () => {
   //       onLocationError("Geolocation is not supported by this browser.");
   //     }
   //   }, []); // Empty dependency array means this runs once on mount
-  
+
   //   // No render method - this component works behind the scenes
   //   return null;
   // };
@@ -160,7 +160,9 @@ const RegisterModal = () => {
           toast.error("Please complete your KYC");
         })
         .catch((error) => {
-          toast.error(error.response?.data?.message || "Error submitting the form.");
+          toast.error(
+            error.response?.data?.message || "Error submitting the form."
+          );
         });
     }, 1000); // Adjust delay as necessary to sync with `getLocation`
   };
@@ -168,45 +170,45 @@ const RegisterModal = () => {
   // const onSubmitHandler = async (e) => {
   //   e.preventDefault();
 
-    // try {
-    //   // const coords = await getLocation();
-    //   // if (coords !== null) {
-    //   //   setDetails({
-    //   //     ...details,
-    //   //     latitude: coords.latitude,
-    //   //     longitude: coords.longitude,
-    //   //   });
+  // try {
+  //   // const coords = await getLocation();
+  //   // if (coords !== null) {
+  //   //   setDetails({
+  //   //     ...details,
+  //   //     latitude: coords.latitude,
+  //   //     longitude: coords.longitude,
+  //   //   });
 
-    //   // Rest of your form submission logic
-    //   const res = await axios.post("/exporter/registerExporter", details);
-    //   toast.success("Got the location and submitted the form");
-    //   setDetails(initialState);
-    //   dispatchModal({
-    //     type: "CLOSE_MODAL",
-    //   });
-    //   history.push(`/kyc/${res?.data?.id}`);
-    //   toast.error("Please complete your KYC..");
-    // } catch (error) {
-    //   console.error("Error getting location:", error);
-    //   toast.error("Error getting location. Please try again.");
-    // }
+  //   // Rest of your form submission logic
+  //   const res = await axios.post("/exporter/registerExporter", details);
+  //   toast.success("Got the location and submitted the form");
+  //   setDetails(initialState);
+  //   dispatchModal({
+  //     type: "CLOSE_MODAL",
+  //   });
+  //   history.push(`/kyc/${res?.data?.id}`);
+  //   toast.error("Please complete your KYC..");
+  // } catch (error) {
+  //   console.error("Error getting location:", error);
+  //   toast.error("Error getting location. Please try again.");
+  // }
 
-    // await axios
-    //   .post("/exporter/registerExporter", details)
-    //   .then((res) => {
-    //     toast.success(res.data.message);
-    //     setDetails(initialState);
-    //     dispatchModal({
-    //       type: "CLOSE_MODAL",
-    //     });
-    //     history.push(`/kyc/${res?.data?.id}`);
-    //     toast.error("Please complete your KYC");
-    //     // getLocation();
-    //     // toast.success("Got the location and submitted the form");
-    //   })
-    //   .catch((error) => {
-    //     toast.error(error.response.data.message);
-    //   });
+  // await axios
+  //   .post("/exporter/registerExporter", details)
+  //   .then((res) => {
+  //     toast.success(res.data.message);
+  //     setDetails(initialState);
+  //     dispatchModal({
+  //       type: "CLOSE_MODAL",
+  //     });
+  //     history.push(`/kyc/${res?.data?.id}`);
+  //     toast.error("Please complete your KYC");
+  //     // getLocation();
+  //     // toast.success("Got the location and submitted the form");
+  //   })
+  //   .catch((error) => {
+  //     toast.error(error.response.data.message);
+  //   });
   //};
 
   // useEffect(() => {

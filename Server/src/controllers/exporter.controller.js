@@ -30,14 +30,22 @@ export const registerExporter = async (req, res, next) => {
     city,
     address,
     pincode,
-    // latitude,
-    // longitude,
+    latitude = 0.0,
+    longitude = 0.0,
   } = req.body;
 
   // check if email exists
   let user = await ExporterModel.findOne({ email });
   if (user) {
     return createError(req, res, next, "Email already exists.", 400);
+  }
+
+  if (!latitude) {
+    latitude = 0.0;
+  }
+
+  if (!longitude) {
+    longitude = 0.0;
   }
 
   // save the user in database
@@ -48,8 +56,8 @@ export const registerExporter = async (req, res, next) => {
     city,
     address,
     pincode,
-    // latitude,
-    // longitude,
+    latitude,
+    longitude,
   });
 
   const savedUser = await user.save();
@@ -160,10 +168,13 @@ export const addProduct = async (req, res, next) => {
         category: category,
         description: description,
         image_url: photoUrl,
-    }
+      }
     );
 
-    if (response.data["is_exportable"] == true && response.data["image_verified"] == true) {
+    if (
+      response.data["is_exportable"] == true &&
+      response.data["image_verified"] == true
+    ) {
       const savedProduct = await saveProduct.save();
 
       const openaiResponse = await openai.chat.completions.create({
@@ -269,15 +280,36 @@ export const addProduct = async (req, res, next) => {
           console.error("Error:", error);
         }
       })();
-    }
-    else if (response.data["is_exportable"] == false && response.data["image_verified"] == true) {
-      return createError(req, res, next, "Product violates export guidelines.", 400);
-    }
-    else if (response.data["is_exportable"] == true && response.data["image_verified"] == false) {
-      return createError(req, res, next, "Product image and description not matching.", 400);
-    }
-    else{
-      return createError(req, res, next, "Product violates export guidelines and image not matching.", 400);
+    } else if (
+      response.data["is_exportable"] == false &&
+      response.data["image_verified"] == true
+    ) {
+      return createError(
+        req,
+        res,
+        next,
+        "Product violates export guidelines.",
+        400
+      );
+    } else if (
+      response.data["is_exportable"] == true &&
+      response.data["image_verified"] == false
+    ) {
+      return createError(
+        req,
+        res,
+        next,
+        "Product image and description not matching.",
+        400
+      );
+    } else {
+      return createError(
+        req,
+        res,
+        next,
+        "Product violates export guidelines and image not matching.",
+        400
+      );
     }
   } catch (error) {
     console.error("Error processing product:", error);
