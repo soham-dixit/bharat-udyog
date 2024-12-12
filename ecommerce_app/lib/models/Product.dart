@@ -31,7 +31,7 @@ class Product {
 
 List<Product> allProducts = [];
 List<Product> festiveProducts = [];
-
+List<Product> recommendedProducts = [];
 List<Product> demoProducts = [
   Product(
     id: "657d13cea1bab7076a51139f",

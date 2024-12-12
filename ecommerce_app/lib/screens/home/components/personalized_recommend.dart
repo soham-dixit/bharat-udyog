@@ -18,7 +18,7 @@ class PersonalizedRecommend extends StatelessWidget {
           padding:
               EdgeInsets.symmetric(horizontal: getProportionateScreenWidth(20)),
           child: SectionTitle(
-              title: recommendForYouTranslations[crntSlctdLan]!, press: () {}),
+              title: recommendForYouTranslations[crntSlctdLan]!, press: () {},recommend: true,),
         ),
         SizedBox(height: getProportionateScreenWidth(20)),
         SingleChildScrollView(
@@ -27,7 +27,7 @@ class PersonalizedRecommend extends StatelessWidget {
           child: Row(
             children: [
               ...List.generate(
-                allProducts.length, // personal_recommendation Product
+                recommendedProducts.length, // personal_recommendation Product
                 (index) {
                   if (allProducts[index].isPopular)
                     return ProductCard(product: allProducts[index]);
