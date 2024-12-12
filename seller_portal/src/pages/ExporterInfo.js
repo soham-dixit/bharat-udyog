@@ -37,6 +37,7 @@ const ExporterInfo = () => {
           `/exporter/getExporterInfo/${state.user.id}`
         );
         setDetails(response.data.data);
+        // Concatenate details for the chatbot data
       } catch (error) {
         toast.error(
           error.response?.data?.message || "Failed to fetch details."
@@ -66,6 +67,23 @@ const ExporterInfo = () => {
         details
       );
       toast.success(response.data.message);
+      const concatenatedData = `
+        About Business: ${details.aboutBusiness}
+        About Products: ${details.aboutProducts}
+        Range & Specifications: ${details.rangeSpecs}
+      `.trim();
+
+      // Submit chatbot data
+      const chatbotResponse = await axios.post(
+        "https://c2b9-49-249-229-42.ngrok-free.app/addChatBotData",
+        {
+          seller_id: details.exporterId,
+          data: concatenatedData,
+        }
+      );
+      toast.success(
+        chatbotResponse.data.message || "Chatbot data submitted successfully!"
+      );
     } catch (error) {
       toast.error(error.response?.data?.message || "An error occurred");
     } finally {
