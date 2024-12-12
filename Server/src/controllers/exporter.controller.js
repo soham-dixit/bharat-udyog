@@ -10,9 +10,9 @@ import OrderStatusModel from "../models/orderStatus.model.js";
 import Docs from "../models/docs.model.js";
 import { findIndexById } from "../utils/findIndex.js";
 import { getOrderStatusForOrder } from "../utils/getOrderStatus.js";
-import { OpenAI } from 'openai';
+import { OpenAI } from "openai";
 import dotenv from "dotenv";
-import axios from 'axios';
+import axios from "axios";
 
 dotenv.config();
 
@@ -152,20 +152,23 @@ export const addProduct = async (req, res, next) => {
   });
 
   try {
-    const response = await axios.post('http://localhost:7000/validate-product', {
-      name: productName,
-      category: category,
-      description: description,
-    });
+    const response = await axios.post(
+      "http://localhost:7000/validate-product",
+      {
+        name: productName,
+        category: category,
+        description: description,
+      }
+    );
 
     if (response.data["is_exportable"] == true) {
       const savedProduct = await saveProduct.save();
 
       const openaiResponse = await openai.chat.completions.create({
-        model: 'gpt-4', // Ensure this is the correct model
+        model: "gpt-4", // Ensure this is the correct model
         messages: [
           {
-            role: 'system',
+            role: "system",
             content: `You are an expert cultural product matcher specializing in Indian festivals and traditional products. Your task is to intelligently map products to their most culturally relevant festivals. 
   
           STRICT GUIDELINES:
@@ -207,21 +210,24 @@ export const addProduct = async (req, res, next) => {
           - An empty array [] if the product is not culturally significant.
           - A maximum of 3-4 festivals for each culturally significant product.
   
-          Only return festivals from the provided list.`
+          Only return festivals from the provided list.`,
           },
           {
-            role: 'user',
+            role: "user",
             content: `Here are the product details:
           Product Name: ${productName}
           Description: ${description}
           Category: ${category}
           Price: ₹${price}
-          Weight: ${weight} kg`
-          }
-        ]
+          Weight: ${weight} kg`,
+          },
+        ],
       });
 
-      console.log("OpenAI Response:", openaiResponse.choices[0].message.content);
+      console.log(
+        "OpenAI Response:",
+        openaiResponse.choices[0].message.content
+      );
 
       const festivals = JSON.parse(openaiResponse.choices[0].message.content);
 
@@ -241,11 +247,12 @@ export const addProduct = async (req, res, next) => {
       // Example usage in your async function
       (async () => {
         try {
-          const response = await axios.post('http://localhost:7000/generate', {
-            product_category: category
+          const response = await axios.post("http://localhost:7000/generate", {
+            product_category: category,
           });
 
-          const exportDocuments = response.data["export_documents"]?.documents || [];
+          const exportDocuments =
+            response.data["export_documents"]?.documents || [];
 
           if (exportDocuments) {
             const exportDocumentsModel = new Docs({
@@ -254,22 +261,26 @@ export const addProduct = async (req, res, next) => {
             });
 
             // await exportDocumentsModel.save();
-            console.log('Document saved successfully');
+            console.log("Document saved successfully");
           }
         } catch (error) {
-          console.error('Error:', error);
+          console.error("Error:", error);
         }
       })();
-    }
-    else {
-      return createError(req, res, next, "Product violates export guidelines.", 400);
+    } else {
+      return createError(
+        req,
+        res,
+        next,
+        "Product violates export guidelines.",
+        400
+      );
     }
   } catch (error) {
-    console.error('Error processing product:', error);
+    console.error("Error processing product:", error);
     return createError(req, res, next, "Error processing product", 500);
   }
 };
-
 
 export const getAllProducts = async (req, res, next) => {
   const { exporterId } = req.params;
@@ -528,5 +539,39 @@ export const deleteProduct = async (req, res, next) => {
     });
   } catch (error) {
     next(error); // Passes the error to the global error handler
+  }
+};
+
+export const addDetails = async (req, res, next) => {
+  try {
+    const { exporterId } = req.params;
+    const { aboutBusiness, aboutProducts, rangeSpecs } = req.body;
+
+    // Validate required fields
+    if (!exporterId || !aboutBusiness || !aboutProducts || !rangeSpecs) {
+      return res.status(400).json({ message: "All fields are required." });
+    }
+
+    // Check if the exporter already exists
+    const existingExporter = await ExporterModel.findOne({ exporterId });
+    if (!existingExporter) {
+      return res.status(404).json({ message: "Exporter not found." });
+    }
+
+    // Update exporter details
+    existingExporter.aboutBusiness = aboutBusiness;
+    existingExporter.aboutProducts = aboutProducts;
+    existingExporter.rangeSpecs = rangeSpecs;
+
+    // Save updated exporter details
+    const updatedExporter = await existingExporter.save();
+
+    res.status(200).json({
+      message: "Exporter details updated successfully.",
+      data: updatedExporter,
+    });
+  } catch (error) {
+    console.error("Error updating exporter details:", error);
+    res.status(500).json({ message: "Internal server error." });
   }
 };
