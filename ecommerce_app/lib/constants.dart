@@ -328,6 +328,7 @@ const Map<String, String> currencySymbolMap = {
 const String regUrl = "https://bharat-udyog.vercel.app/api/v4/";
 const String dbUrl = "https://dnk-documents-default-rtdb.firebaseio.com/";
 const String imgUrl = "https://bharat-udyog.vercel.app/";
+const String ngrox = "https://c2b9-49-249-229-42.ngrok-free.app/";
 
 final otpInputDecoration = InputDecoration(
   contentPadding:
