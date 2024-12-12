@@ -58,7 +58,10 @@ const OrdersTable = ({ resultsPerPage, filter, dateSort }) => {
 
     // If Filters Applied
     if (filter === "Pending") {
-      filteredData = response.filter((order) => order.status === "Pending");
+      filteredData = response.filter(
+        (order) =>
+          order.status === "Pending" || order.status === "No status available"
+      );
     } else if (filter === "Ready for Pickup") {
       filteredData = response.filter(
         (order) => order.status === "Ready for Pickup"
@@ -83,6 +86,8 @@ const OrdersTable = ({ resultsPerPage, filter, dateSort }) => {
       filteredData = response.filter(
         (order) => order.status === "Under Post Office Verification"
       );
+    } else if(filter === "Group By"){
+      
     } else {
       // if filters not applied
       filteredData = response.filter((order) => order.status !== "Dispatched");
@@ -156,7 +161,9 @@ const OrdersTable = ({ resultsPerPage, filter, dateSort }) => {
                         : "neutral"
                     }
                   >
-                    {user.status}
+                    {user.status == "No status available"
+                      ? "Pending"
+                      : user.status}
                   </Badge>
                 </TableCell>
                 <TableCell>

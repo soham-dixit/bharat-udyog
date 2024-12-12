@@ -115,13 +115,18 @@ const Orders = () => {
                 <option value="Picked up by Postman">
                   Picked up by Postman
                 </option>
-                <option value="Dropped at Post Office">Dropped at Post Office</option>
+                <option value="Dropped at Post Office">
+                  Dropped at Post Office
+                </option>
                 <option value="Under Post Office Verification">
                   Under Post Office Verification
                 </option>
-                <option value="Verified by Post Office">Verified by Post Office</option>
+                <option value="Verified by Post Office">
+                  Verified by Post Office
+                </option>
                 <option value="Verified by Custom">Verified by Custom</option>
                 <option value="Dispatched">Dispatched</option>
+                <option value="Group By">Group By Distance</option>
               </Select>
             </Label>
 

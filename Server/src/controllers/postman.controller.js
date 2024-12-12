@@ -6,6 +6,7 @@ import createError from "../utils/createError.js";
 import OrderStatusModel from "../models/orderStatus.model.js";
 import PlaceOrderModel from "../models/order.model.js";
 import { findIndexById } from "../utils/findIndex.js";
+import ExporterModel from "../models/exporter.model.js";
 
 export const registerPostman = async (req, res, next) => {
   const { name, phoneNumber, password, email, latitude, longitude } = req.body;
@@ -167,18 +168,43 @@ export const getPostmanOrders = async (req, res, next) => {
 // };
 
 export const getOrderDetails = async (req, res, next) => {
-  const { orderId } = req.params;
-  const orderDetail = await PlaceOrderModel.findById(orderId);
+  try {
+    const { orderId } = req.params;
 
-  if (!orderDetail || orderDetail.length == 0) {
-    return createError(req, res, next, "Order not found", 404);
+    // Find the order details
+    const orderDetail = await PlaceOrderModel.findById(orderId);
+
+    if (!orderDetail) {
+      return createError(req, res, next, "Order not found", 404);
+    }
+
+    // Find the exporter details to get latitude and longitude
+    const exporterDetail = await ExporterModel.findById(
+      orderDetail.exporterId
+    ).select("latitude longitude");
+
+    if (!exporterDetail) {
+      return createError(req, res, next, "Exporter not found", 404);
+    }
+
+    // Combine order details with exporter location
+    const responseData = {
+      ...orderDetail.toObject(), // Convert Mongoose document to plain object
+      exporterLocation: {
+        latitude: exporterDetail.latitude,
+        longitude: exporterDetail.longitude,
+      },
+    };
+
+    res.status(200).json({
+      success: true,
+      message: "Order details fetched successfully",
+      orderDetail: responseData,
+    });
+  } catch (error) {
+    console.error("Error fetching order details:", error);
+    createError(req, res, next, "Failed to fetch order details", 500);
   }
-
-  res.status(200).json({
-    success: true,
-    message: "Order details fetched successfully",
-    orderDetail,
-  });
 };
 
 export const dropAtDnkCentre = async (req, res, next) => {
