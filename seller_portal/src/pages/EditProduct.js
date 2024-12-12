@@ -28,7 +28,7 @@ const EditProduct = () => {
         const response = await axios.get(`/exporter/getProductDetails/${id}`);
         toast.success(response.data.message);
         setEditedProduct(response.data.product);
-        
+
         // Fetch required documents based on product category
         if (response.data.product.category) {
           fetchRequiredDocuments(response.data.product.category);
@@ -46,10 +46,10 @@ const EditProduct = () => {
     try {
       setIsDocumentsLoading(true);
       const response = await axios.post(
-        "http://localhost:8000/api/v4/utils/docs", 
+        "http://localhost:8000/api/v4/utils/docs",
         { category }
       );
-      
+
       if (response.data.success && response.data.data) {
         // Updated to match the new payload structure
         setRequiredDocuments(response.data.data.documents);
@@ -218,34 +218,44 @@ const EditProduct = () => {
             </div>
           </div>
 
-          {/* Required Export Documents Section */}
           <div className="mt-8">
             <h2 className="text-xl font-bold mb-4 text-gray-800 dark:text-gray-200">
               Required Export Documents
             </h2>
             {isDocumentsLoading ? (
-              <p className="text-gray-600">Loading required documents...</p>
+              <p className="text-gray-700">Loading required documents...</p>
             ) : requiredDocuments && requiredDocuments.length > 0 ? (
               <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {requiredDocuments.map((doc, index) => (
-                  <Card 
-                    key={index} 
+                  <Card
+                    key={index}
                     className="border border-gray-200 dark:border-gray-700 shadow-sm"
                   >
                     <CardBody>
-                      <h3 className="font-semibold text-gray-600 mb-2 text-lg">
+                      <h3 className="font-semibold text-red-500 mb-2 text-xl">
                         {doc.documentName}
                       </h3>
-                      <p className="text-sm text-gray-600 mb-2">
+                      <p className="text-md text-gray-700 mb-2">
                         {doc.description}
                       </p>
                       <div className="mt-2">
-                        <p className="text-xs text-gray-500 mb-1">
+                        <p className="text-sm text-gray-800 mb-1">
                           <strong>Procurement:</strong> {doc.procurement}
                         </p>
-                        <p className="text-xs text-gray-500">
+                        <p className="text-sm text-gray-800">
                           <strong>Regulatory Body:</strong> {doc.regulatoryBody}
                         </p>
+                        {doc.address && (
+                          <p className="text-sm text-gray-800 mb-1">
+                            <strong>Address:</strong> {doc.address}
+                          </p>
+                        )}
+
+                        {doc.contact && (
+                          <p className="text-xs text-gray-800 ml-2">
+                            <strong>Contact:</strong> {doc.contact}
+                          </p>
+                        )}
                       </div>
                     </CardBody>
                   </Card>

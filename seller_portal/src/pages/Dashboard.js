@@ -13,121 +13,148 @@ function Dashboard() {
   const [lineLegends, setLineLegends] = useState([]);
   const [doughnutOptions, setDoughnutOptions] = useState(null);
   const [doughnutLegends, setDoughnutLegends] = useState([]);
+  const [selectedMonth, setSelectedMonth] = useState(
+    new Date().toISOString().slice(0, 7)
+  );
+
+  // useEffect(() => {
+  // {
+  // // Hardcoded data for now
+  //   const response = {
+  //     "success": true,
+  //     "message": "Forecast generated successfully",
+  //     "recommendations": {
+  //         "Chikankari Embroidery": 574,
+  //         "Jaipur Blue Pottery": 114,
+  //         "Kashmiri Shawl": 9849,
+  //         "Madhubani Painting": 2172,
+  //         "Pattachitra Paintings": 6,
+  //         "Saaree": 8,
+  //         "Wood Carvings from Saharanpur": 34,
+  //         "Wooden Basket": 3321
+  //     },
+  //     "mapped_products": [
+  //         {
+  //             "product_name": "Kashmiri Shawl",
+  //             "available_qty": 17,
+  //             "mapped_festivals": [
+  //                 {
+  //                     "festival_name": "Lohri",
+  //                     "month": "January",
+  //                     "date": "14",
+  //                     "day": "Sunday"
+  //                 },
+  //                 {
+  //                     "festival_name": "Merry Christmas",
+  //                     "month": "December",
+  //                     "date": "25",
+  //                     "day": "Wednesday"
+  //                 }
+  //             ]
+  //         },
+  //         {
+  //             "product_name": "Madhubani Painting",
+  //             "available_qty": 28,
+  //             "mapped_festivals": []
+  //         },
+  //         {
+  //             "product_name": "Jaipur Blue Pottery",
+  //             "available_qty": 8,
+  //             "mapped_festivals": []
+  //         },
+  //         {
+  //             "product_name": "Chikankari Embroidery",
+  //             "available_qty": 37,
+  //             "mapped_festivals": [
+  //                 {
+  //                     "festival_name": "Lohri",
+  //                     "month": "January",
+  //                     "date": "14",
+  //                     "day": "Sunday"
+  //                 },
+  //                 {
+  //                     "festival_name": "Pongal, Uttarayan, Makar Sankranti",
+  //                     "month": "January",
+  //                     "date": "15",
+  //                     "day": "Monday"
+  //                 }
+  //             ]
+  //         },
+  //         {
+  //             "product_name": "Pattachitra Paintings",
+  //             "available_qty": 37,
+  //             "mapped_festivals": []
+  //         },
+  //         {
+  //             "product_name": "Wood Carvings from Saharanpur",
+  //             "available_qty": 13,
+  //             "mapped_festivals": []
+  //         },
+  //         {
+  //             "product_name": "Terracotta Pottery",
+  //             "available_qty": 28,
+  //             "mapped_festivals": []
+  //         },
+  //         {
+  //             "product_name": "Saaree",
+  //             "available_qty": 20,
+  //             "mapped_festivals": [
+  //                 {
+  //                     "festival_name": "Lohri",
+  //                     "month": "January",
+  //                     "date": "14",
+  //                     "day": "Sunday"
+  //                 }
+  //             ]
+  //         },
+  //         {
+  //             "product_name": "Wooden Basket",
+  //             "available_qty": 20,
+  //             "mapped_festivals": []
+  //         }
+  //     ]
+  // };
+  // transformDataForCharts(response);
+  //   fetch("http://localhost:7000/forecast", {
+  //     method: "POST",
+  //     headers: {
+
+  //       "Content-Type": "application/json",
+
+  //     },
+  //     body: JSON.stringify({
+  //       "target_month": selectedMonth,
+  //       "seller_id": "675876ada06c3d098e4a4aa0"
+  //     }),
+  //   })
+  //     .then((response) => response.json())
+  //     .then((response) => transformDataForCharts(response))
+  //     .catch((error) => console.error("Error fetching data: ", error));
+
+  // }, []);
+
+  const fetchData = (month) => {
+    const monthInt = parseInt(month.split("-")[1], 10); // Extract and convert the month to an integer
+    fetch("http://localhost:7000/forecast", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        target_month: monthInt, // Send month as an integer
+        seller_id: "675876ada06c3d098e4a4aa0",
+      }),
+    })
+      .then((response) => response.json())
+      .then((response) => transformDataForCharts(response))
+      .catch((error) => console.error("Error fetching data: ", error));
+  };
+  
 
   useEffect(() => {
-    // Hardcoded data for now
-      const response = {
-        "success": true,
-        "message": "Forecast generated successfully",
-        "recommendations": {
-            "Chikankari Embroidery": 574,
-            "Jaipur Blue Pottery": 114,
-            "Kashmiri Shawl": 9849,
-            "Madhubani Painting": 2172,
-            "Pattachitra Paintings": 6,
-            "Saaree": 8,
-            "Wood Carvings from Saharanpur": 34,
-            "Wooden Basket": 3321
-        },
-        "mapped_products": [
-            {
-                "product_name": "Kashmiri Shawl",
-                "available_qty": 17,
-                "mapped_festivals": [
-                    {
-                        "festival_name": "Lohri",
-                        "month": "January",
-                        "date": "14",
-                        "day": "Sunday"
-                    },
-                    {
-                        "festival_name": "Merry Christmas",
-                        "month": "December",
-                        "date": "25",
-                        "day": "Wednesday"
-                    }
-                ]
-            },
-            {
-                "product_name": "Madhubani Painting",
-                "available_qty": 28,
-                "mapped_festivals": []
-            },
-            {
-                "product_name": "Jaipur Blue Pottery",
-                "available_qty": 8,
-                "mapped_festivals": []
-            },
-            {
-                "product_name": "Chikankari Embroidery",
-                "available_qty": 37,
-                "mapped_festivals": [
-                    {
-                        "festival_name": "Lohri",
-                        "month": "January",
-                        "date": "14",
-                        "day": "Sunday"
-                    },
-                    {
-                        "festival_name": "Pongal, Uttarayan, Makar Sankranti",
-                        "month": "January",
-                        "date": "15",
-                        "day": "Monday"
-                    }
-                ]
-            },
-            {
-                "product_name": "Pattachitra Paintings",
-                "available_qty": 37,
-                "mapped_festivals": []
-            },
-            {
-                "product_name": "Wood Carvings from Saharanpur",
-                "available_qty": 13,
-                "mapped_festivals": []
-            },
-            {
-                "product_name": "Terracotta Pottery",
-                "available_qty": 28,
-                "mapped_festivals": []
-            },
-            {
-                "product_name": "Saaree",
-                "available_qty": 20,
-                "mapped_festivals": [
-                    {
-                        "festival_name": "Lohri",
-                        "month": "January",
-                        "date": "14",
-                        "day": "Sunday"
-                    }
-                ]
-            },
-            {
-                "product_name": "Wooden Basket",
-                "available_qty": 20,
-                "mapped_festivals": []
-            }
-        ]
-    };
-    transformDataForCharts(response);
-    // fetch("http://localhost:7000/forecast", {
-    //   method: "POST",
-    //   headers: {
+    fetchData(selectedMonth); // Trigger API call on selectedMonth change
+  }, [selectedMonth]);
 
-    //     "Content-Type": "application/json",
-
-    //   },
-    //   body: JSON.stringify({
-    //     "target_month": 12,
-    //     "seller_id": "675876ada06c3d098e4a4aa0"
-    //   }),
-    // })
-    //   .then((response) => response.json())
-    //   .then((response) => transformDataForCharts(response))
-    //   .catch((error) => console.error("Error fetching data: ", error));
-
-  }, []);
 
   const transformDataForCharts = (response) => {
     // Line Chart Data
@@ -181,10 +208,6 @@ function Dashboard() {
       }))
     );
   };
-
-  const [selectedMonth, setSelectedMonth] = useState(
-    new Date().toISOString().slice(0, 7)
-  );
 
   return (
     <>
