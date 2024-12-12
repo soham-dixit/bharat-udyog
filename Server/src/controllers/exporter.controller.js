@@ -156,9 +156,10 @@ export const addProduct = async (req, res, next) => {
       name: productName,
       category: category,
       description: description,
+      image_url: photoUrl,
     });
 
-    if (response.data["is_exportable"] == true) {
+    if (response.data["is_exportable"] == true && response.data["image_verified"] == true) {
       const savedProduct = await saveProduct.save();
 
       const openaiResponse = await openai.chat.completions.create({
@@ -261,8 +262,14 @@ export const addProduct = async (req, res, next) => {
         }
       })();
     }
-    else {
+    else if (response.data["is_exportable"] == false && response.data["image_verified"] == true) {
       return createError(req, res, next, "Product violates export guidelines.", 400);
+    }
+    else if (response.data["is_exportable"] == true && response.data["image_verified"] == false) {
+      return createError(req, res, next, "Product image and description not matching.", 400);
+    }
+    else{
+      return createError(req, res, next, "Product violates export guidelines and image not matching.", 400);
     }
   } catch (error) {
     console.error('Error processing product:', error);
