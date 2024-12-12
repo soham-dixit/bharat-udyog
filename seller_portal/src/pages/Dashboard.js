@@ -2,6 +2,11 @@ import React, { useState, useEffect } from "react";
 import { Line, Doughnut } from "react-chartjs-2";
 import ChartCard from "../components/Chart/ChartCard";
 import ChartLegend from "../components/Chart/ChartLegend";
+import InfoCard from "../components/Cards/InfoCard";
+import RoundIcon from "../components/RoundIcon";
+import PageTitle from "../components/Typography/PageTitle";
+import { PeopleIcon, CartIcon, MoneyIcon, TruckIcon } from "../icons";
+import { Input } from "@windmill/react-ui";
 
 function Dashboard() {
   const [lineOptions, setLineOptions] = useState(null);
