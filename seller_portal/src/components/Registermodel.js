@@ -30,27 +30,143 @@ const RegisterModal = () => {
   const { modalState, dispatchModal } = useContext(ModalContext);
   const [details, setDetails] = useState(initialState);
   const [location, setLocation] = useState(null);
+  const [isLocationAllowed, setIsLocationAllowed] = useState(false);
   const history = useHistory();
 
   const onChangeHandler = (e) => {
     setDetails({ ...details, [e.target.name]: e.target.value });
   };
 
+  // const getLocation = () => {
+  //   return new Promise((resolve, reject) => {
+  //     navigator.geolocation.getCurrentPosition(
+  //       (position) => {
+  //         resolve(position.coords);
+  //       },
+  //       (error) => {
+  //         reject(error);
+  //       }
+  //     );
+  //   });
+  // };
+
+  // const getLocation = ({ onLocationReceived, onLocationError }) => {
+  //   useEffect(() => {
+  //     // Check if geolocation is supported
+  //     if ("geolocation" in navigator) {
+  //       // Request location permission and get coordinates
+  //       navigator.geolocation.getCurrentPosition(
+  //         // Success callback
+  //         (position) => {
+  //           const { latitude, longitude } = position.coords;
+            
+  //           // Call the callback with location data
+  //           onLocationReceived({
+  //             latitude,
+  //             longitude
+  //           });
+  //         },
+  //         // Error callback
+  //         (error) => {
+  //           let errorMessage;
+  //           switch(error.code) {
+  //             case error.PERMISSION_DENIED:
+  //               errorMessage = "User denied the request for Geolocation.";
+  //               break;
+  //             case error.POSITION_UNAVAILABLE:
+  //               errorMessage = "Location information is unavailable.";
+  //               break;
+  //             case error.TIMEOUT:
+  //               errorMessage = "The request to get user location timed out.";
+  //               break;
+  //             default:
+  //               errorMessage = "An unknown error occurred.";
+  //           }
+            
+  //           // Call the error callback
+  //           onLocationError(errorMessage);
+  //         },
+  //         // Options
+  //         {
+  //           enableHighAccuracy: true, // Request most accurate position
+  //           timeout: 5000, // 5 seconds timeout
+  //           maximumAge: 0 // Don't use cached location
+  //         }
+  //       );
+  //     } else {
+  //       // Geolocation is not supported
+  //       onLocationError("Geolocation is not supported by this browser.");
+  //     }
+  //   }, []); // Empty dependency array means this runs once on mount
+  
+  //   // No render method - this component works behind the scenes
+  //   return null;
+  // };
+
   const getLocation = () => {
-    return new Promise((resolve, reject) => {
+    if ("geolocation" in navigator) {
       navigator.geolocation.getCurrentPosition(
         (position) => {
-          resolve(position.coords);
+          const { latitude, longitude } = position.coords;
+          setDetails((prevDetails) => ({
+            ...prevDetails,
+            latitude,
+            longitude,
+          }));
+          setIsLocationAllowed(true);
+          toast.success("Location retrieved successfully!");
         },
         (error) => {
-          reject(error);
-        }
+          setIsLocationAllowed(false);
+          let errorMessage = "An unknown error occurred.";
+          if (error.code === error.PERMISSION_DENIED) {
+            errorMessage = "Location access denied by user.";
+          } else if (error.code === error.POSITION_UNAVAILABLE) {
+            errorMessage = "Location information unavailable.";
+          } else if (error.code === error.TIMEOUT) {
+            errorMessage = "Location request timed out.";
+          }
+          toast.error(errorMessage);
+        },
+        { enableHighAccuracy: true, timeout: 5000, maximumAge: 0 }
       );
-    });
+    } else {
+      setIsLocationAllowed(false);
+      toast.error("Geolocation is not supported by your browser.");
+    }
   };
 
   const onSubmitHandler = async (e) => {
     e.preventDefault();
+    // Request location
+    getLocation();
+    // Delay submission to allow geolocation state update
+    setTimeout(async () => {
+      if (!isLocationAllowed) {
+        toast.error("Location is required to submit the form.");
+        return;
+      }
+
+      toast.success("Got the location and submitted the form.");
+      await axios
+        .post("/exporter/registerExporter", details)
+        .then((res) => {
+          toast.success(res.data.message);
+          setDetails(initialState);
+          dispatchModal({
+            type: "CLOSE_MODAL",
+          });
+          history.push(`/kyc/${res?.data?.id}`);
+          toast.error("Please complete your KYC");
+        })
+        .catch((error) => {
+          toast.error(error.response?.data?.message || "Error submitting the form.");
+        });
+    }, 1000); // Adjust delay as necessary to sync with `getLocation`
+  };
+
+  // const onSubmitHandler = async (e) => {
+  //   e.preventDefault();
 
     // try {
     //   // const coords = await getLocation();
@@ -75,21 +191,23 @@ const RegisterModal = () => {
     //   toast.error("Error getting location. Please try again.");
     // }
 
-    await axios
-      .post("/exporter/registerExporter", details)
-      .then((res) => {
-        toast.success(res.data.message);
-        setDetails(initialState);
-        dispatchModal({
-          type: "CLOSE_MODAL",
-        });
-        history.push(`/kyc/${res?.data?.id}`);
-        toast.error("Please complete your KYC");
-      })
-      .catch((error) => {
-        toast.error(error.response.data.message);
-      });
-  };
+    // await axios
+    //   .post("/exporter/registerExporter", details)
+    //   .then((res) => {
+    //     toast.success(res.data.message);
+    //     setDetails(initialState);
+    //     dispatchModal({
+    //       type: "CLOSE_MODAL",
+    //     });
+    //     history.push(`/kyc/${res?.data?.id}`);
+    //     toast.error("Please complete your KYC");
+    //     // getLocation();
+    //     // toast.success("Got the location and submitted the form");
+    //   })
+    //   .catch((error) => {
+    //     toast.error(error.response.data.message);
+    //   });
+  //};
 
   // useEffect(() => {
   //   if (location !== null) {
