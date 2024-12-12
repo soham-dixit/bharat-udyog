@@ -4,6 +4,7 @@ import 'package:shop_app/backend/fetch_order_status.dart';
 import 'package:shop_app/backend/fetch_orders.dart';
 import 'package:shop_app/backend/fetch_products.dart';
 import 'package:shop_app/backend/fetch_festive_products.dart';
+import 'package:shop_app/backend/fetch_recommended_products.dart';
 import 'package:shop_app/components/coustom_bottom_nav_bar.dart';
 import 'package:shop_app/constants.dart';
 import 'package:shop_app/globals.dart';
@@ -30,6 +31,7 @@ class _LoadDataState extends State<LoadData> {
   List<dynamic> fetchedAllProducts = [];
   List<dynamic> orders = [];
   List<dynamic> fetchedFestiveProducts = [];
+  List<dynamic> fetchRecommendedProducts = [];
 
   Future<dynamic> loadAllData() async {
     SharedPreferences prefs = await SharedPreferences.getInstance();
@@ -52,7 +54,7 @@ class _LoadDataState extends State<LoadData> {
 
       allProducts = [];
       fetchedAllProducts.forEach((element) {
-        print(element['rating']['\$numberDecimal'].runtimeType);
+        print(element['rating'].runtimeType);
 
         Product prod = Product(
             id: element['_id'],
@@ -63,7 +65,7 @@ class _LoadDataState extends State<LoadData> {
             description: element['description'],
             availableQty: element['availableQty'],
             category: element['category'],
-            rating: double.parse(element['rating']['\$numberDecimal']),
+            rating: element['rating'],
             weight: element['weight'].toDouble(),
             isFestival: false,
             isPopular: true);
@@ -74,8 +76,9 @@ class _LoadDataState extends State<LoadData> {
       print("all products listed");
       if (allProducts.isEmpty) allProducts = demoProducts;
 
-      print("Fetching festive products...");
+      allProducts.sort((a, b) => b.rating.compareTo(a.rating));
 
+      print("Fetching festive products...");
       List<dynamic> festiveResponse =
           await FetchFestiveProducts.performHttpRequest(
         'GET',
@@ -89,8 +92,6 @@ class _LoadDataState extends State<LoadData> {
         print("No festive products found.");
       }
       festiveProducts = [];
-// Print fetched data to ensure it is populated correctly
-      // print(fetchedFestiveProducts);
 
       if (fetchedFestiveProducts.isNotEmpty) {
         fetchedFestiveProducts.forEach((element) {
@@ -103,7 +104,7 @@ class _LoadDataState extends State<LoadData> {
             description: element['description'],
             availableQty: element['availableQty'],
             category: element['category'],
-            rating: double.parse(element['rating']['\$numberDecimal']),
+            rating: element['rating'],
             weight: element['weight'].toDouble(),
             isFestival: true, // Explicitly setting it here
             isPopular: false,
@@ -111,13 +112,48 @@ class _LoadDataState extends State<LoadData> {
 
           festiveProducts.add(prod);
         });
+      }
+      festiveProducts.sort((a, b) => b.rating.compareTo(a.rating));
 
-        // Verify if all products have isFestival set to true
-        // allProducts.forEach((prod) {
-        //   print('Product: ${prod.title}, isFestival: ${prod.isFestival}');
-        // });
+      print("Fetching recommended products...");
+      print(currentUserEmail);
+      List<dynamic> recommendedResponse =
+          await FetchRecommendedProducts.performHttpRequest(
+        'GET',
+        'details/recommendedProducts/',
+        currentUserEmail,
+        context,
+      );
+      if (recommendedResponse.isNotEmpty) {
+        fetchRecommendedProducts = recommendedResponse;
+        print("recommended products fetched successfully!");
+      } else {
+        print("No recommended products found.");
+      }
+      recommendedProducts = [];
+
+      if (fetchRecommendedProducts.isNotEmpty) {
+        fetchRecommendedProducts.forEach((element) {
+          Product prod = Product(
+            id: element['_id'],
+            exporterId: element['exporterId'],
+            title: element['productName'],
+            price: element['price'].toDouble(),
+            photoUrl: element['photoUrl'],
+            description: element['description'],
+            availableQty: element['availableQty'],
+            category: element['category'],
+            rating: element['rating'],
+            weight: element['weight'].toDouble(),
+            isFestival: true, // Explicitly setting it here
+            isPopular: false,
+          );
+
+          recommendedProducts.add(prod);
+        });
       }
 
+      recommendedProducts.sort((a, b) => b.rating.compareTo(a.rating));
       //ORDER starting........................
 
       List<dynamic> res = await FetchOrders.performHttpRequest(

@@ -11,12 +11,14 @@ class SectionTitle extends StatelessWidget {
     Key? key,
     required this.title,
     required this.press,
-    this.festival = false, // Add optional festival parameter
+    this.festival = false,
+    this.recommend = false, // Add optional festival parameter
   }) : super(key: key);
 
   final String title;
   final GestureTapCallback press;
-  final bool festival; // New parameter
+  final bool festival;
+  final bool recommend;// New parameter
 
   @override
   Widget build(BuildContext context) {
@@ -35,7 +37,7 @@ class SectionTitle extends StatelessWidget {
             context,
             SearchScreen.routeName,
             arguments:
-                festival ? {'festival': true} : null, // Pass festival argument
+                festival ? {'festival': true} : recommend ? {'recommend' : true} : null, // Pass festival argument
           ),
           child: Text(
             seeMoreTranslations[crntSlctdLan]!,

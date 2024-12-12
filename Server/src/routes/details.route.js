@@ -7,6 +7,7 @@ import {
   getOrderStatus,
   updateOperationalCountries,
   fetchOperationalCountries,
+  recommendedProducts,
 } from "../controllers/details.controller.js";
 
 const router = Router();
@@ -24,5 +25,7 @@ router.get("/getOrderStatus/:orderId", getOrderStatus);
 router.post("/addOperationalCountries", updateOperationalCountries);
 
 router.get("/fetchOperationalCountries", fetchOperationalCountries);
+
+router.get("/recommendedProducts/:email", recommendedProducts);
 
 export default router;
